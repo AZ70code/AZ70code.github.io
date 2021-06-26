@@ -1693,19 +1693,19 @@ body.ie .ibg img {
 	font-size: 14px;
 	padding: 0px 0px 0px 30px;
 	display: inline-block;
-	line-height: 18px;
+	line-height: 18
 }
 .user-header__link_1 {
-	background: url(../../img/icons/menu/01.png) 1px center no-repeat;
+	background: url(../img/icons/menu/01.png) 1px center no-repeat;
 }
 .user-header__link_2 {
-	background: url(../../img/icons/menu/02.png) left center no-repeat;
+	background: url(../img/icons/menu/02.png) left center no-repeat;
 }
 .user-header__link_3 {
-	background: url(../../img/icons/menu/03.png) 4px center no-repeat;
+	background: url(../img/icons/menu/03.png) 4px center no-repeat;
 }
 .user-header__link_4 {
-	background: url(../../img/icons/menu/04.png) left center no-repeat;
+	background: url(../img/icons/menu/04.png) left center no-repeat;
 }
 @media (min-width: 992px) {
 	.user-header__link:hover {
