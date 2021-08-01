@@ -785,7 +785,6 @@ body.ie .ibg img {
 	        transform: rotate(180deg) translateY(-50%);
 	position: absolute;
 	left: 4%;
-	top: 50%;
 }
 .control .control__arrow_prev:hover {
 	-webkit-transform: scale(1.2) rotate(180deg) translateY(-40%);
@@ -800,7 +799,6 @@ body.ie .ibg img {
 .control .control__arrow_next {
 	position: absolute;
 	right: 4%;
-	top: 50%;
 	-webkit-transform: translateY(50%);
 	    -ms-transform: translateY(50%);
 	        transform: translateY(50%);
@@ -814,6 +812,16 @@ body.ie .ibg img {
 	transition: 0.5s ease-in-out;
 	-webkit-box-shadow: 0px 0px 10px 2px rgba(76, 80, 93, 0.502);
 	        box-shadow: 0px 0px 10px 2px rgba(76, 80, 93, 0.502);
+}
+@media (max-width: 479.98px) {
+	.control_combo {
+		top: 40%;
+	}
+}
+@media (max-width: 479.98px) {
+	.control {
+		top: 47%;
+	}
 }
 
 .content-info {
@@ -978,11 +986,6 @@ body.ie .ibg img {
 @media (max-width: 1260px) {
 	.product__content {
 		padding: 20px;
-	}
-}
-@media (max-width: 479.98px) {
-	.product__content {
-		min-height: 280px;
 	}
 }
 
