@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Payment</title>
+		<meta charset="UTF-8">
+		<meta name="format-detection" content="telephone=no">
+		<link rel="stylesheet" href="css/style.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+		<div class="wrapper">
+<header class="header">
+	<div class="header__container container">
+		<div class="icon-menu">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+		<div class="header__logo"><a href="" class=""><img src="img/logo.png" alt=""></a></div>
+		<div class="header__menu menu">
+			<nav class="menu__body">
+				<ul class="menu__list">
+					<li><a href="#watch" class="menu__link goto">Watches</a></li>
+					<li><a href="#eyewear" class="menu__link goto">Eyewear</a></li>
+					<li><a href="#" class="menu__link">Accessories</a></li>
+					<li><a href="#news" class="menu__link goto">News</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="header__actions actions-header">
+			<div class="actions-header__search search-header">
+				<div class="search-header__icon">
+					<div class="header__image"><img src="img/icons/search.svg" alt=""></div>
+				</div>
+				<form class="search-header__form" action="#">
+					<button class="search-header__btn" type="submit"><img src="img/icons/search.svg" alt=""></button>
+					<input class="search-header__input input" type="search">
+				</form>
+			</div>
+			<div class="actions-header__login login-header">
+				<div class="login-header__icon">
+					<div class="header__image"><img src="img/icons/login.svg" alt=""></div>
+				</div>
+				<span>Log In</span>
+				<form class="login-header__form" action="none">
+					<fieldset id="login">
+						<input class="login-header__input input err" type="text" tabindex="1" placeholder="Log In"/>
+						<input class="login-header__input input err" type="password" tabindex="2" placeholder="Password"/>
+						<button class="login-header__btn btn" type="submit">Log In</button>
+						<button class="login-header__btn btn" type="reset">Reset</button>
+						<p class="login-header__option"><a href="#">forgot your password?</a><span>|</span><a href="#" id="checkbtn">Сheck In</a></p>
+					</fieldset>
+					<fieldset id="checkin">
+						<input class="login-header__input input " type="text" tabindex="1" placeholder="Name"/>
+						<input class="login-header__input input" type="email" tabindex="2" placeholder="Phone"/>
+						<input class="login-header__input input" type="tel" tabindex="3" required placeholder="* Email"/>
+						<input class="login-header__input input" type="text" tabindex="4" required placeholder="* log in"/>
+						<input class="login-header__input input" type="password" tabindex="5" required placeholder="* password"/>
+						<button class="login-header__btn btn" type="submit">Check In</button>
+						<button class="login-header__btn btn" type="reset">Reset</button>
+						<p class="login-header__option">* required field</p>
+					</fieldset>
+				</form>
+			</div>
+			<div class="actions-header__cart cart-header">
+				<div class="cart-header__icon">
+					<div class="header__image"><img src="img/icons/cart.svg" alt=""></div>
+				</div>
+				<div class="cart-header__menu">
+      <div class="cart-body">
+         <div class="cart-body__items">
+            <div class="cart-body__item">
+               <div class="cart-body__card card-series">
+                  <div class="card-series__image"><img src="img/cart/cart01.png" alt=""></div>
+                  <div class="card-series__content">
+                     <div class="card-series__name">Way Kambas Mini Ebony</div>
+                     <div class="card-series__sale"></div>
+                     <div class="card-series__old-price old-price">Rp 1.280.000</div>
+                     <div class="card-series__price--cart price">Rp 1.024.000</div>
+                     <div class="card-series__custom">Custom Engrave</div>
+                     <div class="card-series__custom-text">“Happy | Birthday | from”</div>
+                  </div>
+               </div>
+               <div class="cart-body__select select">
+                  <div class="select__packing">
+                     <div class="select__title">Select Packaging</div>
+                     <select name="Select Packaging">
+                        <option value="wooden" selected>Wooden Packaging (Rp 50.000)</option>
+                        <option value="default">Default Packaging (Free)</option>
+                     </select>
+                  </div>
+                  <div class="cart-body__sum">
+                     <div class="cart-body__quantity quantity">
+                        <button class="quantity__btn btn-minus dwn" type="button"><svg width="16" height="2" viewBox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path d="M0 1H16" stroke="#777777"/></svg>
+                        </button>
+                        <input class="quantity__input" type="text" name="name" value="1">
+                        <button class="quantity__btn btn-plus" type="button"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path d="M0 8H16M8 0V16" stroke="#777777"/></svg>
+                        </button>
+
+                     </div>
+                     <div class="cart-body__price price">Rp 2.048.000</div>
+                     <div class="cart-body__btn-del"><svg width="17" height="19" viewBox="0 0 17 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.6972 2.29715H12.0601L11.7033 0.870009C11.5755 0.358703 11.1161 5.13325e-06 10.589 0H5.49104C4.964 5.13325e-06 4.50459 0.358703 4.37677 0.870009L4.02002 2.29715H0.382859C0.171412 2.29715 0 2.46857 0 2.68001C0 2.89146 0.171412 3.06287 0.382859 3.06287H1.56972L2.28069 17.2866C2.31157 17.8977 2.816 18.3772 3.42781 18.3772H12.6912C13.3032 18.3772 13.8077 17.8972 13.8382 17.2859L14.5493 3.06287H15.6972C15.9087 3.06287 16.0801 2.89146 16.0801 2.68001C16.0801 2.46857 15.9087 2.29715 15.6972 2.29715ZM6.12553 13.4001C6.12553 13.6115 5.95411 13.7829 5.74267 13.7829C5.53122 13.7829 5.35981 13.6115 5.35981 13.4001V7.27433C5.35981 7.06289 5.53122 6.89147 5.74267 6.89147C5.95411 6.89147 6.12553 7.06289 6.12553 7.27433V13.4001ZM8.03973 14.5486C8.25117 14.5486 8.42259 14.3772 8.42259 14.1658V6.5086C8.42259 6.29715 8.25117 6.12574 8.03973 6.12574C7.82828 6.12574 7.65687 6.29715 7.65687 6.5086V14.1658C7.65687 14.3772 7.82828 14.5486 8.03973 14.5486ZM10.7204 13.4001C10.7204 13.6115 10.549 13.7829 10.3376 13.7829C10.1261 13.7829 9.95471 13.6115 9.95471 13.4001V7.27433C9.95471 7.06289 10.1261 6.89147 10.3376 6.89147C10.549 6.89147 10.7204 7.06289 10.7204 7.27433V13.4001ZM5.11937 1.05584L4.80911 2.29715H11.2705L10.9602 1.05584C10.9178 0.885236 10.7645 0.765523 10.5887 0.765711H5.49082C5.31503 0.765523 5.16176 0.885236 5.11937 1.05584Z" fill="#D93F3F"/>
+                        </svg>
+                        </div>
+                  </div>
+               </div>
+            </div>
+            <div class="cart-body__item">
+               <div class="cart-body__card card-series">
+                  <div class="card-series__image"><img src="img/cart/cart02.png" alt=""></div>
+                  <div class="card-series__content">
+                     <div class="card-series__name">Sikka (Ebony & Maple)</div>
+                     <div class="card-series__sale"></div>
+                     <div class="card-series__old-price old-price"></div>
+                     <div class="card-series__price--cart price">Rp 1.264.000</div>
+                     <div class="card-series__custom"></div>
+                     <div class="card-series__custom-text"></div>
+                  </div>
+               </div>
+               <div class="cart-body__select select">
+                  <div class="select__packing">
+                     <div class="select__title">Select Packaging</div>
+                     <div class="cart-body__packing">
+                        <select name="Select Packaging" id="sel">
+                           <option value="wooden" selected>Wooden Packaging (Rp 50.000)</option>
+                           <option value="default">Default Packaging (Free)</option>
+                        </select>
+                     </div>
+                  </div>
+                  <div class="cart-body__sum">
+                     <div class="cart-body__quantity quantity">
+                        <button class="quantity__btn btn-minus dwn" type="button"><svg width="16" height="2" viewBox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path d="M0 1H16" stroke="#777777"/></svg>
+                        </button>
+                        <input class="quantity__input" type="text" name="name" value="1">
+                        <button class="quantity__btn btn-plus" type="button"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path d="M0 8H16M8 0V16" stroke="#777777"/></svg>
+                        </button>
+                     </div>
+                     <div class="cart-body__price price">Rp 1.264.000</div>
+                     <div class="cart-body__btn-del"><svg width="17" height="19" viewBox="0 0 17 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.6972 2.29715H12.0601L11.7033 0.870009C11.5755 0.358703 11.1161 5.13325e-06 10.589 0H5.49104C4.964 5.13325e-06 4.50459 0.358703 4.37677 0.870009L4.02002 2.29715H0.382859C0.171412 2.29715 0 2.46857 0 2.68001C0 2.89146 0.171412 3.06287 0.382859 3.06287H1.56972L2.28069 17.2866C2.31157 17.8977 2.816 18.3772 3.42781 18.3772H12.6912C13.3032 18.3772 13.8077 17.8972 13.8382 17.2859L14.5493 3.06287H15.6972C15.9087 3.06287 16.0801 2.89146 16.0801 2.68001C16.0801 2.46857 15.9087 2.29715 15.6972 2.29715ZM6.12553 13.4001C6.12553 13.6115 5.95411 13.7829 5.74267 13.7829C5.53122 13.7829 5.35981 13.6115 5.35981 13.4001V7.27433C5.35981 7.06289 5.53122 6.89147 5.74267 6.89147C5.95411 6.89147 6.12553 7.06289 6.12553 7.27433V13.4001ZM8.03973 14.5486C8.25117 14.5486 8.42259 14.3772 8.42259 14.1658V6.5086C8.42259 6.29715 8.25117 6.12574 8.03973 6.12574C7.82828 6.12574 7.65687 6.29715 7.65687 6.5086V14.1658C7.65687 14.3772 7.82828 14.5486 8.03973 14.5486ZM10.7204 13.4001C10.7204 13.6115 10.549 13.7829 10.3376 13.7829C10.1261 13.7829 9.95471 13.6115 9.95471 13.4001V7.27433C9.95471 7.06289 10.1261 6.89147 10.3376 6.89147C10.549 6.89147 10.7204 7.06289 10.7204 7.27433V13.4001ZM5.11937 1.05584L4.80911 2.29715H11.2705L10.9602 1.05584C10.9178 0.885236 10.7645 0.765523 10.5887 0.765711H5.49082C5.31503 0.765523 5.16176 0.885236 5.11937 1.05584Z" fill="#D93F3F"/>
+                        </svg>
+                        </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="cart-body__checkout">
+            <div class="cart-body__total">
+               <div class="cart-body__promo">
+                  <div class="cart-body__title">Kode Promo</div>
+                  <div class="cart-body__input">
+                     <input type="text" value="INDONESIA">
+                  </div>
+                  <div class="cart-body__sale">35% OFF</div>
+               </div>
+               <div class="cart-body__subtotal">
+                  <div class="cart-body__label">Subtotal</div>
+                  <div class="cart-body__value value">
+                     <div class="value__old-price old-price">Rp 3.312.000</div>
+                     <div class="value__price price">Rp 2.152.000</div>
+                  </div>
+               </div>
+            </div>
+            <a href="checkout.html" class="cart-body__btn" type="button">Checkout</a>
+         </div>
+      </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>			<div class="container">
+            <div class="payment">
+               <nav class="payment-breadcrumbs breadcrumbs-order">
+                  <ol class="breadcrumbs-order__list">
+                     <li>
+                        <div class="breadcrumbs-order__icon"><svg  width="29" height="34" viewBox="0 0 29 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path d="M10.6481 7.75038L12.8371 5.5637V12.7939C12.8371 13.7108 13.5786 14.4515 14.4965 14.4515C15.4145 14.4515 16.1559 13.7108 16.1559 12.7939V5.59896L18.3449 7.78565C18.6626 8.10307 19.0863 8.27941 19.51 8.27941C19.9337 8.27941 20.3573 8.10307 20.6751 7.78565C21.3106 7.1508 21.3106 6.09273 20.6751 5.45789L15.6616 0.449681C15.0614 -0.149894 13.9669 -0.149894 13.3314 0.449681L8.31794 5.45789C7.68243 6.09273 7.68243 7.1508 8.31794 7.78565C8.98876 8.42049 10.0126 8.42049 10.6481 7.75038Z" fill="#999999"/>
+                           <path d="M28.3368 17.8022C27.8778 17.3084 22.7231 11.8064 22.7231 11.8064C22.0876 11.1363 21.0637 11.1011 20.3929 11.7359C19.7221 12.3707 19.6868 13.3935 20.3223 14.0637L23.3233 17.2379H5.67024L8.67126 14.0637C9.30677 13.3935 9.27147 12.3707 8.60065 11.7359C7.92983 11.1363 6.90596 11.1363 6.27045 11.8064C6.27045 11.8064 1.04514 17.379 0.65677 17.8022C0.268403 18.1901 -0.155271 19.0013 0.0565659 19.742L3.37534 32.0156C3.62249 32.8621 4.39922 33.4617 5.28187 33.4617H23.7117C24.5943 33.4617 25.3711 32.8621 25.6182 32.0156L28.937 19.742C29.1488 19.0013 28.7958 18.2959 28.3368 17.8022ZM9.83637 28.2418C9.83637 28.8414 9.34208 29.3352 8.74188 29.3352C8.14167 29.3352 7.64739 28.8414 7.64739 28.2418V22.493C7.64739 21.8934 8.14167 21.3996 8.74188 21.3996C9.34208 21.3996 9.83637 21.8934 9.83637 22.493V28.2418ZM15.5913 28.2418C15.5913 28.8414 15.097 29.3352 14.4968 29.3352C13.8966 29.3352 13.4023 28.8414 13.4023 28.2418V22.493C13.4023 21.8934 13.8966 21.3996 14.4968 21.3996C15.097 21.3996 15.5913 21.8934 15.5913 22.493V28.2418ZM21.3462 28.2418C21.3462 28.8414 20.8519 29.3352 20.2517 29.3352C19.6515 29.3352 19.1572 28.8414 19.1572 28.2418V22.493C19.1572 21.8934 19.6515 21.3996 20.2517 21.3996C20.8519 21.3996 21.3462 21.8934 21.3462 22.493V28.2418Z" fill="#999999"/>
+                           </svg>
+                        </div>
+                        <a href="checkout.html" class="breadcrumbs-order__link ">Checkout</a>
+                     </li>
+                     <span class="before"></span>
+                     <li class="active">
+                        <div class="breadcrumbs-order__icon"><svg width="30" height="24" viewBox="0 0 30 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path fill-rule="evenodd" clip-rule="evenodd" d="M28.2 0H1.8C0.805887 0 0 0.805887 0 1.8V22.2C0 23.1941 0.805887 24 1.8 24H28.2C29.1941 24 30 23.1941 30 22.2V1.8C30 0.805887 29.1941 0 28.2 0ZM28.8 22.2C28.8 22.5314 28.5313 22.8 28.2 22.8H1.79995C1.46858 22.8 1.19995 22.5314 1.19995 22.2V1.80003C1.19995 1.46866 1.46858 1.20003 1.79995 1.20003H28.2C28.5313 1.20003 28.8 1.46866 28.8 1.80003V22.2ZM7.79985 7.19999C8.13122 7.19999 8.39985 6.93136 8.39985 6.59999C8.39985 6.26861 8.13122 5.99998 7.79985 5.99998H4.19985C3.86848 5.99998 3.59985 6.26861 3.59985 6.59999C3.59985 6.93136 3.86848 7.19999 4.19985 7.19999H7.79985ZM14.9999 7.19999H10.1999C9.86854 7.19999 9.59991 6.93136 9.59991 6.59999C9.59991 6.26861 9.86854 5.99998 10.1999 5.99998H14.9999C15.3313 5.99998 15.5999 6.26861 15.5999 6.59999C15.5999 6.93136 15.3313 7.19999 14.9999 7.19999ZM19.8002 12.76C20.5029 12.2656 21.341 12.0002 22.2002 12C24.0093 11.999 25.6155 13.1571 26.186 14.8738C26.7566 16.5905 26.1631 18.4797 24.7134 19.5617C23.2636 20.6438 21.2837 20.6754 19.8002 19.6401C18.0547 20.8627 15.6701 20.5843 14.2533 18.9923C12.8364 17.4004 12.8364 14.9996 14.2533 13.4077C15.6701 11.8158 18.0547 11.5373 19.8002 12.76ZM17.4 19.2C15.7432 19.2 14.4 17.8568 14.4 16.2C14.4 14.5431 15.7432 13.2 17.4 13.2C19.0569 13.2 20.4 14.5431 20.4 16.2C20.3981 17.8561 19.0561 19.1981 17.4 19.2ZM20.6927 18.7787C21.1485 19.0514 21.669 19.1969 22.2001 19.2C23.8569 19.2 25.2001 17.8568 25.2001 16.2C25.2001 14.5431 23.8569 13.2 22.2001 13.2C21.669 13.203 21.1485 13.3485 20.6927 13.6212C21.9025 15.1275 21.9025 17.2724 20.6927 18.7787Z" fill="#999999"/>
+                           </svg>
+                        </div>
+                        <a href="" class="breadcrumbs-order__link">Payment</a>
+                     </li>
+                     <span class="after"></span>
+                     <li>
+                        <div class="breadcrumbs-order__icon"><svg width="30" height="28" viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path fill-rule="evenodd" clip-rule="evenodd" d="M1.8175 0H3.02917C4.03296 0 4.84668 0.813725 4.84668 1.8175V26.0509C4.84668 27.0547 4.03296 27.8684 3.02917 27.8684H1.8175C0.813725 27.8684 0 27.0547 0 26.0509V1.8175C0 0.813725 0.813725 0 1.8175 0ZM27.2623 0H9.08723C8.08345 0 7.26972 0.813725 7.26972 1.8175V26.0509C7.26972 27.0547 8.08345 27.8684 9.08723 27.8684H27.2623C28.2661 27.8684 29.0798 27.0547 29.0798 26.0509V1.8175C29.0798 0.813725 28.2661 0 27.2623 0ZM27.8687 26.0509C27.8683 26.3854 27.5973 26.6564 27.2628 26.6568H9.0878C8.75337 26.6564 8.48236 26.3854 8.48196 26.0509V1.81753C8.48236 1.48311 8.75337 1.2121 9.0878 1.2117H27.2628C27.5973 1.2121 27.8683 1.48311 27.8687 1.81753V26.0509ZM24.8392 8.4817C25.1738 8.4817 25.445 8.21046 25.445 7.87587C25.445 7.54127 25.1738 7.27003 24.8392 7.27003H17.5691C17.2345 7.27003 16.9633 7.54127 16.9633 7.87587C16.9633 8.21046 17.2345 8.4817 17.5691 8.4817H24.8392ZM15.5743 6.23587C15.8108 6.47245 15.8108 6.85594 15.5743 7.09252L13.151 9.51586C12.9144 9.75237 12.5309 9.75237 12.2943 9.51586L11.0827 8.30419C10.8531 8.06647 10.8564 7.68861 11.09 7.45492C11.3237 7.22123 11.7016 7.21794 11.9393 7.44754L12.7227 8.23088L14.7177 6.23587C14.9542 5.99936 15.3377 5.99936 15.5743 6.23587ZM24.8392 14.54C25.1738 14.54 25.445 14.2688 25.445 13.9342C25.445 13.5996 25.1738 13.3284 24.8392 13.3284H17.5691C17.2345 13.3284 16.9633 13.5996 16.9633 13.9342C16.9633 14.2688 17.2345 14.54 17.5691 14.54H24.8392ZM15.5743 12.2942C15.8108 12.5308 15.8108 12.9143 15.5743 13.1509L13.151 15.5742C12.9144 15.8107 12.5309 15.8107 12.2943 15.5742L11.0827 14.3625C10.8531 14.1248 10.8564 13.7469 11.09 13.5133C11.3237 13.2796 11.7016 13.2763 11.9393 13.5059L12.7227 14.2892L14.7177 12.2942C14.9542 12.0577 15.3377 12.0577 15.5743 12.2942ZM24.8392 20.5984C25.1738 20.5984 25.445 20.3271 25.445 19.9925C25.445 19.6579 25.1738 19.3867 24.8392 19.3867H17.5691C17.2345 19.3867 16.9633 19.6579 16.9633 19.9925C16.9633 20.3271 17.2345 20.5984 17.5691 20.5984H24.8392ZM15.5743 18.3525C15.8108 18.5891 15.8108 18.9726 15.5743 19.2092L13.151 21.6325C12.9144 21.869 12.5309 21.869 12.2943 21.6325L11.0827 20.4209C10.8531 20.1831 10.8564 19.8053 11.09 19.5716C11.3237 19.3379 11.7016 19.3346 11.9393 19.5642L12.7227 20.3475L14.7177 18.3525C14.9542 18.116 15.3377 18.116 15.5743 18.3525ZM3.63496 26.0509C3.63456 26.3853 3.36355 26.6563 3.02913 26.6567H1.81746C1.48303 26.6563 1.21202 26.3853 1.21162 26.0509V6.05833H3.63496V26.0509ZM1.21162 4.84671H3.63496V1.81753C3.63456 1.48311 3.36355 1.2121 3.02913 1.2117H1.81746C1.48303 1.2121 1.21202 1.48311 1.21162 1.81753V4.84671Z" fill="#999999"/>
+                           </svg>
+                           </div>
+                        <a href="" class="breadcrumbs-order__link">Confirmation</a>
+                     </li>
+                  </ol>
+               </nav>
+               <div class="payment__detail">
+                  <div class="payment__detail-order detail-order">
+                     <div class="detail-order__block order-block">
+                        <div class="detail-order__title order-title">Detail Order</div>
+                        <div class="detail-order__body order-info">
+                           <div class="order-info__label">
+                              <ul class="order-label__list">
+                                 <li class="order-label__link order-link">Subtotal</li>
+                                 <li class="order-label__link order-link">Shipping Cost</li>
+                                 <li class="order-label__link order-link">Promo Code</li>
+                                 <li class="order-label__link order-link">Packaging</li>
+                              </ul>
+                           </div>
+                           <div class="order-info__value">
+                              <ul class="order-value__list">
+                                 <li class="order-value__link order-link">Rp 2.152.000</li>
+                                 <li class="order-value__link order-link">Rp 500.000</li>
+                                 <li class="order-value__link order-link">INDONESIA</li>
+                                 <li class="order-value__link order-link">Rp 50.000</li>
+                              </ul>
+                           </div>
+                        </div>
+                        <div class="detail-order__total order-total">
+                           <div class="order-total__label order-link">Grand Total</div>
+                           <div class="order-total__sum">Rp 2.702.000</div>
+                        </div>
+                     </div>
+                     <div class="detail-payment__block order-block">
+                        <div class="detail-payment__box">
+                           <div class="detail-payment__title order-title">Payment Detail</div>
+                           <div class="detail-payment__timer">11:55:55</div>
+                        </div>
+                        <div class="detail-payment__note">Please make a payment according with the limit time specified, starting from now</div>
+                     </div>
+                  </div>
+                  <div class="payment__order-detail order-detail">
+                     <div class="order-detail__block order-block">
+                        <div class="order-detail__title order-title">Order Detail</div>
+                        <div class="order-detail__body">
+                           <div class="order-detail__box">
+                              <div class="order-detail__label">Order Number</div>
+                              <div class="order-detail__value"><span id="order-number">MTAWEB-3A86D4DB</span><span class="order-copy">COPY</span><br>
+                                 <span class="order-note">Always remember Order Number for easy tracking</span></div>
+                           </div>
+                           <div class="order-detail__box">
+                              <div class="order-detail__label">Purchase Date</div>
+                              <div class="order-detail__value">2019-11-07 14:01:48</div>
+                           </div>
+                           <div class="order-detail__box">
+                              <div class="order-detail__label">Items</div>
+                              <div class="order-detail__value order">
+                                 <div class="order__items">
+                                    <div class="order__item item-order">
+                                       <div class="item-order__name"><span id="order-item">Way Kambas Mini Ebony</span></div>
+                                       <div class="item-order__value">
+                                          <span id="qtt"></span>2<span class="item-order__label">x IDR</span><span id="pr">1.024.000</span>
+                                       </div>
+                                    </div>
+                                    <div class="order__item item-order">
+                                       <div class="item-order__name"><span id="order-item">Sikka (Ebony & Mapple)</span></div>
+                                       <div class="item-order__value">
+                                          <span id="qtt"></span>1<span class="item-order__label">x IDR</span><span id="pr">1.264.000
+                                          </span>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="order-detail__box">
+                              <div class="order-detail__label">Name</div>
+                              <div class="order-detail__value">Rasyidin Arsyad Nasution</div>
+                           </div>
+                           <div class="order-detail__box">
+                              <div class="order-detail__label">Phone</div>
+                              <div class="order-detail__value">+18911188899</div>
+                           </div>
+                           <div class="order-detail__box">
+                              <div class="order-detail__label">Email</div>
+                              <div class="order-detail__value">rasyid.arsyad@gmail.com</div>
+                           </div>
+                           <div class="order-detail__box shipping">
+                              <div class="shipping__label">Shipping Address</div>
+                              <div class="shipping__value">18 Richardson Drive
+                                 Fountain Valley, CA 92708</div>
+                           </div>
+
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="payment-method order-block">
+                  <div class="payment-method__title order-title">Payment Method</div>
+                  <form action="#" class="payment-method__form">
+                     <div class="payment-method__radiobuttons radiobuttons">
+                        <div class="radiobuttons__top">
+                           <div class="radiobuttons__item radiobuttons__item--m">
+                              <input type="radio" id="r01" name="nameradio" value="bni">
+                              <label for="r01">BNI Cicilan 0%</label>
+                              <div class="radiobuttons__icon"><img src="img/payment/pay-icon01.png" alt=""></div>
+                           </div>
+                           <div class="radiobuttons__item radiobuttons__item--m">
+                              <input type="radio" id="r02" name="nameradio" value="mandiri">
+                              <label for="r02">Mandiri Cicilan 0%</label>
+                              <div class="radiobuttons__icon"><img src="img/payment/pay-icon02.png" alt=""></div>
+                           </div>
+                           <div class="radiobuttons__item radiobuttons__item--m">
+                              <input type="radio" id="r03" name="nameradio" value="transfer-bank">
+                              <label for="r03">Bank Transfer</label>
+                              <div class="radiobuttons__icon"><img src="img/payment/pay-icon03.png" alt=""></div>
+                           </div>
+                           <div class="radiobuttons__item radiobuttons__item--m">
+                              <input type="radio" id="r04" name="nameradio" value="credit-card">
+                              <label for="r04">Credit Card</label>
+                              <div class="radiobuttons__icons">
+                                 <div class="radiobuttons__icon"><img src="img/payment/pay-icon04.png" alt=""></div>
+                                 <div class="radiobuttons__icon"><img src="img/payment/pay-icon05.png" alt=""></div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="radiobuttons__bottom">
+                           <div class="radiobuttons__item radiobuttons__item--xl">
+                              <input type="radio" id="r05" name="nameradio" value="cc-cicilan">
+                              <label for="r05">Credit Card Cicilan 0% (Danamon, UOB & Standard Chartered)</label>
+                              <div class="radiobuttons__icons">
+                                 <div class="radiobuttons__icon"><img src="img/payment/pay-icon06.png" alt=""></div>
+                                 <div class="radiobuttons__icon"><img src="img/payment/pay-icon07.png" alt=""></div>
+                                 <div class="radiobuttons__icon"><img src="img/payment/pay-icon08.png" alt=""></div>
+                              </div>
+                           </div>
+                           <div class="radiobuttons__item radiobuttons__item--sm">
+                              <input type="radio" id="r06" name="nameradio" value="gopay">
+                              <label for="r06">GO-PAY</label>
+                              <div class="radiobuttons__icon"><img src="img/payment/pay-icon09.png" alt=""></div>
+                           </div>
+                           <div class="radiobuttons__item radiobuttons__item--sm">
+                              <input type="radio" id="r07" name="nameradio" value="krdivo">
+                              <label for="r07">Krdivo</label>
+                              <div class="radiobuttons__icon"><img src="img/payment/pay-icon10.png" alt=""></div>
+                           </div>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+               <div class="order-detail__buttons">
+                  <a href="confirmation.html" type="button" class="order-detail__btn btn" form="billing" formmethod="POST">Proceed Payment</a>
+               </div>
+            </div>
+			</div>
+<footer class="footer">
+	<div class="footer-top">
+		<div class="container">
+			<div class="footer-top__body">
+				<div class="footer-top__row">
+					<a href="" class="footer-top__payment"><img src="img/footer/brands/brand01.png" alt=""></a>
+					<a href="" class="footer-top__payment"><img src="img/footer/brands/brand02.png" alt=""></a>
+					<a href="" class="footer-top__payment"><img src="img/footer/brands/brand03.png" alt=""></a>
+					<a href="" class="footer-top__payment"><img src="img/footer/brands/brand04.png" alt=""></a>
+					<a href="" class="footer-top__payment"><img src="img/footer/brands/brand05.png" alt=""></a>
+				</div>
+				<div class="footer-top__row">
+					<a href="" class="footer-top__payment"><img src="img/footer/brands/brand06.png" alt=""></a>
+					<a href="" class="footer-top__payment"><img src="img/footer/brands/brand07.png" alt=""></a>
+					<a href="" class="footer-top__payment"><img src="img/footer/brands/brand08.png" alt=""></a>
+					<a href="" class="footer-top__payment"><img src="img/footer/brands/brand09.png" alt=""></a>
+					<a href="" class="footer-top__payment"><img src="img/footer/brands/brand10.png" alt=""></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer-bottom">
+		<div class="container">
+			<div class="footer-bottom__body">
+				<div class="footer-bottom__address">
+					<a href="" class="footer-bottom__logo"><img src="img/footer/logo_footer.png" alt=""></a>
+					<h5 class="footer-bottom__subtitle address-footer__subtitle">Address</h5>
+					<p class="footer-bottom__text address-footer__text">Store & Office
+						Jl. Setrasari Kulon III, No. 10-12, Sukarasa, Sukasari, Bandung, Jawa Barat, Indonesia 40152</p>
+					<div class="footer-bottom__subtitle address-footer__subtitle">Office Hour</div>
+					<p class="footer-bottom__text address-footer__text"><span>Monday - Sunday</span>10.00 - 18.00</p>
+				</div>
+				<div class="footer-bottom__content alone">
+					<div class="footer-bottom__get get-footer">
+						<div class="get-footer__title title-footer">Get in touch</div>
+						<ul class="get-footer__block-phone footer__list">
+							<li class="get-footer__phone">
+								<h5 class="footer-bottom__subtitle get-footer__subtitle">Phone</h5>
+								<a href="02220277564" class="footer-bottom__text get-footer__text">022-20277564</a>
+							</li>
+							<li class="get-footer__service">
+								<h5 class="footer-bottom__subtitle get-footer__subtitle">Service Center</h5>
+								<a href="08112338899" class="footer-bottom__text get-footer__text">0811-233-8899</a>
+							</li>
+							<li class="get-footer__customer">
+								<h5 class="footer-bottom__subtitle get-footer__subtitle">Customer Service</h5>
+								<a href="08112359988" class="footer-bottom__text get-footer__text">0811-235-9988</a>
+							</li>
+						</ul>
+						<div class="get-footer__block-social">
+							<a class="get-footer__icon" href="#"><img src="img/footer/social/icon01.png" alt=""></a>
+							<a class="get-footer__icon" href="#"><img src="img/footer/social/icon02.png" alt=""></a>
+							<a class="get-footer__icon" href="#"><img src="img/footer/social/icon03.png" alt=""></a>
+							<a class="get-footer__icon" href="#"><img src="img/footer/social/icon04.png" alt=""></a>
+						</div>
+					</div>
+					<div class="footer-bottom__link link-footer">
+						<div class="link-footer__title title-footer">Useful Link</div>
+						<ul class="link-footer__list footer__list">
+							<li><a href="#" class="link-footer__link">Warranty & Complaints</a></li>
+							<li><a href="#" class="link-footer__link">Order & Shipping</a></li>
+							<li><a href="#" class="link-footer__link">Tracking Order</a></li>
+							<li><a href="#" class="link-footer__link">About Us</a></li>
+							<li><a href="#" class="link-footer__link">Repair</a></li>
+							<li><a href="#" class="link-footer__link">Terms</a></li>
+							<li><a href="#" class="link-footer__link">FAQ</a></li>
+						</ul>
+					</div>
+					<div class="footer-bottom__campaign campaign-footer">
+						<div class="campaign-footer__title title-footer">Campaign</div>
+						<ul class="campaign-footer__list footer__list">
+							<li><a href="#" class="campaign-footer__link">Mengenal Arti Cukup</a></li>
+							<li><a href="#" class="campaign-footer__link">Tell Your Difference</a></li>
+							<li><a href="#" class="campaign-footer__link">Waykambas</a></li>
+							<li><a href="#" class="campaign-footer__link">Rebrand</a></li>
+							<li><a href="#" class="campaign-footer__link">Gallery</a></li>
+							<li><a href="#" class="campaign-footer__link">Singo</a></li>
+							<li><a href="#" class="campaign-footer__link">Rakai</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="footer-bottom__decor--left decor-small">
+					<div class="decor-small__top">
+						<svg width="376" height="218" viewBox="0 0 376 218" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M1 109L181 1L309 217L400 155" stroke="#fff" stroke-opacity="0.1"/>
+						</svg>
+					</div>
+					<div class="decor-small__mid">
+						<svg width="376" height="218" viewBox="0 0 376 218" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M1 109L181 1L309 217L400 155" stroke="#fff" stroke-opacity="0.1"/>
+						</svg>
+					</div>
+
+				</div>
+				<div class="footer-bottom__decor--right decor-small">
+					<div class="decor-small__top">
+						<svg width="376" height="218" viewBox="0 0 376 218" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M1 109L181 1L309 217L400 155" stroke="#fff" stroke-opacity="0.1"/>
+						</svg>
+					</div>
+					<div class="decor-small__mid">
+						<svg width="376" height="218" viewBox="0 0 376 218" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M1 109L181 1L309 217L400 155" stroke="#fff" stroke-opacity="0.1"/>
+						</svg>
+					</div>
+
+				</div>
+	
+			</div>
+
+		</div>
+	</div>
+</footer>		</div>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<!-- <script src="https://code.jquery.com/jquery-migrate-3.0.1.min.js"></script> -->
+<script src="js/vendors.js"></script>
+<script src="js/main.js"></script>
+	</body>
+</html>
