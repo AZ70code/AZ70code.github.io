@@ -3712,6 +3712,36 @@ body.ie .ibg img {
 	        justify-content: space-between;
 	margin-top: 155px;
 }
+.main-card #glasses {
+	-webkit-transform: translateX(-300%);
+	    -ms-transform: translateX(-300%);
+	        transform: translateX(-300%);
+	opacity: 0;
+	-webkit-transition: all 1.5s ease-in;
+	-o-transition: all 1.5s ease-in;
+	transition: all 1.5s ease-in;
+}
+.main-card #glasses._active {
+	opacity: 1;
+	-webkit-transform: translateY(0);
+	    -ms-transform: translateY(0);
+	        transform: translateY(0);
+}
+.main-card #watches {
+	-webkit-transform: translateX(300%);
+	    -ms-transform: translateX(300%);
+	        transform: translateX(300%);
+	opacity: 0;
+	-webkit-transition: all 1.5s ease-in;
+	-o-transition: all 1.5s ease-in;
+	transition: all 1.5s ease-in;
+}
+.main-card #watches._active {
+	opacity: 1;
+	-webkit-transform: translateY(0);
+	    -ms-transform: translateY(0);
+	        transform: translateY(0);
+}
 @media (max-width: 991.98px) {
 	.main-card {
 		margin-top: 100px;
