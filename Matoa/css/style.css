@@ -735,7 +735,7 @@ body.ie .ibg img {
 	border: 1px solid #D84727;
 	cursor: pointer;
 }
-#scrollup:hover, #scrollup:focus {
+#scrollup:hover {
 	background: url(../img/icons/arrow_w.png) center no-repeat, #F1DDC9;
 	-webkit-transform: rotate(-90deg);
 	    -ms-transform: rotate(-90deg);
