@@ -720,6 +720,28 @@ body.ie .ibg img {
 	color: #000000;
 }
 
+#scrollup {
+	width: 40px;
+	height: 40px;
+	position: fixed;
+	right: 20px;
+	bottom: 50px;
+	display: none;
+	z-index: 100;
+	-webkit-transform: rotate(90deg);
+	    -ms-transform: rotate(90deg);
+	        transform: rotate(90deg);
+	background: url(../img/icons/arrow.png) center no-repeat, #F7F6F4;
+	border: 1px solid #D84727;
+	cursor: pointer;
+}
+#scrollup:hover, #scrollup:focus {
+	background: url(../img/icons/arrow_w.png) center no-repeat, #F1DDC9;
+	-webkit-transform: rotate(-90deg);
+	    -ms-transform: rotate(-90deg);
+	        transform: rotate(-90deg);
+}
+
 .header {
 	background-color: #F7F6F4;
 	position: fixed;
@@ -1271,6 +1293,7 @@ body.ie .ibg img {
 	top: -25%;
 	z-index: 3;
 }
+
 .address-footer__text {
 	margin-bottom: 16px;
 }
@@ -1887,7 +1910,7 @@ body.ie .ibg img {
 	z-index: 10;
 	width: 40px;
 	height: 40px;
-	background: url(../img/icons/arrow.png) center no-repeat;
+	background: url(../../img/icons/arrow.png) center no-repeat;
 	border: 1px solid #D84727;
 	cursor: pointer;
 }
@@ -2265,11 +2288,6 @@ body.ie .ibg img {
 	    -ms-flex: 1 0 35%;
 	        flex: 1 0 35%;
 	margin-right: 32px;
-}
-@media (max-width: 549.98px) {
-	.shipping__label {
-		border-bottom: 1px solid #999;
-	}
 }
 .shipping__value {
 	-webkit-box-flex: 1;
@@ -3481,16 +3499,8 @@ body.ie .ibg img {
 	margin-bottom: 16px;
 }
 .page {
-	margin-top: 140px;
+	margin-top: 120px;
 	position: relative;
-	border-top: 60px solid transparent;
-	background-clip: padding-box;
-}
-@media (max-width: 549.98px) {
-	.page {
-		border-top: 160px solid transparent;
-		margin-top: 130px;
-	}
 }
 
 .main-slider {
