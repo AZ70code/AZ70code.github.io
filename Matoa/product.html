@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<title>Product</title>
+		<meta charset="UTF-8">
+		<meta name="format-detection" content="telephone=no">
+		<link rel="stylesheet" href="css/style.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+		<div class="wrapper">
+<header class="header">
+	<div class="header__container container">
+		<div class="icon-menu">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+		<div class="header__logo"><a href="" class=""><img src="img/logo.png" alt=""></a></div>
+		<div class="header__menu menu">
+			<nav class="menu__body">
+				<ul class="menu__list">
+					<li><a href="#watch" class="menu__link">Watches</a></li>
+					<li><a href="#eyewear" class="menu__link">Eyewear</a></li>
+					<li><a href="#" class="menu__link">Accessories</a></li>
+					<li><a href="#news" class="menu__link">News</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="header__actions actions-header">
+			<div class="actions-header__search search-header">
+				<div class="search-header__icon">
+					<div class="header__image"><img src="img/icons/search.svg" alt=""></div>
+				</div>
+				<form class="search-header__form" action="#">
+					<button class="search-header__btn" type="submit"><img src="img/icons/search.svg" alt=""></button>
+					<input class="search-header__input input" type="search">
+				</form>
+			</div>
+			<div class="actions-header__login login-header">
+				<div class="login-header__icon">
+					<div class="header__image"><img src="img/icons/login.svg" alt=""></div>
+				</div>
+				<span>Log In</span>
+				<form class="login-header__form" action="none">
+					<fieldset id="login">
+						<input class="login-header__input input err" type="text" tabindex="1" placeholder="Log In"/>
+						<input class="login-header__input input err" type="password" tabindex="2" placeholder="Password"/>
+						<button class="login-header__btn btn" type="submit">Log In</button>
+						<button class="login-header__btn btn" type="reset">Reset</button>
+						<p class="login-header__option"><a href="#">forgot your password?</a><span>|</span><a href="#" id="checkbtn">Сheck In</a></p>
+					</fieldset>
+					<fieldset id="checkin">
+						<input class="login-header__input input " type="text" tabindex="1" placeholder="Name"/>
+						<input class="login-header__input input" type="email" tabindex="2" placeholder="Phone"/>
+						<input class="login-header__input input" type="tel" tabindex="3" required placeholder="* Email"/>
+						<input class="login-header__input input" type="text" tabindex="4" required placeholder="* log in"/>
+						<input class="login-header__input input" type="password" tabindex="5" required placeholder="* password"/>
+						<button class="login-header__btn btn" type="submit">Check In</button>
+						<button class="login-header__btn btn" type="reset">Reset</button>
+						<p class="login-header__option">* required field</p>
+					</fieldset>
+				</form>
+			</div>
+			<div class="actions-header__cart cart-header">
+				<div class="cart-header__icon">
+					<div class="header__image"><img src="img/icons/cart.svg" alt=""></div>
+				</div>
+				<div class="cart-header__menu">
+      <div class="cart-body">
+         <div class="cart-body__items">
+            <div class="cart-body__item">
+               <div class="cart-body__card card-series">
+                  <div class="card-series__image"><img src="img/cart/cart01.png" alt=""></div>
+                  <div class="card-series__content">
+                     <div class="card-series__name">Way Kambas Mini Ebony</div>
+                     <div class="card-series__sale"></div>
+                     <div class="card-series__old-price old-price">Rp 1.280.000</div>
+                     <div class="card-series__price--cart price">Rp 1.024.000</div>
+                     <div class="card-series__custom">Custom Engrave</div>
+                     <div class="card-series__custom-text">“Happy | Birthday | from”</div>
+                  </div>
+               </div>
+               <div class="cart-body__select select">
+                  <div class="select__packing">
+                     <div class="select__title">Select Packaging</div>
+                     <select name="Select Packaging">
+                        <option value="wooden" selected>Wooden Packaging (Rp 50.000)</option>
+                        <option value="default">Default Packaging (Free)</option>
+                     </select>
+                  </div>
+                  <div class="cart-body__sum">
+                     <div class="cart-body__quantity quantity">
+                        <button class="quantity__btn btn-minus dwn" type="button"><svg width="16" height="2" viewBox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path d="M0 1H16" stroke="#777777"/></svg>
+                        </button>
+                        <input class="quantity__input" type="text" name="name" value="1">
+                        <button class="quantity__btn btn-plus" type="button"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path d="M0 8H16M8 0V16" stroke="#777777"/></svg>
+                        </button>
+
+                     </div>
+                     <div class="cart-body__price price">Rp 2.048.000</div>
+                     <div class="cart-body__btn-del"><svg width="17" height="19" viewBox="0 0 17 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.6972 2.29715H12.0601L11.7033 0.870009C11.5755 0.358703 11.1161 5.13325e-06 10.589 0H5.49104C4.964 5.13325e-06 4.50459 0.358703 4.37677 0.870009L4.02002 2.29715H0.382859C0.171412 2.29715 0 2.46857 0 2.68001C0 2.89146 0.171412 3.06287 0.382859 3.06287H1.56972L2.28069 17.2866C2.31157 17.8977 2.816 18.3772 3.42781 18.3772H12.6912C13.3032 18.3772 13.8077 17.8972 13.8382 17.2859L14.5493 3.06287H15.6972C15.9087 3.06287 16.0801 2.89146 16.0801 2.68001C16.0801 2.46857 15.9087 2.29715 15.6972 2.29715ZM6.12553 13.4001C6.12553 13.6115 5.95411 13.7829 5.74267 13.7829C5.53122 13.7829 5.35981 13.6115 5.35981 13.4001V7.27433C5.35981 7.06289 5.53122 6.89147 5.74267 6.89147C5.95411 6.89147 6.12553 7.06289 6.12553 7.27433V13.4001ZM8.03973 14.5486C8.25117 14.5486 8.42259 14.3772 8.42259 14.1658V6.5086C8.42259 6.29715 8.25117 6.12574 8.03973 6.12574C7.82828 6.12574 7.65687 6.29715 7.65687 6.5086V14.1658C7.65687 14.3772 7.82828 14.5486 8.03973 14.5486ZM10.7204 13.4001C10.7204 13.6115 10.549 13.7829 10.3376 13.7829C10.1261 13.7829 9.95471 13.6115 9.95471 13.4001V7.27433C9.95471 7.06289 10.1261 6.89147 10.3376 6.89147C10.549 6.89147 10.7204 7.06289 10.7204 7.27433V13.4001ZM5.11937 1.05584L4.80911 2.29715H11.2705L10.9602 1.05584C10.9178 0.885236 10.7645 0.765523 10.5887 0.765711H5.49082C5.31503 0.765523 5.16176 0.885236 5.11937 1.05584Z" fill="#D93F3F"/>
+                        </svg>
+                        </div>
+                  </div>
+               </div>
+            </div>
+            <div class="cart-body__item">
+               <div class="cart-body__card card-series">
+                  <div class="card-series__image"><img src="img/cart/cart02.png" alt=""></div>
+                  <div class="card-series__content">
+                     <div class="card-series__name">Sikka (Ebony & Maple)</div>
+                     <div class="card-series__sale"></div>
+                     <div class="card-series__old-price old-price"></div>
+                     <div class="card-series__price--cart price">Rp 1.264.000</div>
+                     <div class="card-series__custom"></div>
+                     <div class="card-series__custom-text"></div>
+                  </div>
+               </div>
+               <div class="cart-body__select select">
+                  <div class="select__packing">
+                     <div class="select__title">Select Packaging</div>
+                     <div class="cart-body__packing">
+                        <select name="Select Packaging" id="sel">
+                           <option value="wooden" selected>Wooden Packaging (Rp 50.000)</option>
+                           <option value="default">Default Packaging (Free)</option>
+                        </select>
+                     </div>
+                  </div>
+                  <div class="cart-body__sum">
+                     <div class="cart-body__quantity quantity">
+                        <button class="quantity__btn btn-minus dwn" type="button"><svg width="16" height="2" viewBox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path d="M0 1H16" stroke="#777777"/></svg>
+                        </button>
+                        <input class="quantity__input" type="text" name="name" value="1">
+                        <button class="quantity__btn btn-plus" type="button"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path d="M0 8H16M8 0V16" stroke="#777777"/></svg>
+                        </button>
+                     </div>
+                     <div class="cart-body__price price">Rp 1.264.000</div>
+                     <div class="cart-body__btn-del"><svg width="17" height="19" viewBox="0 0 17 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.6972 2.29715H12.0601L11.7033 0.870009C11.5755 0.358703 11.1161 5.13325e-06 10.589 0H5.49104C4.964 5.13325e-06 4.50459 0.358703 4.37677 0.870009L4.02002 2.29715H0.382859C0.171412 2.29715 0 2.46857 0 2.68001C0 2.89146 0.171412 3.06287 0.382859 3.06287H1.56972L2.28069 17.2866C2.31157 17.8977 2.816 18.3772 3.42781 18.3772H12.6912C13.3032 18.3772 13.8077 17.8972 13.8382 17.2859L14.5493 3.06287H15.6972C15.9087 3.06287 16.0801 2.89146 16.0801 2.68001C16.0801 2.46857 15.9087 2.29715 15.6972 2.29715ZM6.12553 13.4001C6.12553 13.6115 5.95411 13.7829 5.74267 13.7829C5.53122 13.7829 5.35981 13.6115 5.35981 13.4001V7.27433C5.35981 7.06289 5.53122 6.89147 5.74267 6.89147C5.95411 6.89147 6.12553 7.06289 6.12553 7.27433V13.4001ZM8.03973 14.5486C8.25117 14.5486 8.42259 14.3772 8.42259 14.1658V6.5086C8.42259 6.29715 8.25117 6.12574 8.03973 6.12574C7.82828 6.12574 7.65687 6.29715 7.65687 6.5086V14.1658C7.65687 14.3772 7.82828 14.5486 8.03973 14.5486ZM10.7204 13.4001C10.7204 13.6115 10.549 13.7829 10.3376 13.7829C10.1261 13.7829 9.95471 13.6115 9.95471 13.4001V7.27433C9.95471 7.06289 10.1261 6.89147 10.3376 6.89147C10.549 6.89147 10.7204 7.06289 10.7204 7.27433V13.4001ZM5.11937 1.05584L4.80911 2.29715H11.2705L10.9602 1.05584C10.9178 0.885236 10.7645 0.765523 10.5887 0.765711H5.49082C5.31503 0.765523 5.16176 0.885236 5.11937 1.05584Z" fill="#D93F3F"/>
+                        </svg>
+                        </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="cart-body__checkout">
+            <div class="cart-body__total">
+               <div class="cart-body__promo">
+                  <div class="cart-body__title">Kode Promo</div>
+                  <div class="cart-body__input">
+                     <input type="text" value="INDONESIA">
+                  </div>
+                  <div class="cart-body__sale">35% OFF</div>
+               </div>
+               <div class="cart-body__subtotal">
+                  <div class="cart-body__label">Subtotal</div>
+                  <div class="cart-body__value value">
+                     <div class="value__old-price old-price">Rp 3.312.000</div>
+                     <div class="value__price price">Rp 2.152.000</div>
+                  </div>
+               </div>
+            </div>
+            <a href="checkout.html" class="cart-body__btn" type="button">Checkout</a>
+         </div>
+      </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+			<div class="container">
+				<nav class="breadcrumbs">
+					<ul class="breadcrumbs__list">
+						<li><a href="" class="breadcrumbs__link">Home</a></li>
+						<li><a href="" class="breadcrumbs__link">Product</a></li>
+						<li><a href="" class="breadcrumbs__link">Watches</a></li>
+						<li><a href="" class="breadcrumbs__link active">Way Kambas Mini Ebony</a></li>
+					</ul>
+				</nav>
+				<div class="product-slider">
+					<div class="product-slider__body">
+						<div class="product-slider__item">
+							<div class="product-tab">
+								<nav class="product-tab__items">
+									<a href="#tab01" class="product-tab__item"><img src="img/product/slider/productslider01.png" alt=""></a>
+									<a href="#tab02" class="product-tab__item"><img src="img/product/slider/productslider02.png" alt=""></a>
+									<a href="#tab03" class="product-tab__item"><img src="img/product/slider/productslider03.png" alt=""></a>
+									<a href="#tab04" class="product-tab__item"><img src="img/product/slider/productslider04.png" alt=""></a>
+								</nav>
+								<div class="product-tab__block">
+									<div id="tab01" class="product-tab__image ibg"><img src="img/product/slider/productslider01.png" alt=""></div>
+									<div id="tab02" class="product-tab__image ibg"><img src="img/product/slider/productslider02.png" alt=""></div>
+									<div id="tab03" class="product-tab__image ibg"><img src="img/product/slider/productslider03.png" alt=""></div>
+									<div id="tab04" class="product-tab__image ibg"><img src="img/product/slider/productslider04.png" alt=""></div>
+								</div>
+							</div>
+							<div class="product-slider__content">
+								<div class="product-slider__box">
+									<h1 class="product-slider__title slider-title">
+										WAY KAMBAS <br> MINI EBONY
+									</h1>
+									<div class="product-slider__old-price old-price">Rp 1.280.000
+									</div>
+									<div class="product-slider__price price">Rp 1.024.000</div>
+									<div class="product-slider__choose">
+										<div class="product-slider__choose-title">Choose Model</div>
+										<div class="product-slider__dotts"></div>
+									</div>
+									<div class="product-slider__cart-box">
+										<div class="product-slider__quantity quantity">
+											<button class="quantity__btn btn-minus dwn" type="button"><svg width="16" height="2" viewBox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M0 1H16" stroke="#777777"/></svg>
+											</button>
+											<input class="quantity__input" type="text" name="name" value="1">
+											<button class="quantity__btn btn-plus" type="button"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M0 8H16M8 0V16" stroke="#777777"/></svg>
+											</button>
+										</div>
+										<div class="product-slider__boxbtn boxbtn">
+											<a href="" class="product-slider__btn boxbtn__btn boxbtn__btn--cart btn"><svg class="svg" width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M21.3185 3.95208L18.7585 13.3388C18.7111 13.513 18.5593 13.6384 18.3794 13.6522L8.41454 14.4187L7.94341 15.3601H17.4935C17.7291 15.3601 17.9202 15.5512 17.9202 15.7868C17.9202 16.0225 17.7291 16.2135 17.4935 16.2135H7.2534C7.10552 16.2135 6.96816 16.137 6.8904 16.0112C6.81264 15.8854 6.80557 15.7283 6.8717 15.596L7.42211 14.4952L7.28557 14.5056L7.2534 14.5068C7.05747 14.5069 6.88664 14.3736 6.83919 14.1835L3.59504 1.16336C3.54305 0.979604 3.37513 0.8529 3.18416 0.853341H0.426671C0.191027 0.853341 0 0.662314 0 0.426671C0 0.191027 0.191027 0 0.426671 0H3.18416C3.76369 0.000889804 4.27074 0.390021 4.4215 0.949598L5.03736 3.4213C5.06462 3.41609 5.0923 3.41344 5.12005 3.41337H20.9069C21.0398 3.41338 21.1651 3.47535 21.2458 3.58098C21.3266 3.6866 21.3534 3.82381 21.3185 3.95208ZM9.38679 8.96006C9.38679 8.72441 9.57782 8.53338 9.81346 8.53338H11.9468V6.40003C11.9468 6.16439 12.1378 5.97336 12.3735 5.97336C12.6091 5.97336 12.8002 6.16439 12.8002 6.40003V8.53338H14.9335C15.1692 8.53338 15.3602 8.72441 15.3602 8.96006C15.3602 9.1957 15.1692 9.38673 14.9335 9.38673H12.8002V11.5201C12.8002 11.7557 12.6091 11.9467 12.3735 11.9467C12.1378 11.9467 11.9468 11.7557 11.9468 11.5201V9.38673H9.81346C9.57782 9.38673 9.38679 9.1957 9.38679 8.96006ZM5.24726 4.26672H20.3482L18.0138 12.8243L7.57979 13.6272L5.24726 4.26672ZM8.53344 17.0668C8.06215 17.0668 7.6801 17.4489 7.6801 17.9202C7.6801 18.3915 8.06215 18.7735 8.53344 18.7735C9.00473 18.7735 9.38678 18.3915 9.38678 17.9202C9.38678 17.4489 9.00473 17.0668 8.53344 17.0668ZM15.3602 17.9202C15.3602 17.4489 15.7423 17.0668 16.2135 17.0668C16.6848 17.0668 17.0669 17.4489 17.0669 17.9202C17.0669 18.3915 16.6848 18.7735 16.2135 18.7735C15.7423 18.7735 15.3602 18.3915 15.3602 17.9202Z" fill="#D84727"/>
+												</svg><span>Add to cart</span></a>
+											<a href="" class="product-slider__btn boxbtn__btn boxbtn__btn--cicil btn"><svg class="cicil" width="57" height="33" viewBox="0 0 57 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M14.9517 19.921C13.5384 18.9344 11.9886 20.2055 11.9886 20.2055C9.8347 21.6359 6.95395 21.1843 5.33398 19.1622C3.71401 17.1402 3.88521 14.2098 5.72946 12.3929C7.57371 10.576 10.4872 10.4675 12.4597 12.1423C13.2256 12.6118 14.1899 12.6026 14.9469 12.1186C14.9469 12.1186 16.6522 10.6957 14.2497 8.79843H14.3204C10.6544 6.17949 5.61605 6.77102 2.64685 10.169C-0.322342 13.5669 -0.263461 18.6739 2.78328 22.0015C5.83001 25.3291 10.8806 25.8027 14.4853 23.0988C16.5392 21.2158 14.9517 19.921 14.9517 19.921Z" fill="#D84727"/>
+												<path d="M40.7334 19.9209C39.3202 18.9344 37.775 20.2055 37.775 20.2055C35.6227 21.6309 32.7472 21.1776 31.1306 19.158C29.514 17.1385 29.685 14.213 31.5256 12.3982C33.3662 10.5834 36.2746 10.4726 38.2461 12.1423C39.0109 12.6098 39.9728 12.6006 40.7287 12.1186C40.7287 12.1186 42.434 10.6956 40.0315 8.79841H40.1021C36.4367 6.18582 31.4037 6.78096 28.4392 10.1776C25.4746 13.5741 25.5352 18.6761 28.5794 22.0004C31.6237 25.3248 36.6693 25.7988 40.2717 23.0988C42.3209 21.2158 40.7334 19.9209 40.7334 19.9209Z" fill="#D84727"/>
+												<path d="M20.9293 5.90037C21.9543 5.90037 22.7853 4.89381 22.7853 3.65215C22.7853 2.41049 21.9543 1.40393 20.9293 1.40393C19.9042 1.40393 19.0732 2.41049 19.0732 3.65215C19.0732 4.89381 19.9042 5.90037 20.9293 5.90037Z" fill="#D84727"/>
+												<path d="M22.7859 9.19684C22.7361 8.20259 21.9209 7.42218 20.9322 7.42218C19.9435 7.42218 19.1283 8.20259 19.0785 9.19684V22.6577C19.044 23.347 19.3896 23.9993 19.9773 24.3543C20.5651 24.7094 21.2993 24.7094 21.8871 24.3543C22.4748 23.9993 22.8204 23.347 22.7859 22.6577V9.19684Z" fill="#D84727"/>
+												<path d="M46.8341 5.90037C47.8591 5.90037 48.6901 4.89381 48.6901 3.65215C48.6901 2.41049 47.8591 1.40393 46.8341 1.40393C45.809 1.40393 44.978 2.41049 44.978 3.65215C44.978 4.89381 45.809 5.90037 46.8341 5.90037Z" fill="#D84727"/>
+												<path d="M48.6897 9.19684C48.6399 8.20259 47.8247 7.42218 46.836 7.42218C45.8473 7.42218 45.0321 8.20259 44.9823 9.19684V22.6577C44.9478 23.347 45.2934 23.9993 45.8811 24.3543C46.4689 24.7094 47.2032 24.7094 47.7909 24.3543C48.3787 23.9993 48.7242 23.347 48.6897 22.6577V9.19684Z" fill="#D84727"/>
+												<path d="M56.7078 2.34308C56.7423 1.65383 56.3967 1.00153 55.809 0.646477C55.2212 0.291425 54.487 0.291425 53.8992 0.646477C53.3115 1.00153 52.9659 1.65383 53.0004 2.34308V9.19683V22.6577C52.9659 23.347 53.3115 23.9993 53.8992 24.3543C54.487 24.7094 55.2212 24.7094 55.809 24.3543C56.3967 23.9993 56.7423 23.347 56.7078 22.6577V9.19683V2.34308Z" fill="#D84727"/>
+												<path d="M26.5826 27.8182C25.744 27.0213 24.3026 27.5383 24.3026 27.5383C23.4098 28.4406 22.1969 28.9477 20.932 28.9477C19.6671 28.9477 18.4543 28.4406 17.5615 27.5383C17.5615 27.5383 16.1153 27.0213 15.2768 27.8182C14.6926 28.4164 14.5541 29.3239 14.9329 30.0711C16.5106 31.6965 18.6725 32.6128 20.9297 32.6128C23.1869 32.6128 25.3488 31.6965 26.9264 30.0711C27.3099 29.3246 27.1709 28.4143 26.5826 27.8182Z" fill="#D84727"/>
+												</svg>
+												</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="product-slider__item">
+							<div class="product-tab">
+								<nav class="product-tab__items">
+									<a href="#tab05" class="product-tab__item--eb"><img src="img/product/slider/productslider05.png" alt=""></a>
+									<a href="#tab06" class="product-tab__item--eb"><img src="img/product/slider/productslider02.png" alt=""></a>
+									<a href="#tab07" class="product-tab__item--eb"><img src="img/product/slider/productslider03.png" alt=""></a>
+									<a href="#tab08" class="product-tab__item--eb"><img src="img/product/slider/productslider04.png" alt=""></a>
+								</nav>
+								<div class="product-tab__block">
+									<div id="tab05" class="product-tab__image--eb ibg"><img src="img/product/slider/productslider05.png" alt=""></div>
+									<div id="tab06" class="product-tab__image--eb ibg"><img src="img/product/slider/productslider02.png" alt=""></div>
+									<div id="tab07" class="product-tab__image--eb ibg"><img src="img/product/slider/productslider03.png" alt=""></div>
+									<div id="tab08" class="product-tab__image--eb ibg"><img src="img/product/slider/productslider04.png" alt=""></div>
+								</div>
+							</div>
+							<div class="product-slider__content">
+								<div class="product-slider__box">
+									<h1 class="product-slider__title slider-title">
+										WAY KAMBAS <br> MINI EBONY
+									</h1>
+									<div class="product-slider__old-price old-price">Rp 1.280.000
+									</div>
+									<div class="product-slider__price price">Rp 1.024.000</div>
+									<div class="product-slider__choose">
+										<div class="product-slider__choose-title">Choose Model</div>
+										<div class="product-slider__dotts"></div>
+									</div>
+									<div class="product-slider__cart-box">
+										<div class="product-slider__quantity quantity">
+											<button class="quantity__btn dwn" type="button"><svg width="16" height="2" viewBox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M0 1H16" stroke="#777777"/></svg>
+											</button>
+											<input class="quantity__input" type="text" name="name" value="1">
+											<button class="quantity__btn" type="button"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M0 8H16M8 0V16" stroke="#777777"/></svg>
+											</button>
+										</div>
+										<div class="product-slider__boxbtn boxbtn">
+											<a href="" class="product-slider__btn boxbtn__btn boxbtn__btn--cart btn"><svg class="svg" width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M21.3185 3.95208L18.7585 13.3388C18.7111 13.513 18.5593 13.6384 18.3794 13.6522L8.41454 14.4187L7.94341 15.3601H17.4935C17.7291 15.3601 17.9202 15.5512 17.9202 15.7868C17.9202 16.0225 17.7291 16.2135 17.4935 16.2135H7.2534C7.10552 16.2135 6.96816 16.137 6.8904 16.0112C6.81264 15.8854 6.80557 15.7283 6.8717 15.596L7.42211 14.4952L7.28557 14.5056L7.2534 14.5068C7.05747 14.5069 6.88664 14.3736 6.83919 14.1835L3.59504 1.16336C3.54305 0.979604 3.37513 0.8529 3.18416 0.853341H0.426671C0.191027 0.853341 0 0.662314 0 0.426671C0 0.191027 0.191027 0 0.426671 0H3.18416C3.76369 0.000889804 4.27074 0.390021 4.4215 0.949598L5.03736 3.4213C5.06462 3.41609 5.0923 3.41344 5.12005 3.41337H20.9069C21.0398 3.41338 21.1651 3.47535 21.2458 3.58098C21.3266 3.6866 21.3534 3.82381 21.3185 3.95208ZM9.38679 8.96006C9.38679 8.72441 9.57782 8.53338 9.81346 8.53338H11.9468V6.40003C11.9468 6.16439 12.1378 5.97336 12.3735 5.97336C12.6091 5.97336 12.8002 6.16439 12.8002 6.40003V8.53338H14.9335C15.1692 8.53338 15.3602 8.72441 15.3602 8.96006C15.3602 9.1957 15.1692 9.38673 14.9335 9.38673H12.8002V11.5201C12.8002 11.7557 12.6091 11.9467 12.3735 11.9467C12.1378 11.9467 11.9468 11.7557 11.9468 11.5201V9.38673H9.81346C9.57782 9.38673 9.38679 9.1957 9.38679 8.96006ZM5.24726 4.26672H20.3482L18.0138 12.8243L7.57979 13.6272L5.24726 4.26672ZM8.53344 17.0668C8.06215 17.0668 7.6801 17.4489 7.6801 17.9202C7.6801 18.3915 8.06215 18.7735 8.53344 18.7735C9.00473 18.7735 9.38678 18.3915 9.38678 17.9202C9.38678 17.4489 9.00473 17.0668 8.53344 17.0668ZM15.3602 17.9202C15.3602 17.4489 15.7423 17.0668 16.2135 17.0668C16.6848 17.0668 17.0669 17.4489 17.0669 17.9202C17.0669 18.3915 16.6848 18.7735 16.2135 18.7735C15.7423 18.7735 15.3602 18.3915 15.3602 17.9202Z" fill="#D84727"/>
+												</svg><span>Add to cart</span></a>
+											<a href="" class="product-slider__btn boxbtn__btn boxbtn__btn--cicil btn"><svg class="cicil" width="57" height="33" viewBox="0 0 57 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M14.9517 19.921C13.5384 18.9344 11.9886 20.2055 11.9886 20.2055C9.8347 21.6359 6.95395 21.1843 5.33398 19.1622C3.71401 17.1402 3.88521 14.2098 5.72946 12.3929C7.57371 10.576 10.4872 10.4675 12.4597 12.1423C13.2256 12.6118 14.1899 12.6026 14.9469 12.1186C14.9469 12.1186 16.6522 10.6957 14.2497 8.79843H14.3204C10.6544 6.17949 5.61605 6.77102 2.64685 10.169C-0.322342 13.5669 -0.263461 18.6739 2.78328 22.0015C5.83001 25.3291 10.8806 25.8027 14.4853 23.0988C16.5392 21.2158 14.9517 19.921 14.9517 19.921Z" fill="#D84727"/>
+												<path d="M40.7334 19.9209C39.3202 18.9344 37.775 20.2055 37.775 20.2055C35.6227 21.6309 32.7472 21.1776 31.1306 19.158C29.514 17.1385 29.685 14.213 31.5256 12.3982C33.3662 10.5834 36.2746 10.4726 38.2461 12.1423C39.0109 12.6098 39.9728 12.6006 40.7287 12.1186C40.7287 12.1186 42.434 10.6956 40.0315 8.79841H40.1021C36.4367 6.18582 31.4037 6.78096 28.4392 10.1776C25.4746 13.5741 25.5352 18.6761 28.5794 22.0004C31.6237 25.3248 36.6693 25.7988 40.2717 23.0988C42.3209 21.2158 40.7334 19.9209 40.7334 19.9209Z" fill="#D84727"/>
+												<path d="M20.9293 5.90037C21.9543 5.90037 22.7853 4.89381 22.7853 3.65215C22.7853 2.41049 21.9543 1.40393 20.9293 1.40393C19.9042 1.40393 19.0732 2.41049 19.0732 3.65215C19.0732 4.89381 19.9042 5.90037 20.9293 5.90037Z" fill="#D84727"/>
+												<path d="M22.7859 9.19684C22.7361 8.20259 21.9209 7.42218 20.9322 7.42218C19.9435 7.42218 19.1283 8.20259 19.0785 9.19684V22.6577C19.044 23.347 19.3896 23.9993 19.9773 24.3543C20.5651 24.7094 21.2993 24.7094 21.8871 24.3543C22.4748 23.9993 22.8204 23.347 22.7859 22.6577V9.19684Z" fill="#D84727"/>
+												<path d="M46.8341 5.90037C47.8591 5.90037 48.6901 4.89381 48.6901 3.65215C48.6901 2.41049 47.8591 1.40393 46.8341 1.40393C45.809 1.40393 44.978 2.41049 44.978 3.65215C44.978 4.89381 45.809 5.90037 46.8341 5.90037Z" fill="#D84727"/>
+												<path d="M48.6897 9.19684C48.6399 8.20259 47.8247 7.42218 46.836 7.42218C45.8473 7.42218 45.0321 8.20259 44.9823 9.19684V22.6577C44.9478 23.347 45.2934 23.9993 45.8811 24.3543C46.4689 24.7094 47.2032 24.7094 47.7909 24.3543C48.3787 23.9993 48.7242 23.347 48.6897 22.6577V9.19684Z" fill="#D84727"/>
+												<path d="M56.7078 2.34308C56.7423 1.65383 56.3967 1.00153 55.809 0.646477C55.2212 0.291425 54.487 0.291425 53.8992 0.646477C53.3115 1.00153 52.9659 1.65383 53.0004 2.34308V9.19683V22.6577C52.9659 23.347 53.3115 23.9993 53.8992 24.3543C54.487 24.7094 55.2212 24.7094 55.809 24.3543C56.3967 23.9993 56.7423 23.347 56.7078 22.6577V9.19683V2.34308Z" fill="#D84727"/>
+												<path d="M26.5826 27.8182C25.744 27.0213 24.3026 27.5383 24.3026 27.5383C23.4098 28.4406 22.1969 28.9477 20.932 28.9477C19.6671 28.9477 18.4543 28.4406 17.5615 27.5383C17.5615 27.5383 16.1153 27.0213 15.2768 27.8182C14.6926 28.4164 14.5541 29.3239 14.9329 30.0711C16.5106 31.6965 18.6725 32.6128 20.9297 32.6128C23.1869 32.6128 25.3488 31.6965 26.9264 30.0711C27.3099 29.3246 27.1709 28.4143 26.5826 27.8182Z" fill="#D84727"/>
+												</svg>
+												</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="product-slider__bg"></div>
+				</div>
+				<div class="product-info">
+					<div class="product-info-tab tab-info">
+						<ul class="tab-info__items">
+							<li><a href="#info01" class="tab-info__item">Detail</a></li>
+							<li><a href="#info02" class="tab-info__item">Warranty</a></li>
+							<li><a href="#info03" class="tab-info__item">Custom Engrave</a></li>
+							<li><a href="#info04" class="tab-info__item">How to Adjust</a></li>
+							<li><a href="#info05" class="tab-info__item">How to Care</a></li>
+							<li><a href="#info06" class="tab-info__item">Gallery</a></li>
+						</ul>
+						<div class="tab-info__block">
+							<div id="info01" class="tab-info__body">
+								<h4 class="tab-info__title">Material</h4>
+								<p class="tab-info__text">MATOA Way Kambas - Sumatran Rhino comes with a material form of Makassar Ebony (Diospyros celebica). This wood is chosen to represent the Sumatran Rhino's skin which is designed with an overlap effect on its strap to represent Rhino's skin. Sumatran Rhino has unique skin fold, the skin is fairly thin about 10-16mm, and is soft and pliable.</p>
+								<h4 class="tab-info__title">Case</h4>
+								<p class="tab-info__text">The case on this timepiece is made with Height 12.5mm, Width 36mm, Length 33mm and Dial Opening 25mm. The glass is equipped with K1 flat glass to increase the enhanced durability on timepieces as scratch resistant and anti fingerprint. This timepiece is also equipped with Hand Polish Brass Spacer for a longer usage periods.</p>
+								<h4 class="tab-info__title">Movement</h4>
+								<p class="tab-info__text">For the first time, MATOA comes with Seiko Quartz VD78 movement with small second function. A small second hand is above 6 o'clock position. This second hand dial is dedicated to Sumatran Rhino whom every second of its life is so precious because whenever Sumatran Rhino goes, it can be threatened by illegal poaching</p>
+								<h4 class="tab-info__title">Dial</h4>
+								<p class="tab-info__text">In the dial, there are double layer of Makassar Ebony Veneer with 3, 9 & 12 o'clock laser cut brass plate index.</p>
+								<h4 class="tab-info__title">Hand</h4>
+								<p class="tab-info__text">The hour, minute & small second hands on MATOA Way Kambas - Sumatran Rhino is outfitted with skeleton hand and brush finished with Gold Matte color. This new design aims at adding a value for this special edition.</p>
+								<h4 class="tab-info__title">Important to Note</h4>
+								<p class="tab-info__text">Wood color on watches is produced from a combination of mature and fresh wood but should not be viewed as a defect. It is a very natural process of wood aging.</p>
+								<div class="tab-info__image"><img src="img/product/dimensions.jpg" alt=""></div>
+							</div>
+							<div id="info02" class="tab-info__body">
+								<h4 class="tab-info__title">Material</h4>
+								<p class="tab-info__text">MATOA Way Kambas - Sumatran Rhino comes with a material form of Makassar Ebony (Diospyros celebica). This wood is chosen to represent the Sumatran Rhino's skin which is designed with an overlap effect on its strap to represent Rhino's skin. Sumatran Rhino has unique skin fold, the skin is fairly thin about 10-16mm, and is soft and pliable.</p>
+								<h4 class="tab-info__title">Case</h4>
+								<p class="tab-info__text">The case on this timepiece is made with Height 12.5mm, Width 36mm, Length 33mm and Dial Opening 25mm. The glass is equipped with K1 flat glass to increase the enhanced durability on timepieces as scratch resistant and anti fingerprint. This timepiece is also equipped with Hand Polish Brass Spacer for a longer usage periods.</p>
+								<h4 class="tab-info__title">Movement</h4>
+								<p class="tab-info__text">For the first time, MATOA comes with Seiko Quartz VD78 movement with small second function. A small second hand is above 6 o'clock position. This second hand dial is dedicated to Sumatran Rhino whom every second of its life is so precious because whenever Sumatran Rhino goes, it can be threatened by illegal poaching</p>
+								<h4 class="tab-info__title">Dial</h4>
+								<p class="tab-info__text">In the dial, there are double layer of Makassar Ebony Veneer with 3, 9 & 12 o'clock laser cut brass plate index.</p>
+
+							</div>
+							<div id="info03" class="tab-info__body">
+								<h4 class="tab-info__title">Material</h4>
+								<p class="tab-info__text">MATOA Way Kambas - Sumatran Rhino comes with a material form of Makassar Ebony (Diospyros celebica). This wood is chosen to represent the Sumatran Rhino's skin which is designed with an overlap effect on its strap to represent Rhino's skin. Sumatran Rhino has unique skin fold, the skin is fairly thin about 10-16mm, and is soft and pliable.</p>
+								<h4 class="tab-info__title">Case</h4>
+								<p class="tab-info__text">The case on this timepiece is made with Height 12.5mm, Width 36mm, Length 33mm and Dial Opening 25mm. The glass is equipped with K1 flat glass to increase the enhanced durability on timepieces as scratch resistant and anti fingerprint. This timepiece is also equipped with Hand Polish Brass Spacer for a longer usage periods.</p>
+							</div>
+							<div id="info04" class="tab-info__body">
+								<h4 class="tab-info__title">Material</h4>
+								<p class="tab-info__text">MATOA Way Kambas - Sumatran Rhino comes with a material form of Makassar Ebony (Diospyros celebica). This wood is chosen to represent the Sumatran Rhino's skin which is designed with an overlap effect on its strap to represent Rhino's skin. Sumatran Rhino has unique skin fold, the skin is fairly thin about 10-16mm, and is soft and pliable.</p>
+								<h4 class="tab-info__title">Case</h4>
+								<p class="tab-info__text">The case on this timepiece is made with Height 12.5mm, Width 36mm, Length 33mm and Dial Opening 25mm. The glass is equipped with K1 flat glass to increase the enhanced durability on timepieces as scratch resistant and anti fingerprint. This timepiece is also equipped with Hand Polish Brass Spacer for a longer usage periods.</p>
+								<h4 class="tab-info__title">Movement</h4>
+								<p class="tab-info__text">For the first time, MATOA comes with Seiko Quartz VD78 movement with small second function. A small second hand is above 6 o'clock position. This second hand dial is dedicated to Sumatran Rhino whom every second of its life is so precious because whenever Sumatran Rhino goes, it can be threatened by illegal poaching</p>
+								<h4 class="tab-info__title">Dial</h4>
+								<p class="tab-info__text">In the dial, there are double layer of Makassar Ebony Veneer with 3, 9 & 12 o'clock laser cut brass plate index.</p>
+
+							</div>
+							<div id="info05" class="tab-info__body">
+								<h4 class="tab-info__title">Material</h4>
+								<p class="tab-info__text">MATOA Way Kambas - Sumatran Rhino comes with a material form of Makassar Ebony (Diospyros celebica). This wood is chosen to represent the Sumatran Rhino's skin which is designed with an overlap effect on its strap to represent Rhino's skin. Sumatran Rhino has unique skin fold, the skin is fairly thin about 10-16mm, and is soft and pliable.</p>
+								<h4 class="tab-info__title">Case</h4>
+								<p class="tab-info__text">The case on this timepiece is made with Height 12.5mm, Width 36mm, Length 33mm and Dial Opening 25mm. The glass is equipped with K1 flat glass to increase the enhanced durability on timepieces as scratch resistant and anti fingerprint. This timepiece is also equipped with Hand Polish Brass Spacer for a longer usage periods.</p>
+							</div>
+							<div id="info06" class="tab-info__body">
+								<h4 class="tab-info__title">Movement</h4>
+								<p class="tab-info__text">For the first time, MATOA comes with Seiko Quartz VD78 movement with small second function. A small second hand is above 6 o'clock position. This second hand dial is dedicated to Sumatran Rhino whom every second of its life is so precious because whenever Sumatran Rhino goes, it can be threatened by illegal poaching</p>
+								<h4 class="tab-info__title">Dial</h4>
+								<p class="tab-info__text">In the dial, there are double layer of Makassar Ebony Veneer with 3, 9 & 12 o'clock laser cut brass plate index.</p>
+								<h4 class="tab-info__title">Hand</h4>
+								<p class="tab-info__text">The hour, minute & small second hands on MATOA Way Kambas - Sumatran Rhino is outfitted with skeleton hand and brush finished with Gold Matte color. This new design aims at adding a value for this special edition.</p>
+								<h4 class="tab-info__title">Important to Note</h4>
+								<p class="tab-info__text">Wood color on watches is produced from a combination of mature and fresh wood but should not be viewed as a defect. It is a very natural process of wood aging.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<section class="product-relate">
+					<div class="product-relate__title title">Relate Products</div>
+					<div class="product-relate__content relate">
+							<div class="relate-card card">
+								<div class="relate-card__label card__label sale">20% OFF</div>
+
+								<div class="relate-card__image-box card__image-box">
+									<div class="relate-card__image card__image ibg">
+										<img src="img/product/relate01.jpg" alt="">
+									</div>
+								</div>
+								<div class="card__body">
+									<div class="card__title">Singo Maple</div>
+									<div class="card__sale"></div>
+									<div class="card__old-price old-price">Rp 1.500.000</div>
+									<div class="card__price price">Rp 1.264.000</div>
+								</div>
+								<div class="deals__btn btn-card">
+									<a href="" class="btn-card__like btn"><svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M10.0036 2.6792C10.9066 1.6216 12.6428 0 14.8 0C17.9103 0 20 2.25056 20 5.6C20 11.574 10.9772 17.7803 10.4636 18.1336L10.4536 18.1405L9.9976 18.4L9.5432 18.0838C9.53815 18.0802 9.53163 18.0757 9.52367 18.0702C8.91773 17.6504 0 11.4725 0 5.6C0 2.25056 2.08968 0 5.2 0C7.37992 0 9.10728 1.62008 10.0036 2.6792ZM0.799967 5.59997C0.799967 11.2 9.99997 17.427 9.99997 17.427V17.4271C9.99997 17.4271 19.2 11.2668 19.2 5.59997C19.2 2.79997 17.6 0.799967 14.8 0.799967C12.0666 0.799967 9.99997 3.99997 9.99997 3.99997C9.99997 3.99997 7.96661 0.799967 5.19997 0.799967C2.39997 0.799967 0.799967 2.79997 0.799967 5.59997Z" fill="#D84727"/>
+										</svg></a>
+									<a href="" class="btn-card__cart btn">Add to cart</a>
+								</div>
+							</div>
+							<div class="relate-card card">
+								<div class="relate-card__label card__label new">NEW</div>
+								<div class="relate-card__image-box card__image-box">
+									<div class="relate-card__image card__image ibg">
+										<img src="img/product/relate02.jpg" alt="">
+									</div>
+								</div>
+								<div class="card__body">
+									<div class="card__title">Sikka (Ebony & Maple)</div>
+									<div class="card__sale"></div>
+									<div class="card__old-price old-price"></div>
+									<div class="card__price price">Rp 1.264.000</div>
+								</div>
+								<div class="deals__btn btn-card">
+									<a href="" class="btn-card__like btn"><svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M10.0036 2.6792C10.9066 1.6216 12.6428 0 14.8 0C17.9103 0 20 2.25056 20 5.6C20 11.574 10.9772 17.7803 10.4636 18.1336L10.4536 18.1405L9.9976 18.4L9.5432 18.0838C9.53815 18.0802 9.53163 18.0757 9.52367 18.0702C8.91773 17.6504 0 11.4725 0 5.6C0 2.25056 2.08968 0 5.2 0C7.37992 0 9.10728 1.62008 10.0036 2.6792ZM0.799967 5.59997C0.799967 11.2 9.99997 17.427 9.99997 17.427V17.4271C9.99997 17.4271 19.2 11.2668 19.2 5.59997C19.2 2.79997 17.6 0.799967 14.8 0.799967C12.0666 0.799967 9.99997 3.99997 9.99997 3.99997C9.99997 3.99997 7.96661 0.799967 5.19997 0.799967C2.39997 0.799967 0.799967 2.79997 0.799967 5.59997Z" fill="#D84727"/>
+										</svg></a>
+									<a href="" class="btn-card__cart btn">Add to cart</a>
+								</div>
+							</div>
+							<div class="relate-card card">
+								<div class="relate-card__label card__label"></div>
+								<div class="relate-card__image-box card__image-box">
+									<div class="relate-card__image card__image ibg">
+										<img src="img/product/relate03.jpg" alt="">
+									</div>
+								</div>
+								<div class="card__body">
+									<div class="card__title">Sunda</div>
+									<div class="card__sale"></div>
+									<div class="card__old-price old-price"></div>
+									<div class="card__price price">Rp 1.174.000</div>
+								</div>
+								<div class="deals__btn btn-card">
+									<a href="" class="btn-card__like btn"><svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M10.0036 2.6792C10.9066 1.6216 12.6428 0 14.8 0C17.9103 0 20 2.25056 20 5.6C20 11.574 10.9772 17.7803 10.4636 18.1336L10.4536 18.1405L9.9976 18.4L9.5432 18.0838C9.53815 18.0802 9.53163 18.0757 9.52367 18.0702C8.91773 17.6504 0 11.4725 0 5.6C0 2.25056 2.08968 0 5.2 0C7.37992 0 9.10728 1.62008 10.0036 2.6792ZM0.799967 5.59997C0.799967 11.2 9.99997 17.427 9.99997 17.427V17.4271C9.99997 17.4271 19.2 11.2668 19.2 5.59997C19.2 2.79997 17.6 0.799967 14.8 0.799967C12.0666 0.799967 9.99997 3.99997 9.99997 3.99997C9.99997 3.99997 7.96661 0.799967 5.19997 0.799967C2.39997 0.799967 0.799967 2.79997 0.799967 5.59997Z" fill="#D84727"/>
+										</svg></a>
+									<a href="" class="btn-card__cart btn">Add to cart</a>
+								</div>
+							</div>
+							<div class="relate-card card">
+								<div class="relate-card__label card__label sale">25% OFF</div>
+								<div class="relate-card__image-box card__image-box">
+									<div class="relate-card__image card__image ibg">
+										<img src="img/product/relate04.jpg" alt="">
+									</div>
+								</div>
+								<div class="card__body">
+									<div class="card__title">Singo Maple</div>
+									<div class="card__sale"></div>
+									<div class="card__old-price old-price">Rp 1.280.000</div>
+									<div class="card__price price">Rp 960.000</div>
+								</div>
+								<div class="deals__btn btn-card">
+									<a href="" class="btn-card__like btn"><svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M10.0036 2.6792C10.9066 1.6216 12.6428 0 14.8 0C17.9103 0 20 2.25056 20 5.6C20 11.574 10.9772 17.7803 10.4636 18.1336L10.4536 18.1405L9.9976 18.4L9.5432 18.0838C9.53815 18.0802 9.53163 18.0757 9.52367 18.0702C8.91773 17.6504 0 11.4725 0 5.6C0 2.25056 2.08968 0 5.2 0C7.37992 0 9.10728 1.62008 10.0036 2.6792ZM0.799967 5.59997C0.799967 11.2 9.99997 17.427 9.99997 17.427V17.4271C9.99997 17.4271 19.2 11.2668 19.2 5.59997C19.2 2.79997 17.6 0.799967 14.8 0.799967C12.0666 0.799967 9.99997 3.99997 9.99997 3.99997C9.99997 3.99997 7.96661 0.799967 5.19997 0.799967C2.39997 0.799967 0.799967 2.79997 0.799967 5.59997Z" fill="#D84727"/>
+										</svg></a>
+									<a href="" class="btn-card__cart btn">Add to cart</a>
+								</div>
+							</div>
+
+					</div>
+				</section>
+			</div>
+
+<footer class="footer">
+	<div class="footer-top">
+		<div class="container">
+			<div class="footer-top__body">
+				<div class="footer-top__row">
+					<a href="" class="footer-top__payment"><img src="img/footer/brands/brand01.png" alt=""></a>
+					<a href="" class="footer-top__payment"><img src="img/footer/brands/brand02.png" alt=""></a>
+					<a href="" class="footer-top__payment"><img src="img/footer/brands/brand03.png" alt=""></a>
+					<a href="" class="footer-top__payment"><img src="img/footer/brands/brand04.png" alt=""></a>
+					<a href="" class="footer-top__payment"><img src="img/footer/brands/brand05.png" alt=""></a>
+				</div>
+				<div class="footer-top__row">
+					<a href="" class="footer-top__payment"><img src="img/footer/brands/brand06.png" alt=""></a>
+					<a href="" class="footer-top__payment"><img src="img/footer/brands/brand07.png" alt=""></a>
+					<a href="" class="footer-top__payment"><img src="img/footer/brands/brand08.png" alt=""></a>
+					<a href="" class="footer-top__payment"><img src="img/footer/brands/brand09.png" alt=""></a>
+					<a href="" class="footer-top__payment"><img src="img/footer/brands/brand10.png" alt=""></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer-bottom">
+		<div class="container">
+			<div class="footer-bottom__body">
+				<div class="footer-bottom__address">
+					<a href="" class="footer-bottom__logo"><img src="img/footer/logo_footer.png" alt=""></a>
+					<h5 class="footer-bottom__subtitle address-footer__subtitle">Address</h5>
+					<p class="footer-bottom__text address-footer__text">Store & Office
+						Jl. Setrasari Kulon III, No. 10-12, Sukarasa, Sukasari, Bandung, Jawa Barat, Indonesia 40152</p>
+					<div class="footer-bottom__subtitle address-footer__subtitle">Office Hour</div>
+					<p class="footer-bottom__text address-footer__text"><span>Monday - Sunday</span>10.00 - 18.00</p>
+				</div>
+				<div class="footer-bottom__content alone">
+					<div class="footer-bottom__get get-footer">
+						<div class="get-footer__title title-footer">Get in touch</div>
+						<ul class="get-footer__block-phone footer__list">
+							<li class="get-footer__phone">
+								<h5 class="footer-bottom__subtitle get-footer__subtitle">Phone</h5>
+								<a href="02220277564" class="footer-bottom__text get-footer__text">022-20277564</a>
+							</li>
+							<li class="get-footer__service">
+								<h5 class="footer-bottom__subtitle get-footer__subtitle">Service Center</h5>
+								<a href="08112338899" class="footer-bottom__text get-footer__text">0811-233-8899</a>
+							</li>
+							<li class="get-footer__customer">
+								<h5 class="footer-bottom__subtitle get-footer__subtitle">Customer Service</h5>
+								<a href="08112359988" class="footer-bottom__text get-footer__text">0811-235-9988</a>
+							</li>
+						</ul>
+						<div class="get-footer__block-social">
+							<a class="get-footer__icon" href="#"><img src="img/footer/social/icon01.png" alt=""></a>
+							<a class="get-footer__icon" href="#"><img src="img/footer/social/icon02.png" alt=""></a>
+							<a class="get-footer__icon" href="#"><img src="img/footer/social/icon03.png" alt=""></a>
+							<a class="get-footer__icon" href="#"><img src="img/footer/social/icon04.png" alt=""></a>
+						</div>
+					</div>
+					<div class="footer-bottom__link link-footer">
+						<div class="link-footer__title title-footer">Useful Link</div>
+						<ul class="link-footer__list footer__list">
+							<li><a href="#" class="link-footer__link">Warranty & Complaints</a></li>
+							<li><a href="#" class="link-footer__link">Order & Shipping</a></li>
+							<li><a href="#" class="link-footer__link">Tracking Order</a></li>
+							<li><a href="#" class="link-footer__link">About Us</a></li>
+							<li><a href="#" class="link-footer__link">Repair</a></li>
+							<li><a href="#" class="link-footer__link">Terms</a></li>
+							<li><a href="#" class="link-footer__link">FAQ</a></li>
+						</ul>
+					</div>
+					<div class="footer-bottom__campaign campaign-footer">
+						<div class="campaign-footer__title title-footer">Campaign</div>
+						<ul class="campaign-footer__list footer__list">
+							<li><a href="#" class="campaign-footer__link">Mengenal Arti Cukup</a></li>
+							<li><a href="#" class="campaign-footer__link">Tell Your Difference</a></li>
+							<li><a href="#" class="campaign-footer__link">Waykambas</a></li>
+							<li><a href="#" class="campaign-footer__link">Rebrand</a></li>
+							<li><a href="#" class="campaign-footer__link">Gallery</a></li>
+							<li><a href="#" class="campaign-footer__link">Singo</a></li>
+							<li><a href="#" class="campaign-footer__link">Rakai</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="footer-bottom__decor--left decor-small">
+					<div class="decor-small__top">
+						<svg width="376" height="218" viewBox="0 0 376 218" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M1 109L181 1L309 217L400 155" stroke="#fff" stroke-opacity="0.1"/>
+						</svg>
+					</div>
+					<div class="decor-small__mid">
+						<svg width="376" height="218" viewBox="0 0 376 218" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M1 109L181 1L309 217L400 155" stroke="#fff" stroke-opacity="0.1"/>
+						</svg>
+					</div>
+
+				</div>
+				<div class="footer-bottom__decor--right decor-small">
+					<div class="decor-small__top">
+						<svg width="376" height="218" viewBox="0 0 376 218" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M1 109L181 1L309 217L400 155" stroke="#fff" stroke-opacity="0.1"/>
+						</svg>
+					</div>
+					<div class="decor-small__mid">
+						<svg width="376" height="218" viewBox="0 0 376 218" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M1 109L181 1L309 217L400 155" stroke="#fff" stroke-opacity="0.1"/>
+						</svg>
+					</div>
+
+				</div>
+	
+			</div>
+
+		</div>
+	</div>
+</footer>		</div>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<!-- <script src="https://code.jquery.com/jquery-migrate-3.0.1.min.js"></script> -->
+<script src="js/vendors.js"></script>
+<script src="js/main.js"></script>
+	</body>
+</html>
