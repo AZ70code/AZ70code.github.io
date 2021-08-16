@@ -490,10 +490,29 @@ body.ie .ibg img {
   width: 100%;
   top: 0;
   left: 0;
-  z-index: 5;
+}
+
+.header._scroll .header__wrapper {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media (any-hover: hover) {
+  .header._scroll .header__wrapper:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+}
+
+.header__wrapper {
+  transition: background-color 0.3s ease;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 50;
 }
 
 .header__container {
+  height: 100px;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -501,17 +520,19 @@ body.ie .ibg img {
   display: flex;
   font-size: 0;
   justify-content: space-between;
+  align-items: center;
   position: relative;
 }
 
-.header__logo {
-  margin: 70px 0px 0px 0px;
+@media (max-width: 991.98px) {
+  .header__container {
+    height: 70px;
+  }
 }
 
-@media (max-width: 991.98px) {
-  .header__logo {
-    margin: 50px 0px 0px 0px;
-  }
+.header__logo {
+  position: relative;
+  z-index: 10;
 }
 
 .header__menu {
@@ -568,6 +589,12 @@ body.ie .ibg img {
 }
 
 @media (max-width: 767.98px) {
+  .menu__link {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 767.98px) {
   .menu__body {
     position: fixed;
     overflow: auto;
@@ -576,7 +603,7 @@ body.ie .ibg img {
     top: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.8);
-    padding: 50px 0 20px 0;
+    padding-top: 100px;
     transform: translate3d(0, -100%, 0);
     -webkit-transform: translate3d(0, -100%, 0);
     -ms-transform: translate3d(0, -100%, 0);
@@ -601,10 +628,10 @@ body.ie .ibg img {
     justify-content: center;
   }
   .menu__list li {
-    padding: 0 0 25px 0;
+    margin: 0 0 25px 0;
   }
   .menu__list li:last-child {
-    padding: 0;
+    margin: 0;
   }
 }
 
@@ -616,7 +643,8 @@ body.ie .ibg img {
   .icon-menu {
     display: block;
     position: absolute;
-    top: 54px;
+    top: 50%;
+    transform: translateY(-50%);
     right: 10px;
     width: 30px;
     height: 18px;
@@ -1252,7 +1280,7 @@ footer {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: #fe504f;
+  background-color: rgba(254, 80, 79, 0.9);
   display: none;
 }
 
@@ -1274,6 +1302,12 @@ footer {
   width: 80%;
   margin: 0 auto;
   color: #ffffff;
+}
+
+@media (max-width: 767.98px) {
+  .aboutus-team__image picture .hover .image-container {
+    margin: 5px;
+  }
 }
 
 .aboutus-team__image picture .hover h2 {
@@ -1560,6 +1594,7 @@ footer {
 
 .card__title a {
   color: #fe504f;
+  transition: color 0.3s ease;
 }
 
 .card__title a:hover {
@@ -1692,6 +1727,13 @@ footer {
   line-height: 1.667;
   padding: 0px 0px 0px 10px;
   margin: 4px 0px 0px 0px;
+  transition: color 0.3s ease;
+}
+
+@media (any-hover: hover) {
+  .form-adress span:hover {
+    color: #fe504f;
+  }
 }
 
 @media (max-width: 767.98px) {
