@@ -122,13 +122,20 @@ body.lock {
 	color: #415167;
 	padding: 0px 15px;
 	margin-bottom: 10px;
-	-webkit-transition: 0.5s ease-in-out;
-	-o-transition: 0.5s ease-in-out;
-	transition: 0.5s ease-in-out;
-}
-.btn:hover {
+	margin-right: 10px;
+	-webkit-transition: background-color 0.5s ease-in-out;
+	-o-transition: background-color 0.5s ease-in-out;
+	transition: background-color 0.5s ease-in-out;
 	background-color: #C7A17A;
-	color: #fff;
+}
+@media (any-hover: hover) {
+	.btn {
+		background-color: transparent;
+	}
+	.btn:hover {
+		background-color: #C7A17A;
+		color: #fff;
+	}
 }
 @media (max-width: 767.98px) {
 	.btn {
@@ -136,7 +143,6 @@ body.lock {
 		padding: 0px 25px;
 		line-height: 40px;
 		text-align: center;
-		background-color: #C7A17A;
 		color: #fff;
 		margin-right: 10px;
 	}
