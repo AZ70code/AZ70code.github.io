@@ -1,0 +1,62 @@
+@font-face {
+  font-family: "icons";
+  src: url("../fonts/icons.ttf?aixq28") format("truetype"),
+    url("../fonts/icons.woff?aixq28") format("woff"),
+    url("../fonts/icons.svg?aixq28#icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="_icon-"]::before,
+[class*=" _icon-"]::before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icons" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+._icon-cart_arrow:before {
+  content: "\e909";
+}
+._icon-cart_main:before {
+  content: "\e90a";
+}
+._icon-checkout:before {
+  content: "\e90c";
+}
+._icon-cicil:before {
+  content: "\e90d";
+}
+._icon-confirmation:before {
+  content: "\e90e";
+}
+._icon-courier:before {
+  content: "\e90f";
+}
+._icon-delete:before {
+  content: "\e910";
+}
+._icon-heart:before {
+  content: "\e911";
+}
+._icon-login:before {
+  content: "\e912";
+}
+._icon-payment:before {
+  content: "\e913";
+}
+._icon-search1:before {
+  content: "\e914";
+}
+._icon-time:before {
+  content: "\e915";
+}
