@@ -122,11 +122,13 @@ body.lock {
 	color: #415167;
 	padding: 0px 15px;
 	margin-bottom: 10px;
-	margin-right: 10px;
 	-webkit-transition: background-color 0.5s ease-in-out;
 	-o-transition: background-color 0.5s ease-in-out;
 	transition: background-color 0.5s ease-in-out;
 	background-color: #C7A17A;
+}
+.btn:not(:last-child) {
+	margin-right: 8px;
 }
 @media (any-hover: hover) {
 	.btn {
