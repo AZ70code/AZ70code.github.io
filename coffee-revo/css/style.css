@@ -293,7 +293,7 @@ body.ie .ibg img {
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
 	width: 50%;
-	margin-left: 10%;
+	margin-left: 5%;
 	margin-top: 10px;
 }
 @media (min-width: 767.98px) {
@@ -1017,11 +1017,8 @@ body.ie .ibg img {
 	}
 }
 .product__items .slick-dots {
-	-webkit-box-pack: start;
-	    -ms-flex-pack: start;
-	        justify-content: flex-start;
-	width: 100%;
-	margin: 0px 10px;
+	width: 50%;
+	margin-left: 15%;
 }
 .product__item {
 	max-width: 560px;
