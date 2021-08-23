@@ -1122,25 +1122,53 @@ body.ie .ibg img {
 	z-index: 5;
 }
 .footer-top__body {
-	padding-bottom: 13px;
+	padding: 13px 0;
 	margin: 0 auto;
 	display: -ms-grid;
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
+	-ms-grid-columns: (minmax(20%, 1fr))[5];
+	grid-template-columns: repeat(5, minmax(20%, 1fr));
 	max-width: 900px;
-	-webkit-box-align: center;
-	    -ms-flex-align: center;
-	        align-items: center;
-	-webkit-box-pack: center;
-	    -ms-flex-pack: center;
-	        justify-content: center;
 }
 @media (max-width: 549.98px) {
 	.footer-top__body {
-		grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+		-ms-grid-columns: (minmax(25%, 1fr))[4];
+		grid-template-columns: repeat(4, minmax(25%, 1fr));
 		-ms-grid-rows: (70px)[2];
 		grid-template-rows: repeat(2, 70px);
 		grid-auto-rows: 70px;
+	}
+	.footer-top__body > *:nth-child(1) {
+		-ms-grid-row: 1;
+		-ms-grid-column: 1;
+	}
+	.footer-top__body > *:nth-child(2) {
+		-ms-grid-row: 1;
+		-ms-grid-column: 2;
+	}
+	.footer-top__body > *:nth-child(3) {
+		-ms-grid-row: 1;
+		-ms-grid-column: 3;
+	}
+	.footer-top__body > *:nth-child(4) {
+		-ms-grid-row: 1;
+		-ms-grid-column: 4;
+	}
+	.footer-top__body > *:nth-child(5) {
+		-ms-grid-row: 2;
+		-ms-grid-column: 1;
+	}
+	.footer-top__body > *:nth-child(6) {
+		-ms-grid-row: 2;
+		-ms-grid-column: 2;
+	}
+	.footer-top__body > *:nth-child(7) {
+		-ms-grid-row: 2;
+		-ms-grid-column: 3;
+	}
+	.footer-top__body > *:nth-child(8) {
+		-ms-grid-row: 2;
+		-ms-grid-column: 4;
 	}
 }
 .footer-top__row {
@@ -1168,7 +1196,6 @@ body.ie .ibg img {
 .footer-top__payment {
 	width: 100px;
 	height: 100px;
-	margin: 40px 10px 10px 10px;
 }
 .footer-top__payment img {
 	width: 100%;
@@ -1181,7 +1208,24 @@ body.ie .ibg img {
 	.footer-top__payment {
 		width: 70px;
 		height: 70px;
-		margin: 10px;
+	}
+}
+@media (max-width: 549.98px) {
+	.footer-top__payment:nth-child(9) {
+		-ms-grid-column: 1;
+		    grid-column-start: 1;
+		-ms-grid-column-span: 2;
+		grid-column-end: 3;
+		-ms-grid-column-align: center;
+		    justify-self: center;
+	}
+	.footer-top__payment:nth-child(10) {
+		-ms-grid-column: 3;
+		    grid-column-start: 3;
+		-ms-grid-column-span: 2;
+		grid-column-end: 5;
+		-ms-grid-column-align: center;
+		    justify-self: center;
 	}
 }
 
@@ -2639,7 +2683,7 @@ body.ie .ibg img {
 	letter-spacing: 0.02em;
 	color: #999999;
 }
-.tab-info__item._tab {
+.tab-info__item._active {
 	color: #D84727;
 	border-bottom: 1px solid #D84727;
 }
@@ -2657,7 +2701,7 @@ body.ie .ibg img {
 .tab-info__spoller {
 	display: block;
 	font-weight: 700;
-	font-size: 30px;
+	font-size: 28px;
 	line-height: 1.5;
 	letter-spacing: 0.02em;
 	color: #999999;
@@ -2680,10 +2724,6 @@ body.ie .ibg img {
 @media (min-width: 767.98px) {
 	.tab-info__body {
 		padding: 0 20px;
-		display: none;
-	}
-	.tab-info__body._tab {
-		display: block;
 	}
 }
 .tab-info__title {
@@ -3375,11 +3415,22 @@ body.ie .ibg img {
 	}
 }
 .radiobuttons__item {
-	font-size: 20px;
-	line-height: 32px;
-	letter-spacing: 0.02em;
 	padding: 10px;
+	font-size: 20px;
+	line-height: 1.5;
+	letter-spacing: 0.02em;
 	white-space: nowrap;
+}
+@media (max-width: 1110px) {
+	.radiobuttons__item {
+		font-size: calc(16px + 4 * ((100vw - 320px) / 790));
+	}
+}
+.radiobuttons__item:nth-child(5) {
+	-ms-grid-column: 1;
+	    grid-column-start: 1;
+	-ms-grid-column-span: 2;
+	grid-column-end: 3;
 }
 .radiobuttons__item--m {
 	-webkit-box-flex: 0;
@@ -3419,18 +3470,34 @@ body.ie .ibg img {
 	}
 }
 .radiobuttons__icons {
+	margin-left: 40px;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
 	font-size: 0;
 }
+.radiobuttons__icons .radiobuttons__icon {
+	margin-left: 0;
+}
 .radiobuttons__icon {
-	margin-left: 16px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	margin-left: 40px;
 	width: 100px;
 	height: 100px;
+	margin-right: 22px;
+}
+@media (max-width: 1110px) {
+	.radiobuttons__icon {
+		margin-right: calc(10px + 12 * ((100vw - 320px) / 790));
+	}
 }
 .radiobuttons__icon img {
-	max-width: 100%;
+	width: 100%;
 }
 @media (max-width: 991.98px) {
 	.radiobuttons__icon {
