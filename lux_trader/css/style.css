@@ -1693,7 +1693,7 @@ body.ie .ibg img {
 	font-size: 14px;
 	padding: 0px 0px 0px 30px;
 	display: inline-block;
-	line-height: 18
+	line-height: 18px;
 }
 .user-header__link_1 {
 	background: url(../img/icons/menu/01.png) 1px center no-repeat;
