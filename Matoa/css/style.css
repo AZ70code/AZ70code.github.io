@@ -2073,20 +2073,18 @@ body.ie .ibg img {
 	font-size: 16px;
 }
 .card__price {
-	margin-bottom: 24px;
-	padding-bottom: 24px;
+	margin-bottom: 16px;
 }
 
 .btn-card {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	font-size: 0;
 	-webkit-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;
 	padding-bottom: 16px;
-	margin-top: -24px;
+	margin-top: 8px;
 	display: none;
 }
 @media (any-hover: none) {
@@ -2748,7 +2746,9 @@ body.ie .ibg img {
 }
 
 .product-relate {
-	padding-bottom: 67px;
+	position: relative;
+	padding-bottom: 37px;
+	min-height: 620px;
 }
 .product-relate__title {
 	margin-bottom: 70px;
@@ -2770,13 +2770,8 @@ body.ie .ibg img {
 }
 
 .relate-card {
-	position: relative;
-	-webkit-box-flex: 0;
-	    -ms-flex: 0 0 255px;
-	        flex: 0 0 255px;
 	min-height: 403px;
 	padding: 0 15px;
-	margin-bottom: 30px;
 	margin-right: 15px;
 	margin-left: 15px;
 }
@@ -3907,6 +3902,11 @@ body.ie .ibg img {
 }
 .deals__content {
 	margin: 0 -10px;
+	min-height: 500px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	font-size: 0;
 }
 .deals__slide {
 	margin-top: 40px;
