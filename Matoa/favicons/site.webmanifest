@@ -1,0 +1,14 @@
+{
+    "name": "Matoa",
+    "short_name": "Matoa",
+    "icons": [
+        {
+            "src": "/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#f1ddc9",
+    "background_color": "#f1ddc9",
+    "display": "standalone"
+}
