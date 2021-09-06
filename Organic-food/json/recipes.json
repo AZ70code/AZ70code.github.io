@@ -1,0 +1,25 @@
+{
+    "recipes": [
+        {
+            "id": 24,
+            "url": "#",
+            "title":"5 reasons to love organic",
+            "image":"image01.jpg",
+            "label": "Breakfast"
+        },
+        {
+            "id": 25,
+            "url": "#",
+            "title":"You’re the Apple for My Pie",
+            "image":"image02.jpg",
+            "label": "Salads"
+        },
+        {
+            "id": 26,
+            "url": "#",
+            "title":"Best Christmas food gifts for 2020",
+            "image":"image03.jpg",
+            "label": "Main Dishes"
+        }
+    ]
+}

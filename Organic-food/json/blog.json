@@ -1,0 +1,43 @@
+{
+    "blog": [
+        {
+            "id": 14,
+            "url": "#",
+            "title":"5 reasons to love organic",
+            "text":"There are many reasons to love organic food and farming. We take a look at why organic is good for you and your family.",
+            "views":[
+                {
+                    "data": "8 SEP 2020",
+                    "quantity": "585"
+                }
+            ],
+            "image":"image01.jpg"
+        },
+        {
+            "id": 15,
+            "url": "#",
+            "title":"You’re the Apple for My Pie",
+            "text":"This year, we plan to bake a home-made apple pie, but we need the main ingredient: apples, of course!",
+            "views":[
+                {
+                    "data": "6 SEP 2020",
+                    "quantity": "820"
+                }
+            ],
+            "image":"image02.jpg"
+        },
+        {
+            "id": 16,
+            "url": "#",
+            "title":"Best Christmas food gifts for 2020",
+            "text":"From quick bites to comforting teas, Christmas is the right time of the year to spoil your loved ones with food gifts.",
+            "views":[
+                {
+                    "data": "4 SEP 2020",
+                    "quantity": "923"
+                }
+            ],
+            "image":"image03.jpg"
+        }
+    ]
+}
