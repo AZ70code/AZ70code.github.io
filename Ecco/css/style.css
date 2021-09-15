@@ -2488,11 +2488,15 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 	font-size: 30px;
 	color: #000851;
 	font-family: "GothamProMedium";
+	display: none;
 }
 @media (max-width: 1140px) {
 	.body-order__title {
 		font-size: calc(24px + 6 * ((100vw - 320px) / 820));
 	}
+}
+.body-order__title._active {
+	display: block;
 }
 .body-order__price {
 	color: #d7014d;
@@ -2744,7 +2748,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 	opacity: 1;
 	visibility: visible;
 }
-.order-galery #galery-burgundy {
+.order-galery #galery-red {
 	position: absolute;
 	top: 0;
 	left: 0;
