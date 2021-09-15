@@ -165,7 +165,15 @@ body.lock {
 }
 
 .logo {
-	display: block;
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 	width: 154px;
 	height: 42px;
 	padding: 0px 10px;
@@ -2441,6 +2449,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
+	max-width: 460px;
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
 	    -ms-flex-direction: column;
@@ -2454,23 +2463,27 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 @media (max-width: 991.98px) {
 	.body-order__block {
-		-webkit-box-pack: start;
-		    -ms-flex-pack: start;
-		        justify-content: flex-start;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
 	}
 }
 .body-order__header {
+	width: 100%;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
 	-webkit-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;
-	-webkit-box-pack: center;
-	    -ms-flex-pack: center;
-	        justify-content: center;
 }
 .body-order__logo {
+	-webkit-box-flex: 0;
+	    -ms-flex: 0 0 156px;
+	        flex: 0 0 156px;
+	-webkit-box-ordinal-group: 2;
+	    -ms-flex-order: 1;
+	        order: 1;
 	padding: 0px 10px;
 }
 @media (max-width: 767.98px) {
@@ -2481,10 +2494,15 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 @media (max-width: 479.98px) {
 	.body-order__logo {
 		width: 100%;
-		text-align: center;
 	}
 }
 .body-order__title {
+	width: 304px;
+	-webkit-box-ordinal-group: 3;
+	    -ms-flex-order: 2;
+	        order: 2;
+	white-space: nowrap;
+	text-align: center;
 	font-size: 30px;
 	color: #000851;
 	font-family: "GothamProMedium";
@@ -2497,6 +2515,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 .body-order__title._active {
 	display: block;
+	margin: 0 auto;
 }
 .body-order__price {
 	color: #d7014d;
