@@ -1,1 +1,330 @@
-window.onload=function(){"use strict";function e(e){this.type=e}e.prototype.init=function(){const e=this;this.оbjects=[],this.daClassname="_dynamic_adapt_",this.nodes=document.querySelectorAll("[data-da]");for(let e=0;e<this.nodes.length;e++){const t=this.nodes[e],i=t.dataset.da.trim().split(","),n={};n.element=t,n.parent=t.parentNode,n.destination=document.querySelector(i[0].trim()),n.breakpoint=i[1]?i[1].trim():"767",n.place=i[2]?i[2].trim():"last",n.index=this.indexInParent(n.parent,n.element),this.оbjects.push(n)}this.arraySort(this.оbjects),this.mediaQueries=Array.prototype.map.call(this.оbjects,(function(e){return"("+this.type+"-width: "+e.breakpoint+"px),"+e.breakpoint}),this),this.mediaQueries=Array.prototype.filter.call(this.mediaQueries,(function(e,t,i){return Array.prototype.indexOf.call(i,e)===t}));for(let t=0;t<this.mediaQueries.length;t++){const i=this.mediaQueries[t],n=String.prototype.split.call(i,","),a=window.matchMedia(n[0]),s=n[1],c=Array.prototype.filter.call(this.оbjects,(function(e){return e.breakpoint===s}));a.addListener((function(){e.mediaHandler(a,c)})),this.mediaHandler(a,c)}},e.prototype.mediaHandler=function(e,t){if(e.matches)for(let e=0;e<t.length;e++){const i=t[e];i.index=this.indexInParent(i.parent,i.element),this.moveTo(i.place,i.element,i.destination)}else for(let e=0;e<t.length;e++){const i=t[e];i.element.classList.contains(this.daClassname)&&this.moveBack(i.parent,i.element,i.index)}},e.prototype.moveTo=function(e,t,i){t.classList.add(this.daClassname),"last"===e||e>=i.children.length?i.insertAdjacentElement("beforeend",t):"first"!==e?i.children[e].insertAdjacentElement("beforebegin",t):i.insertAdjacentElement("afterbegin",t)},e.prototype.moveBack=function(e,t,i){t.classList.remove(this.daClassname),void 0!==e.children[i]?e.children[i].insertAdjacentElement("beforebegin",t):e.insertAdjacentElement("beforeend",t)},e.prototype.indexInParent=function(e,t){const i=Array.prototype.slice.call(e.children);return Array.prototype.indexOf.call(i,t)},e.prototype.arraySort=function(e){"min"===this.type?Array.prototype.sort.call(e,(function(e,t){return e.breakpoint===t.breakpoint?e.place===t.place?0:"first"===e.place||"last"===t.place?-1:"last"===e.place||"first"===t.place?1:e.place-t.place:e.breakpoint-t.breakpoint})):Array.prototype.sort.call(e,(function(e,t){return e.breakpoint===t.breakpoint?e.place===t.place?0:"first"===e.place||"last"===t.place?1:"last"===e.place||"first"===t.place?-1:t.place-e.place:t.breakpoint-e.breakpoint}))};new e("max").init(),document.querySelector(".galery__slider")&&new Swiper(".galery__slider",{navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"},pagination:{el:".swiper-pagination",clickable:!0,dinamicBullets:!0},keyboard:{enable:!0,onlyInViewport:!0,pageUpdpwn:!0},slidesPerView:"auto",spaceBetween:30,loop:!0,speed:600,breakpoints:{320:{slidesPerView:1,spaceBetween:50},479:{slidesPerView:"auto"}}});let t=document.getElementById("form"),i=document.getElementById("info"),n=document.getElementById("showContent"),a=document.getElementById("hideContent");function s(){window.innerWidth>479&&(n.addEventListener("click",(e=>{t.style.opacity="1",t.style.visibility="visible",i.style.opacity="0",i.style.visibility="hidden",e.preventDefault()})),a.addEventListener("click",(e=>{t.style.opacity="0",t.style.visibility="hidden",i.style.opacity="1",i.style.visibility="visible",e.preventDefault()})))}n.addEventListener("click",s()),a.addEventListener("click",s()),window.addEventListener("resize",(()=>{n.addEventListener("click",s()),a.addEventListener("click",s())}));let c=document.getElementById("black"),l=document.getElementById("burgundy"),r=document.getElementById("items-black"),d=document.getElementById("items-burgundy"),o=document.getElementById("galery-black"),p=document.getElementById("galery-burgundy"),m=document.getElementById("item-black"),y=document.getElementById("item-burgundy");function u(){window.innerWidth<992&&(m.addEventListener("click",(function(){r.classList.add("_active"),o.classList.add("_active"),d.classList.remove("_active"),p.classList.remove("_active")})),y.addEventListener("click",(function(){r.classList.remove("_active"),o.classList.remove("_active"),d.classList.add("_active"),p.classList.add("_active")})))}c.addEventListener("click",(function(){c.classList.add("_active"),r.classList.add("_active"),o.classList.add("_active"),l.classList.remove("_active"),d.classList.remove("_active"),p.classList.remove("_active")})),l.addEventListener("click",(function(){c.classList.remove("_active"),r.classList.remove("_active"),o.classList.remove("_active"),l.classList.add("_active"),d.classList.add("_active"),p.classList.add("_active")})),m.addEventListener("click",u()),y.addEventListener("click",u())};
+
+window.onload = function () {
+
+
+
+// Dynamic Adapt v.1
+// HTML data-da="where(uniq class name),when(breakpoint),position(digi)"
+// e.x. data-da=".item,992,2"
+// Andrikanych Yevhen 2020
+// https://www.youtube.com/c/freelancerlifestyle
+
+
+"use strict";
+
+function DynamicAdapt(type) {
+	this.type = type;
+}
+
+DynamicAdapt.prototype.init = function () {
+	const _this = this;
+	// массив объектов
+	this.оbjects = [];
+	this.daClassname = "_dynamic_adapt_";
+	// массив DOM-элементов
+	this.nodes = document.querySelectorAll("[data-da]");
+
+	// наполнение оbjects объктами
+	for (let i = 0; i < this.nodes.length; i++) {
+		const node = this.nodes[i];
+		const data = node.dataset.da.trim();
+		const dataArray = data.split(",");
+		const оbject = {};
+		оbject.element = node;
+		оbject.parent = node.parentNode;
+		оbject.destination = document.querySelector(dataArray[0].trim());
+		оbject.breakpoint = dataArray[1] ? dataArray[1].trim() : "767";
+		оbject.place = dataArray[2] ? dataArray[2].trim() : "last";
+		оbject.index = this.indexInParent(оbject.parent, оbject.element);
+		this.оbjects.push(оbject);
+	}
+
+	this.arraySort(this.оbjects);
+
+	// массив уникальных медиа-запросов
+	this.mediaQueries = Array.prototype.map.call(this.оbjects, function (item) {
+		return '(' + this.type + "-width: " + item.breakpoint + "px)," + item.breakpoint;
+	}, this);
+	this.mediaQueries = Array.prototype.filter.call(this.mediaQueries, function (item, index, self) {
+		return Array.prototype.indexOf.call(self, item) === index;
+	});
+
+	// навешивание слушателя на медиа-запрос
+	// и вызов обработчика при первом запуске
+	for (let i = 0; i < this.mediaQueries.length; i++) {
+		const media = this.mediaQueries[i];
+		const mediaSplit = String.prototype.split.call(media, ',');
+		const matchMedia = window.matchMedia(mediaSplit[0]);
+		const mediaBreakpoint = mediaSplit[1];
+
+		// массив объектов с подходящим брейкпоинтом
+		const оbjectsFilter = Array.prototype.filter.call(this.оbjects, function (item) {
+			return item.breakpoint === mediaBreakpoint;
+		});
+		matchMedia.addListener(function () {
+			_this.mediaHandler(matchMedia, оbjectsFilter);
+		});
+		this.mediaHandler(matchMedia, оbjectsFilter);
+	}
+};
+
+DynamicAdapt.prototype.mediaHandler = function (matchMedia, оbjects) {
+	if (matchMedia.matches) {
+		for (let i = 0; i < оbjects.length; i++) {
+			const оbject = оbjects[i];
+			оbject.index = this.indexInParent(оbject.parent, оbject.element);
+			this.moveTo(оbject.place, оbject.element, оbject.destination);
+		}
+	} else {
+		for (let i = 0; i < оbjects.length; i++) {
+			const оbject = оbjects[i];
+			if (оbject.element.classList.contains(this.daClassname)) {
+				this.moveBack(оbject.parent, оbject.element, оbject.index);
+			}
+		}
+	}
+};
+
+// Функция перемещения
+DynamicAdapt.prototype.moveTo = function (place, element, destination) {
+	element.classList.add(this.daClassname);
+	if (place === 'last' || place >= destination.children.length) {
+		destination.insertAdjacentElement('beforeend', element);
+		return;
+	}
+	if (place === 'first') {
+		destination.insertAdjacentElement('afterbegin', element);
+		return;
+	}
+	destination.children[place].insertAdjacentElement('beforebegin', element);
+}
+
+// Функция возврата
+DynamicAdapt.prototype.moveBack = function (parent, element, index) {
+	element.classList.remove(this.daClassname);
+	if (parent.children[index] !== undefined) {
+		parent.children[index].insertAdjacentElement('beforebegin', element);
+	} else {
+		parent.insertAdjacentElement('beforeend', element);
+	}
+}
+
+// Функция получения индекса внутри родителя
+DynamicAdapt.prototype.indexInParent = function (parent, element) {
+	const array = Array.prototype.slice.call(parent.children);
+	return Array.prototype.indexOf.call(array, element);
+};
+
+// Функция сортировки массива по breakpoint и place 
+// по возрастанию для this.type = min
+// по убыванию для this.type = max
+DynamicAdapt.prototype.arraySort = function (arr) {
+	if (this.type === "min") {
+		Array.prototype.sort.call(arr, function (a, b) {
+			if (a.breakpoint === b.breakpoint) {
+				if (a.place === b.place) {
+					return 0;
+				}
+
+				if (a.place === "first" || b.place === "last") {
+					return -1;
+				}
+
+				if (a.place === "last" || b.place === "first") {
+					return 1;
+				}
+
+				return a.place - b.place;
+			}
+
+			return a.breakpoint - b.breakpoint;
+		});
+	} else {
+		Array.prototype.sort.call(arr, function (a, b) {
+			if (a.breakpoint === b.breakpoint) {
+				if (a.place === b.place) {
+					return 0;
+				}
+
+				if (a.place === "first" || b.place === "last") {
+					return 1;
+				}
+
+				if (a.place === "last" || b.place === "first") {
+					return -1;
+				}
+
+				return b.place - a.place;
+			}
+
+			return b.breakpoint - a.breakpoint;
+		});
+		return;
+	}
+};
+
+const da = new DynamicAdapt("max");
+da.init();
+
+  
+if(document.querySelector('.galery__slider')) {
+	new Swiper('.galery__slider', {
+		navigation: {
+			nextEl:'.swiper-button-next',
+			prevEl:'.swiper-button-prev'
+		},
+		pagination: {
+			el:'.swiper-pagination',
+			 clickable:true,
+			 dinamicBullets: true,
+		},
+		keyboard: {
+			enable: true,
+			onlyInViewport: true,
+			pageUpdpwn: true,
+		},
+		slidesPerView: 'auto',
+		spaceBetween: 30,
+		loop: true,
+		speed: 600,
+		breakpoints: {
+			320: {
+				slidesPerView: 1,
+				spaceBetween: 50,
+
+			},
+			479: {
+				slidesPerView: 'auto',
+			},
+		},
+	});
+}
+//================= open/close form ===============================
+	let contentForm = document.getElementById("form");
+	let contentInfo = document.getElementById("info");
+	let show = document.getElementById("showContent");
+	let hide = document.getElementById("hideContent");
+
+	function formShow() {
+		if (window.innerWidth > 479 ) {
+			show.addEventListener("click", (e) => {
+				contentForm.style.opacity = "1";
+				contentForm.style.visibility = "visible";
+				contentInfo.style.opacity = "0";
+				contentInfo.style.visibility = "hidden";
+				e.preventDefault();
+			});
+
+			hide.addEventListener("click", (e) => {
+				contentForm.style.opacity = "0";
+				contentForm.style.visibility = "hidden";
+				contentInfo.style.opacity = "1";
+				contentInfo.style.visibility = "visible";
+				e.preventDefault();
+			});
+		}	
+	}
+	show.addEventListener('click', formShow());
+	hide.addEventListener('click', formShow());
+
+	window.addEventListener('resize', () => {
+		show.addEventListener('click', formShow());
+		hide.addEventListener('click', formShow());
+	
+	});
+//==================== switch tabs ======================================
+
+	let tabBlack = document.getElementById('black');
+	let tabRed = document.getElementById('red');
+	let contentBlack = document.getElementById('items-black');
+	let contentRed = document.getElementById('items-red');
+	let galeryBlack = document.getElementById('galery-black');
+	let galeryRed = document.getElementById('galery-red');
+	let itemBlack = document.getElementById('item-black');
+	let itemRed = document.getElementById('item-red');
+	let titleBlack = document.getElementById('title-black');
+	let titleRed = document.getElementById('title-red');
+
+
+
+	tabBlack.addEventListener('click', function() {
+		tabBlack.classList.add('_active');
+		contentBlack.classList.add('_active');
+		galeryBlack.classList.add('_active');
+		titleBlack.classList.add('_active');
+		tabRed.classList.remove('_active');
+		contentRed.classList.remove('_active');
+		galeryRed.classList.remove('_active');
+		titleRed.classList.remove('_active');
+
+		
+	});
+	tabRed.addEventListener('click', function() {
+		tabBlack.classList.remove('_active');
+		contentBlack.classList.remove('_active');
+		galeryBlack.classList.remove('_active');
+		titleBlack.classList.remove('_active');
+		tabRed.classList.add('_active');
+		contentRed.classList.add('_active');
+		galeryRed.classList.add('_active');
+		titleRed.classList.add('_active');
+
+	});
+
+	function tabSwitch() {
+		if (window.innerWidth < 992 ) {
+			itemBlack.addEventListener('click', function() {
+			contentBlack.classList.add('_active');
+			galeryBlack.classList.add('_active');
+			titleBlack.classList.add('_active');
+			contentRed.classList.remove('_active');
+			galeryRed.classList.remove('_active');
+			titleRed.classList.remove('_active');
+			});
+
+			itemRed.addEventListener('click', function() {
+			contentBlack.classList.remove('_active');
+			galeryBlack.classList.remove('_active');
+			titleBlack.classList.remove('_active');
+			contentRed.classList.add('_active');
+			galeryRed.classList.add('_active');
+			titleRed.classList.add('_active');
+			});
+		}
+	}
+	itemBlack.addEventListener('click', tabSwitch());
+	itemRed.addEventListener('click', tabSwitch());
+
+//====== инициализация галереи=======================
+let allGalleries = document.querySelectorAll('._lightgallery');
+allGalleries.forEach(item => lightGallery(item));
+
+
+
+//Tabs
+/* let tabs = document.querySelectorAll(".tabs-order__body");
+for (let index = 0; index < tabs.length; index++) {
+	let tab = tabs[index];
+	let tabs_items = tab.querySelectorAll(".tabs-order__arrow");
+	console.log(tabs_items);
+
+	let tabs_blocks = tab.querySelectorAll(".tabs-order__items");
+	for (let index = 0; index < tabs_items.length; index++) {
+		let tabs_item = tabs_items[index];
+
+		tabs_item.addEventListener("click", function (e) {
+			for (let index = 0; index < tabs_items.length; index++) {
+				let tabs_item = tabs_items[index];
+				tabs_item.classList.remove('_active');
+				tabs_blocks[index].classList.remove('_active');
+
+			}
+
+			tabs_item.classList.add('_active');
+			tabs_blocks[index].classList.add('_active');
+			e.preventDefault();
+		});
+	}
+}
+ */
+};
