@@ -199,6 +199,40 @@ if(document.querySelector('.galery__slider')) {
 		},
 	});
 }
+if(document.querySelector('.spray-slider')) {
+	new Swiper('.spray-slider', {
+		navigation: {
+			nextEl:'.swiper-button-next',
+			prevEl:'.swiper-button-prev'
+		},
+		keyboard: {
+			enable: true,
+			onlyInViewport: true,
+			pageUpdpwn: true,
+		},
+		slidesPerView: 1,
+		spaceBetween: 10,
+		loop: true,
+		speed: 600,
+		effect: 'fade',
+		thumbs: {
+			swiper: {
+				el: '.spray-slider-mini',
+				slidesPerView: 1,
+				effect: 'fade',
+
+			}
+		}
+	});
+}
+
+/* if(document.querySelector('.spray-slider-mini')) {
+	new Swiper('.spray-slider-mini', {
+		slidesPerView: 1,
+		loop: true,
+		speed: 600,
+	});
+} */
 //================= open/close form ===============================
 	let contentForm = document.getElementById("form");
 	let contentInfo = document.getElementById("info");
