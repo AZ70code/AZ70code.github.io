@@ -199,8 +199,10 @@ if(document.querySelector('.galery__slider')) {
 		},
 	});
 }
+let imageSlider, textSlider;
+
 if(document.querySelector('.spray-slider')) {
-	new Swiper('.spray-slider', {
+	imageSlider = new Swiper('.spray-slider', {
 		navigation: {
 			nextEl:'.swiper-button-next',
 			prevEl:'.swiper-button-prev'
@@ -220,19 +222,22 @@ if(document.querySelector('.spray-slider')) {
 				el: '.spray-slider-mini',
 				slidesPerView: 1,
 				effect: 'fade',
-
-			}
+			},
 		}
 	});
-}
-
-/* if(document.querySelector('.spray-slider-mini')) {
-	new Swiper('.spray-slider-mini', {
+};
+if(document.querySelector('.spray-slider-content')) {
+	textSlider = new Swiper('.spray-slider-content', {
 		slidesPerView: 1,
 		loop: true,
 		speed: 600,
+		effect: 'fade',
+		autoHeight: true,
 	});
-} */
+};
+
+imageSlider.controller.control = textSlider
+textSlider.controller.control = imageSlider
 //================= open/close form ===============================
 	let contentForm = document.getElementById("form");
 	let contentInfo = document.getElementById("info");
@@ -333,32 +338,37 @@ if(document.querySelector('.spray-slider')) {
 let allGalleries = document.querySelectorAll('._lightgallery');
 allGalleries.forEach(item => lightGallery(item));
 
+//===================radio + tabs============================
+/* var buttons = [];
+var imagess = [];
+let radioButton = [document.querySelectorAll('[type="radio"]')];
+let advantImage = [document.querySelectorAll('.body-advant__image')];
 
-
+[].forEach.call(radioButton, function(but, ind) {
+	but.addEventListener('click', function() {
+	  target[ind].classList.add('_active');
+	});
+});
+ */
 //Tabs
-/* let tabs = document.querySelectorAll(".tabs-order__body");
+let tabs = document.querySelectorAll(".advantages__radio");
 for (let index = 0; index < tabs.length; index++) {
 	let tab = tabs[index];
-	let tabs_items = tab.querySelectorAll(".tabs-order__arrow");
-	console.log(tabs_items);
-
-	let tabs_blocks = tab.querySelectorAll(".tabs-order__items");
+	let tabs_items = tab.querySelectorAll(".radio-advant__button");
+	let tabs_blocks = tab.querySelectorAll(".body-advant");
 	for (let index = 0; index < tabs_items.length; index++) {
 		let tabs_item = tabs_items[index];
-
 		tabs_item.addEventListener("click", function (e) {
 			for (let index = 0; index < tabs_items.length; index++) {
 				let tabs_item = tabs_items[index];
 				tabs_item.classList.remove('_active');
 				tabs_blocks[index].classList.remove('_active');
-
 			}
-
 			tabs_item.classList.add('_active');
 			tabs_blocks[index].classList.add('_active');
 			e.preventDefault();
 		});
 	}
 }
- */
+
 };
