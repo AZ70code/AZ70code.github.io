@@ -13,21 +13,21 @@
 			<div class="wrapper__bg">
 				<section class="first-screen">
 					<div class="first-screen__decor decor first-screen__decor--left">
-						<img src="img/decor-left.png" alt="">
+						<img src="img/decor/decor-left.png" alt="">
 					</div>
 					<div class="first-screen__decor decor first-screen__decor--right">
-						<img src="img/decor-right.png" alt="">
+						<img src="img/decor/decor-right.png" alt="">
 					</div>
 						<div class="first-screen__container _container">
 							<a href="#" class="first-screen__logo logo"><img src="img/first-screen/logo.png" alt="ECCO"></a>
 							<div class="first-screen__content">
 								<h1 class="first-screen__title">Lorem ipsum dolor sit amet consectetur</h1>
-								<div class="first-screen__label label-first-screen">
-									<div class="label-first-screen__title">скидка</div>
-									<div class="label-first-screen__value">50%</div>
+								<div class="first-screen__label label-first-screen label">
+									<div class="label-first-screen__title label-title">скидка</div>
+									<div class="label-first-screen__value label-value">50%</div>
 								</div>
 								<div class="first-screen__price price"><span>3690 грн</span>1379 грн</div>
-								<a href="#order" class="first-screen__button">заказать по скидке</a>
+								<a href="#order" class="first-screen__button button">заказать по скидке</a>
 							</div>
 							<div class="first-screen__image-body" data-da=".first-screen__content, 479, 1">
 								<div class="first-screen__image first-screen__image--left">
@@ -39,10 +39,10 @@
 							</div>
 						</div>
 						<div class="first-screen__decor-mob decor-mob first-screen__decor-mob--left">
-							<img src="img/first-screen/decor-left.png" alt="">
+							<img src="img/decor/decor-left.png" alt="">
 						</div>
 						<div class="first-screen__decor-mob decor-mob first-screen__decor-mob--right">
-							<img src="img/first-screen/decor-right.png" alt="">
+							<img src="img/decor/decor-right.png" alt="">
 						</div>
 				</section>
 				<section class="product">
@@ -121,13 +121,13 @@
 			</section>
 			<section class="advantages">
 				<div class="advantages__decor decor advantages__decor--left">
-					<img src="img/decor-left.png" alt="">
+					<img src="img/decor/decor-left.png" alt="">
 				</div>
 				<div class="advantages__decor decor advantages__decor--right">
-					<img src="img/decor-right.png" alt="">
+					<img src="img/decor/decor-right.png" alt="">
 				</div>
 				<div class="advantages__decor decor advantages__decor--blue">
-					<img src="img/decor-blue.png" alt="">
+					<img src="img/decor/decor-blue.png" alt="">
 				</div>
 				<div class="advantage__container _container">
 					<h2 class="advantages__title title">Lorem ipsum dolor</h2>
@@ -200,24 +200,31 @@
 							<div class="video-block__title title">lorem ipsum</div>
 							<div class="video-block__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia sapiente rerum delectus in possimus tempora nostrum laboriosam impedit labore quos iste laudantium eligendi et atque eum quas autem, tenetur voluptatem.</div>
 						</div>
-						<div class="video-blck__body">
+						<div class="video-block__body">
 							<div class="video-block__frame-box ">
-								<iframe class="video-block__frame" src="https://www.youtube.com/embed/0G0T-8KpTk8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								<video class="video-block__frame" preload="metadata" loop muted >
+								<source src="img/advant/advant.mp4"></video>
+								<div class="video-block__button" id="play">
+									<img src="img/icons/youtube.svg" alt="button play">
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="advantages__decor-mob decor-mob advantages__decor-mob--left">
-					<img src="img/first-screen/decor-left.png" alt="">
+					<img src="img/decor/decor-left.png" alt="">
 				</div>
 				<div class="advantages__decor-mob decor-mob advantages__decor-mob--right">
-					<img src="img/first-screen/decor-right.png" alt="">
+					<img src="img/decor/decor-right.png" alt="">
 				<div class="advantages__decor-mob decor-mob advantages__decor-mob--blue">
-					<img src="img/first-screen/decor-blue.png" alt="">
+					<img src="img/decor/decor-blue.png" alt="">
 				</div>
 
 			</section>
 			<section class="order" id="order">
+				<div class="order__decor decor">
+					<img src="img/decor/decor-orange.png" alt="">
+				</div>
 				<div class="order__container _container">
 					<div class="order__shoes shoes-order order-wrapper">
 						<div class="shoes-order__tabs tabs-order">
@@ -403,7 +410,83 @@
 					</div>
 				</div>
 			</section>
+			<section class="services">
+				<div class="services__decor decor">
+					<img src="img/decor/decor-left.png" alt="">
+				</div>
+				<div class="services__container _container">
+					<div class="services__guarantee guarantee">
+						<h2 class="guarantee__title title">гарантии</h2>
+						<div class="guarantee__content">
+							<div class="guarantee__image">
+								<div class="guarantee__label" data-da=".services__guarantee,479,1">
+									<img src="img/services/label.png" alt="guarantee 100%">
+								</div>
+								<img src="img/services/image01.png" alt="shoes on feet">
+							</div>
+							<div class="guarantee__text">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta enim, obcaecati nesciunt voluptatem cum, praesentium reiciendis ut odit repudiandae animi consectetur aliquam at veniam tempore quia sapiente quaerat dolorum asperiores.
+							</div>
+						</div>
+					</div>
+					<div class="services__delivery delivery">
+						<div class="delivery__title title">оплата и доставка</div>
+						<div class="delivery__content">
+							<div class="delivery__body-list">
+								<ol class="delivery__list">
+									<li class="delivery__item">Заявка<span>Вы оставляете заявку на сайте</span>
+									</li>
+									<li class="delivery__item">Оформление<span>Мы связываемся с вами для подтверждения заказа</span>
+									</li>
+									<li class="delivery__item">Отправка<span>Отправляем ваш заказ в кратчайшие сроки</span>
+									</li>
+									<li class="delivery__item">Получение<span>Вы получаете товар на почте и оплачиваете</span>
+									</li>
+								</ol>
+							</div>
+							<div class="delivery__image">
+								<img src="img/services/image02.png" alt="shoes on feet">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="services__decor-mob decor-mob">
+					<img src="img/decor/decor-left.png" alt="">
+				</div>
+			</section>
+			<section class="last-screen">
+				<div class="last-screen__container _container">
+					<a href="#" class="last-screen__logo logo"><img src="img/first-screen/logo.png" alt="ECCO"></a>
+					<div class="last-screen__content">
+						<h1 class="last-screen__title">Lorem ipsum dolor sit amet</h1>
+						<div class="last-screen__sale">
+							<div class="last-screen__label label-last-screen label">
+								<div class="label-last-screen__title label-title">скидка</div>
+								<div class="label-last-screen__value label-value">50%</div>
+							</div>
+							<div class="last-screen__price price"><span>3690 грн</span>1379 грн</div>
+						</div>
+						<a href="#order" class="last-screen__button button">заказать по скидке</a>
+					</div>
+					<div class="last-screen__image-body" data-da=".last-screen__content, 479, 1">
+						<div class="last-screen__image last-screen__image--left">
+							<img src="img/first-screen/shoes-left.png" alt="shoes">
+						</div>
+						<div class="last-screen__image last-screen__image--right"
+							><img src="img/first-screen/shoes-right.png" alt="shoes">
+						</div>
+					</div>
+				</div>
+			</section>
 		</div>
+		<footer class="footer">
+			<div class="footer_container _container">
+				<div class="footer__item">Политика конфиденциальности</div>
+				<div class="footer__item">Все права защищены.<span>Copyright 2019</span></div>
+				<div class="footer__item"> ТОВ "SaleShop" г.Харьков, ул. Шевченка, 32, <span>ЕГРПОУ 39129343</span></div>
+			</div>
+
+		</footer>
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 <script src="js/vendors.js"></script>
 <script src="js/main.js"></script>
