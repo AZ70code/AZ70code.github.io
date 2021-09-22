@@ -339,17 +339,6 @@ let allGalleries = document.querySelectorAll('._lightgallery');
 allGalleries.forEach(item => lightGallery(item));
 
 //===================radio + tabs============================
-/* var buttons = [];
-var imagess = [];
-let radioButton = [document.querySelectorAll('[type="radio"]')];
-let advantImage = [document.querySelectorAll('.body-advant__image')];
-
-[].forEach.call(radioButton, function(but, ind) {
-	but.addEventListener('click', function() {
-	  target[ind].classList.add('_active');
-	});
-});
- */
 //Tabs
 let tabs = document.querySelectorAll(".advantages__radio");
 for (let index = 0; index < tabs.length; index++) {
@@ -370,5 +359,26 @@ for (let index = 0; index < tabs.length; index++) {
 		});
 	}
 }
+//========================video====================================
+[].forEach.call(document.querySelectorAll('video'), function(el) {
+	var cont = document.createElement('div');
+	cont.className = "video";
+	el.parentNode.insertBefore(cont, el);
+	cont.appendChild(el);
+	cont.insertAdjacentHTML('afterbegin', '<div class="overlay"></div>');
+	cont.addEventListener('click', function(e) {
+		var video = cont.querySelector('video');
+		if (video.paused) {
+			cont.classList.add('is-playing');
+			video.play();
+		} else {
+			cont.classList.remove('is-playing');
+		video.pause();
+		}
+		video.onended = function() {
+			cont.classList.remove('is-playing');
+		};
+	});
+});
 
 };
