@@ -4267,6 +4267,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 	padding-bottom: 370px;
 	padding-bottom: 380px;
 	background: url(../img/last-screen/left_bg.png) 0 100%/contain no-repeat, url(../img/last-screen/right_bg.png) 100% 100%/contain no-repeat;
+	background-color: #fdcf10;
 	min-height: 100%;
 }
 @media (max-width: 1140px) {
