@@ -28,28 +28,37 @@
 						<li><a href="#news" class="menu__link"><span>news</span></a></li>
 						<li><a href="#contact" class="menu__link"><span>contact</span></a></li>
 					</ul>
+					<div class="menu__row">
+						<div class="menu__column">
+							<div class="menu__copyright">© 2014 SKOKOV - all rights reserved</div>
+						</div>	
+						<div class="menu__column">
+							<div class="menu__social social-icon"> 
+								<div class="social-icon__image"><a href=""><img src="img/icons/footer/linkedin.png" alt=""></a></div>
+								<div class="social-icon__image"><a href=""><img src="img/icons/footer/facebook.png" alt=""></a></div>
+								<div class="social-icon__image"><a href=""><img src="img/icons/footer/twitter.png" alt=""></a></div>
+								<div class="social-icon__image"><a href=""><img src="img/icons/footer/youtube.png" alt=""></a></div>
+							</div>
+						</div>
+					</div>
 				</nav>
 			</div>
 		</div>
 	</div>
 </header>			<div class="main" id="home">
-				<div class="main__image ibg"><img src="img/bgheader.jpg" alt="">
-					<div class="main__bg">
-						<div class="main__container container">
-							<div class="main__content">
-								<h1 class="main__title _anim-no-hide"><span class="anim-left">Global management</span>
-									<span class="anim-right">consulting agency</span></h1>
-								<div class="main__text">Growth doesn't always go the way you expect. Our
-									strategy consultants can help you climb.</div>
-								<a href="#" class="main__btn btn fw">Get started</a>
-								<a href="#" class="main__btn btn btn--b fw">Learn more</a>
-							</div>
-						</div>
-						<div class="main__decor ibg">
-							<img src="img/chart.png" alt="">
-						</div>
+				<div class="main__container container">
+					<div class="main__content">
+						<h1 class="main__title _anim-no-hide"><span class="anim-left">Global management</span>
+							<span class="anim-right">consulting agency</span></h1>
+						<div class="main__text">Growth doesn't always go the way you expect. Our
+							strategy consultants can help you climb.</div>
+						<a href="#" class="main__btn btn fw">Get started</a>
+						<a href="#" class="main__btn btn btn--b fw">Learn more</a>
 					</div>
-				</div>	
+				</div>
+				<div class="main__decor">
+					<canvas id='canvas'></canvas>
+				</div>
 			</div>
 			<div class="service" id="service">
 				<div class="service__container container">
@@ -423,12 +432,12 @@
 									</a>
 								</div>
 								<div class="form-adress__item">
-									<a href=""><img src="img/icons/form/phone.png" alt="">
+									<a href="tel:+380577770505"><img src="img/icons/form/phone.png" alt="">
 										<span>+38 (057) 777-05-05</span>
 									</a>
 								</div>
 								<div class="form-adress__item">
-									<a href=""><img src="img/icons/form/message.png" alt="">
+									<a href="mailto:mynameisskokov@gmail.com"><img src="img/icons/form/message.png" alt="">
 										<span>mynameisskokov@gmail.com</span>
 									</a>
 								</div>
@@ -438,10 +447,10 @@
 								<div class="form-contact__text">Please contact us using contact form below</div>
 								<form action="#" class="form-contact__body">
 									<div class="form-contact__input">
-										<input type="text" name="name" tabindex="1" class="input" placeholder="Name">
+										<input type="text" name="name" tabindex="1" class="input" required placeholder="Name*">
 									</div>
 									<div class="form-contact__input">
-										<input type="email" name="email" tabindex="2" class="input req email" placeholder="Email">
+										<input type="email" name="email" tabindex="2" class="input" required placeholder="Email*">
 									</div>
 									<div class="form-contact__input">
 										<input type="text" name="subject" tabindex="3" class="input" placeholder="Subject">
