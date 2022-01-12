@@ -155,6 +155,7 @@ body.lock {
   background-color: #fe504f;
   border-radius: 33px;
   text-align: center;
+  cursor: pointer;
   -webkit-transition: all 1s ease 0s;
   -moz-transition: all 1s ease 0s;
   -ms-transition: all 1s ease 0s;
@@ -182,7 +183,6 @@ body.lock {
   background-color: #fff;
   color: #fe504f;
   text-decoration: underline;
-  cursor: pointer;
 }
 
 @media (max-width: 479.98px) {
@@ -887,10 +887,36 @@ footer {
 
 .main__decor {
   width: 100%;
+  height: 40vh;
   position: absolute;
   z-index: 5;
   left: 0;
-  bottom: -3px;
+  bottom: -1px;
+  background-color: #fff;
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 87.5% 100%, 75% 100%, 62.5% 100%, 50% 100%, 37.5% 100%, 25% 100%, 12.5% 100%);
+  transition: all 0.8s ease;
+}
+
+.main__decor._active {
+  clip-path: polygon(0 100%, 100% 100%, 100% 0, 87.5% 42%, 75% 62%, 62.5% 46%, 50% 66%, 37.5% 79%, 25% 69%, 12.5% 88%);
+}
+
+@media (min-width: 1600px) {
+  .main__decor {
+    height: 540px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .main__decor {
+    height: 30vh;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .main__decor {
+    height: 20vh;
+  }
 }
 
 .main__content {
@@ -1500,6 +1526,7 @@ footer {
 }
 
 .wedo__button {
+  cursor: pointer;
   display: block;
   height: 95px;
   width: 95px;
@@ -1507,10 +1534,10 @@ footer {
   border-radius: 50%;
   background-color: #fe504f;
   position: relative;
+  transition: 0.5s ease;
 }
 
 .wedo__button:hover {
-  cursor: pointer;
   background-color: #343434;
 }
 
