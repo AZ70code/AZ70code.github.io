@@ -178,16 +178,17 @@ textarea:focus {
   padding: 14px 18px;
   font-size: 1.3rem;
   border: 1px solid #1E3240;
+  transition: all 0.5s ease;
 }
 .input::placeholder {
   color: #BDBDBD;
   font-size: 1.3rem;
 }
-.input._focus {
-  border: 2px solid #1E3240;
+.input:focus {
+  background-color: rgba(175, 212, 226, 0.1);
 }
 .input._error {
-  border: 2px solid red;
+  border: 2px solid rgb(192, 44, 44);
 }
 
 textarea.input {
@@ -214,6 +215,31 @@ textarea.input {
 
 .swiper-button-lock {
   display: none !important;
+}
+
+.pagination {
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+@media (max-width: 767.98px) {
+  .pagination {
+    display: flex;
+    margin-bottom: 25px;
+  }
+}
+.pagination .swiper-pagination-bullet {
+  background-color: #afd4e2;
+  opacity: 1;
+  width: 8px;
+  height: 8px;
+  margin-right: 10px;
+  opacity: 1;
+}
+.pagination .swiper-pagination-bullet-active {
+  background-color: #1E3240;
 }
 
 ._custom-scroll {
@@ -877,7 +903,6 @@ textarea.input {
 .projects__arrow--prev:hover {
   transform: translateX(10px) rotate(180deg);
 }
-
 .slide {
   display: flex;
   flex-direction: column;
@@ -1086,6 +1111,26 @@ textarea.input {
   text-align: center;
   font-size: 1.3rem;
   color: #BDBDBD;
+}
+.contact__form {
+  position: relative;
+}
+.contact__form::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  background: rgba(175, 212, 226, 0.1) url(../img/loading.gif) center/50px no-repeat;
+  backdrop-filter: blur(1px);
+  opacity: 0;
+  visibility: hidden;
+}
+.contact__form._sending::before {
+  opacity: 1;
+  visibility: visible;
 }
 .contact__inputs {
   display: grid;
