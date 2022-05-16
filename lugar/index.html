@@ -104,6 +104,7 @@
 					<div class="projects__container _container">
 						<h2 class="projects__title title">Ongoing projects</h2>
 						<p class="projects__descr">Turpis facilisis tempor pulvinar in lobortis ornare magna.</p>
+						<div class="projects__pagination pagination"></div>
 						<div class="projects__slider _swiper">
 							<div class="projects__slide slide">
 								<div class="slide__image">
@@ -152,7 +153,20 @@
 					<div class="testimonial__container _container">
 						<h2 class="testimonial__title title">Few smiles and comment</h2>
 						<p class="testimonial__descr">Turpis facilisis tempor pulvinar in lobortis ornare magna.</p>
+						<div class="testimonial__pagination pagination"></div>
 						<div class="testimonial__slider _swiper">
+							<div class="testimonial__slide slide">
+								<div class="testimonial__image">
+									<img src="./img/comment.jpg" alt="">
+								</div>
+								<div class="testimonial__content content-slide">
+									<div class="content-slide__quotte">&#34</div>
+									<h3 class="content-slide__title">Dream house isn’t dream anymore</h3>
+									<p class="content-slide__text">Semper arcu mauris aliquam lacus. Massa erat vitae ultrices pharetra scelerisque. Ipsum, turpis facilisis tempor pulvinar.</p>
+									<div class="content-slide__name">Brooklyn Simmons</div>
+									<div class="content-slide__position">Artist</div>
+								</div>
+							</div>
 							<div class="testimonial__slide slide">
 								<div class="testimonial__image">
 									<img src="./img/comment.jpg" alt="">
@@ -180,14 +194,14 @@
 						<div class="contact__content">
 							<h2 class="contact__title title">Contact us</h2>
 							<p class="contact__descr">Turpis facilisis tempor pulvinar in lobortis ornare magna.</p>
-							<form action="" class="contact__form _req">
+							<form action="#" class="contact__form" data-test>
 								<div class="contact__inputs">
-									<input type="text" class="contact__input input" placeholder="First name">
-									<input type="text" class="contact__input input" placeholder="Last name">
-									<input type="email" class="contact__input input" placeholder="Email address">
-									<input type="tel" class="contact__input input" placeholder="Phone number">
+									<input type="text" class="contact__input input _req" name="firstname" placeholder="First name">
+									<input type="text" class="contact__input input _req" name="lastname" placeholder="Last name">
+									<input type="email" class="contact__input input _req _email" name="email" placeholder="Email address">
+									<input type="tel" class="contact__input input _req _phone" name="phone" placeholder="Phone number">
 								</div>
-								<textarea class="contact__messsage input" placeholder="Description"></textarea>
+								<textarea class="contact__messsage input" name="message" placeholder="Description" maxlength="200"></textarea>
 								<button type="submit" class="contact__button btn btn--accent">Get a quote</button>
 								<span>We don’t sell your email and spam</span>
 							</form>
