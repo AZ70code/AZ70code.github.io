@@ -1,11 +1,50 @@
 <!DOCTYPE html>
 <html lang="ru">
-	@@include('_head.html',{
-	"title":"lugar"
-	})
+	 <head>
+	<title>lugar</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="css/style.min.css">
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 	<body>
 		<div class="wrapper">
-			@@include('_header.html',{})
+			<header class="header">
+	<div class="header__container _container">
+		<a href="#" class="header__logo logo">Lugar</a>
+		<nav class="header__menu menu">
+			<ul class="menu__list">
+				<li class="menu__item"><a href="#hero" class="menu__link _goto-block">Home</a></li>
+				<li class="menu__item"><a href="#aboutus" class="menu__link _goto-block">About</a></li>
+				<li class="menu__item"><a href="#projects" class="menu__link _goto-block">Project</a></li>
+				<li class="menu__item"><a href="#contact" class="menu__link _goto-block">Contact</a></li>
+			</ul>
+			<div class="menu__mobile-contact mobile-contact">
+				<div class="mobile-contact__item">
+					<svg class="mobile-icon" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M3.86167 6.29417C4.70167 7.945 6.055 9.2925 7.70583 10.1383L8.98917 8.855C9.14667 8.6975 9.38 8.645 9.58417 8.715C10.2375 8.93083 10.9433 9.0475 11.6667 9.0475C11.9875 9.0475 12.25 9.31 12.25 9.63083V11.6667C12.25 11.9875 11.9875 12.25 11.6667 12.25C6.18917 12.25 1.75 7.81083 1.75 2.33333C1.75 2.0125 2.0125 1.75 2.33333 1.75H4.375C4.69583 1.75 4.95833 2.0125 4.95833 2.33333C4.95833 3.0625 5.075 3.7625 5.29083 4.41583C5.355 4.62 5.30833 4.8475 5.145 5.01083L3.86167 6.29417Z" fill="#1E3240"/>
+					</svg>
+					<a href="tel:+33415653569" class="mobile-link">+33 415 65356 - 9</a>
+				</div>
+				<div class="mobile-contact__item">
+					<svg class="mobile-icon" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M11.6667 2.33331H2.33333C1.69167 2.33331 1.1725 2.85831 1.1725 3.49998L1.16667 10.5C1.16667 11.1416 1.69167 11.6666 2.33333 11.6666H11.6667C12.3083 11.6666 12.8333 11.1416 12.8333 10.5V3.49998C12.8333 2.85831 12.3083 2.33331 11.6667 2.33331ZM11.6667 4.66665L7 7.58331L2.33333 4.66665V3.49998L7 6.41665L11.6667 3.49998V4.66665Z" fill="#1E3240"/>
+					</svg>
+					<a href="email:contact@lugar.com" class="mobile-link">contact@lugar.com</a>
+				</div>
+			</div>
+		</nav>
+		<div class="icon-menu">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+	</div>
+</header>
 			<main class="page">
 				<section class="hero" id="hero">
 					<div class="hero__container _container">
@@ -162,8 +201,70 @@
 					</div>
 				</section>
 			</main>
-			@@include('_footer.html',{})
+			<footer class="footer">
+	<div class="footer__container _container">
+		<div class="footer__top">
+			<div class="footer__contact">
+				<a href="" class="footer__logo">lugar</a>
+				<ul>
+					<li><div class="footer__address footer__icon">2118 Thornridge Cir. Dubai, UAE 35624</div>
+					</li>
+					<li><a href="tel:+33415653569" class="footer__phone footer__link footer__icon">+33 415 65356 - 9</a></li>
+					<li><a href="email:contact@lugar.com" class="footer__email footer__link footer__icon">contact@lugar.com</a></li>
+				</ul>
+			</div>
+			<div class="footer__links" data-spollers="480, max" data-one-spoller>
+				<div class="footer__block-link quick">
+					<div class="footer__spoller" data-spoller>
+						<h3 class="footer__title">Quick links</h3>
+						<span>
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#fff"><path d="M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414z"/></svg>
+						</span>
+					</div>
+					<ul class="quick__list">
+						<li><a href="" class="footer__link">Home</a></li>
+						<li><a href="" class="footer__link">About</a></li>
+						<li><a href="" class="footer__link">Project</a></li>
+						<li><a href="" class="footer__link">Contact</a></li>
+					</ul>
+				</div>
+				<div class="footer__block-link legal">
+					<div class="footer__spoller" data-spoller>
+						<h3 class="footer__title" >Legal links</h3>
+						<span>
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#fff"><path d="M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414z"/></svg>
+						</span>
+					</div>
+					<ul class="legal__list">
+						<li><a href="" class="footer__link">Terms</a></li>
+						<li><a href="" class="footer__link">Conditions</a></li>
+						<li><a href="" class="footer__link">Policy</a></li>
+						<li><a href="" class="footer__link"></a></li>
+					</ul>
+				</div>
+				<div class="footer__block-link social">
+					<div class="footer__spoller" data-spoller>
+						<h3 class="footer__title">Social media</h3>
+						<span>
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#fff"><path d="M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414z"/></svg>
+						</span>
+					</div>
+					<ul class="social__list">
+						<li><a href="" class="footer__link">Facebook</a></li>
+						<li><a href="" class="footer__link">Twitter</a></li>
+						<li><a href="" class="footer__link">YouTube</a></li>
+						<li><a href="" class="footer__link">LinkedIn</a></li>
+					</ul>
+				</div>
+			</div>
 		</div>
-		@@include('_js.html',{})
+		<div class="footer__bottom">Copyright @ 2022 Lugar Inc.</div>
+	</div>
+</footer>
+		</div>
+		<!-- Swiper -->
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script src="js/vendors.min.js"></script>
+<script src="js/app.min.js"></script>
 	</body>
 </html>
