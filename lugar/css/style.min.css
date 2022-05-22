@@ -1010,7 +1010,11 @@ textarea.input {
 }
 @media (max-width: 1240px) {
   .testimonial__arrows {
-    top: 25%;
+    position: absolute;
+    top: 130px;
+    left: auto;
+    right: 0px;
+    width: 96px;
     justify-content: center;
   }
 }
