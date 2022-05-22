@@ -746,6 +746,7 @@ textarea.input {
 }
 
 .decor--lg {
+  background-color: #afd4e2;
   top: 482px;
   right: 633px;
 }
@@ -757,14 +758,14 @@ textarea.input {
 }
 
 .line-animation {
-  stroke-dashoffset: 224;
-  stroke-dasharray: 310;
-  animation: animarrow 6s linear 1s;
+  stroke-dashoffset: 1600;
+  stroke-dasharray: 800;
+  animation: animarrow 6s 1 backwards 1s;
 }
 
 @keyframes animarrow {
   to {
-    stroke-dashoffset: 80;
+    stroke-dashoffset: 0;
   }
 }
 .aboutus {
@@ -1153,4 +1154,13 @@ textarea.input {
 .contact span {
   font-size: 0.8rem;
   opacity: 0.6;
+}
+
+.form__error {
+  color: red;
+  font-weight: 700;
+  font-style: italic;
+  letter-spacing: 0.05em;
+  text-align: center;
+  margin-bottom: 10px;
 }
