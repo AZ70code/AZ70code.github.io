@@ -758,9 +758,10 @@ textarea.input {
 }
 
 .line-animation {
-  stroke-dashoffset: 1600;
+  stroke-dashoffset: 800;
   stroke-dasharray: 800;
-  animation: animarrow 6s 1 backwards 1s;
+  animation: animarrow 6s ease 1 1s;
+  animation-fill-mode: forwards;
 }
 
 @keyframes animarrow {
