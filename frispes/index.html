@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Главная</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20220528234026">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header" data-scroll="150" data-scroll-show>
+			<div class="header__container">
+				<a href="#" class="header__logo logo">Frispes.</a>
+				<div class="header__menu menu">
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item"><a href="#" class="menu__link">Home</a></li>
+							<li class="menu__item"><a href="#" class="menu__link">Workspace</a></li>
+							<li class="menu__item"><a href="#" class="menu__link">Service</a></li>
+							<li class="menu__item"><a href="#" class="menu__link">Events</a></li>
+							<li class="menu__item"><a href="#" class="menu__link">Reviews</a></li>
+							<li class="menu__item"><a href="#" class="menu__link">Contact Us</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="icon-menu">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				<div class="header__action action-header">
+					<button type="button" class="action-header__login button button-white" data-popup="#login">Log In</button>
+					<button type="button" class="action-header__signup button" data-popup="#signup">Sign Up</button>
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<section class="page__hero hero">
+				<div class="hero__container">
+					<div class="hero__label label">Introducing</div>
+					<div class="hero__content">
+						<h1 class="hero__title"><span>Revolutionary</span> co-working space to realize your innovation</h1>
+						<p class="hero__text">In frispes, we spearhead new initiatives and provide mentorship to a new startup, and help grow their opportunities in key local, regional and global markets</p>
+					</div>
+					<div class="hero__slider-body">
+						<div class="hero__slider swiper">
+							<div class="swiper-wrapper">
+								<div class="hero__slide swiper-slide -ibg">
+									<picture><source srcset="img/hero.webp" type="image/webp"><img src="img/hero.jpg" alt=""></picture>
+								</div>
+								<div class="hero__slide swiper-slide -ibg">
+									<picture><source srcset="img/facilities.webp" type="image/webp"><img src="img/facilities.jpg" alt=""></picture>
+								</div>
+								<div class="hero__slide swiper-slide -ibg">
+									<picture><source srcset="img/hero.webp" type="image/webp"><img src="img/hero.jpg" alt=""></picture>
+								</div>
+							</div>
+						</div>
+						<div class="hero__pagination"></div>
+					</div>
+					<div class="hero__modal modal-hero " aria-hidden="true">
+						<h2 class="modal-hero__title">Find your space now</h2>
+						<form class="modal-hero__body popup__form" data-one-select>
+							<fieldset class="modal-hero__select-box">
+								<label for="location" class="modal-hero__label">Location</label>
+								<select name="location" id="location" class="modal-hero__select" data-scroll>
+									<option value="1" selected>Malang, Indonesia</option>
+									<option value="2">Kosgoda, Sri Lanka</option>
+									<option value="3">Phuket, Thailand</option>
+								</select>
+							</fieldset>
+							<fieldset class="modal-hero__select-box">
+								<label for="type" class="modal-hero__label">Type</label>
+								<select name="type" id="type" class="modal-hero__select">
+									<option value="1" selected>Private Office</option>
+									<option value="2">Private Office</option>
+									<option value="3">Сonference Hall</option>
+								</select>
+							</fieldset>
+							<fieldset class="modal-hero__select-box">
+								<label for="date" class="modal-hero__label">Date</label>
+								<input type="date" class="modal-hero__select" value="2022-08-09">
+							</fieldset>
+							<button data-close class="modal-hero__button popup__close button button-modal" type="submit">FIND MY SPACE</button>
+						</form>
+					</div>
+				</div>
+			</section>
+			<section class="spaces">
+				<div class="spaces__container">
+					<div class="spaces__header">
+						<div class="spaces__title-box">
+							<h2 class="spaces__title title">Our Spaces</h2>
+							<p class="spaces__subtitle">Our space is designed to give you a different experience when working with your team or personally</p>
+						</div>
+						<div class="spaces__navigation spaces-arrows arrows">
+							<div class="arrow arrow-next">
+								<svg width="53" height="27" viewBox="0 0 53 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M0.448429 14.7981L9.6525 25.9884C9.94822 26.3465 10.3179 26.5255 10.6875 26.5255C11.0572 26.5255 11.4268 26.3465 11.7225 25.9884C12.3139 25.2722 12.3139 24.1532 11.7225 23.437L5.03198 15.2905H26.6191C27.4323 15.2905 28.0977 14.4848 28.0977 13.5001C28.0977 12.5153 27.4323 11.7096 26.6191 11.7096H5.03198L11.7225 3.56312C12.3139 2.84695 12.3139 1.72792 11.7225 1.01174C11.1311 0.295565 10.207 0.295565 9.61555 1.01174L0.411451 12.202C-0.143013 12.9629 -0.142998 14.1267 0.448429 14.7981Z" fill="#9A9A9A" />
+									<rect width="50" height="4.00159" rx="2.00079" transform="matrix(-1 0 0 1 52.6855 11.5194)" fill="#9A9A9A" />
+								</svg>
+							</div>
+							<div class="arrow arrow-prev">
+								<svg width="53" height="27" viewBox="0 0 53 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M0.448429 14.7981L9.6525 25.9884C9.94822 26.3465 10.3179 26.5255 10.6875 26.5255C11.0572 26.5255 11.4268 26.3465 11.7225 25.9884C12.3139 25.2722 12.3139 24.1532 11.7225 23.437L5.03198 15.2905H26.6191C27.4323 15.2905 28.0977 14.4848 28.0977 13.5001C28.0977 12.5153 27.4323 11.7096 26.6191 11.7096H5.03198L11.7225 3.56312C12.3139 2.84695 12.3139 1.72792 11.7225 1.01174C11.1311 0.295565 10.207 0.295565 9.61555 1.01174L0.411451 12.202C-0.143013 12.9629 -0.142998 14.1267 0.448429 14.7981Z" fill="#9A9A9A" />
+									<rect width="50" height="4.00159" rx="2.00079" transform="matrix(-1 0 0 1 52.6855 11.5194)" fill="#9A9A9A" />
+								</svg>
+							</div>
+						</div>
+					</div>
+					<div class="spaces__slider swiper">
+						<div class="swiper-wrapper">
+							<figure class="spaces__slide swiper-slide">
+								<div class="spaces__image -ibg"><picture><source srcset="img/spaces/slide01.webp" type="image/webp"><img src="img/spaces/slide01.jpg" alt=""></picture>
+									<a href="#" class="spaces__link button-link slide__link"><span class="image-arrow link-arrow"></span></a>
+								</div>
+								<figcaption>
+									Working with team
+								</figcaption>
+								<div class="spaces__hover-block hover-block">
+									<div class="hover-block__body">
+										<div class="hover-block__decor"></div>
+										<h3 class="hover-block__title">Private Space</h3>
+										<p class="hover-block__descr">Comfortable space, Full speed wifi, Free coffe & Snack and many more</p>
+									</div>
+									<a href="#" class="hover-block__link button-link slide__link">
+										<span class="hover-block__label">Check avaibility</span>
+										<span class="hover-block__arrow link-arrow image-arrow"></span>
+									</a>
+								</div>
+							</figure>
+							<figure class="spaces__slide swiper-slide">
+								<div class="spaces__image -ibg"><picture><source srcset="img/spaces/slide02.webp" type="image/webp"><img src="img/spaces/slide02.jpg" alt=""></picture>
+									<a href="#" class="spaces__link button-link slide__link"><span class="image-arrow link-arrow"></span></a>
+								</div>
+								<figcaption>
+									Custom Office
+								</figcaption>
+								<div class="spaces__hover-block hover-block">
+									<div class="hover-block__body">
+										<div class="hover-block__decor"></div>
+										<h3 class="hover-block__title">Private Space</h3>
+										<p class="hover-block__descr">Comfortable space, Full speed wifi, Free coffe & Snack and many more</p>
+									</div>
+									<a href="#" class="hover-block__link button-link slide__link">
+										<span class="hover-block__label">Check avaibility</span>
+										<span class="hover-block__arrow link-arrow image-arrow"></span>
+									</a>
+								</div>
+							</figure>
+							<figure class="spaces__slide swiper-slide">
+								<div class="spaces__image -ibg"><picture><source srcset="img/spaces/slide01.webp" type="image/webp"><img src="img/spaces/slide01.jpg" alt=""></picture>
+									<a href="#" class="spaces__link button-link slide__link"><span class="image-arrow link-arrow"></span></a>
+								</div>
+								<figcaption>
+									Working with team
+								</figcaption>
+								<div class="spaces__hover-block hover-block">
+									<div class="hover-block__body">
+										<div class="hover-block__decor"></div>
+										<h3 class="hover-block__title">Private Space</h3>
+										<p class="hover-block__descr">Comfortable space, Full speed wifi, Free coffe & Snack and many more</p>
+									</div>
+									<a href="#" class="hover-block__link button-link slide__link">
+										<span class="hover-block__label">Check avaibility</span>
+										<span class="hover-block__arrow link-arrow image-arrow"></span>
+									</a>
+								</div>
+							</figure>
+							<figure class="spaces__slide swiper-slide">
+								<div class="spaces__image -ibg"><picture><source srcset="img/spaces/slide02.webp" type="image/webp"><img src="img/spaces/slide02.jpg" alt=""></picture>
+									<a href="#" class="spaces__link button-link slide__link"><span class="image-arrow link-arrow"></span></a>
+								</div>
+								<figcaption>
+									Custom Office
+								</figcaption>
+								<div class="spaces__hover-block hover-block">
+									<div class="hover-block__body">
+										<div class="hover-block__decor"></div>
+										<h3 class="hover-block__title">Private Space</h3>
+										<p class="hover-block__descr">Comfortable space, Full speed wifi, Free coffe & Snack and many more</p>
+									</div>
+									<a href="#" class="hover-block__link button-link slide__link">
+										<span class="hover-block__label">Check avaibility</span>
+										<span class="hover-block__arrow link-arrow image-arrow"></span>
+									</a>
+								</div>
+							</figure>
+							<figure class="spaces__slide swiper-slide">
+								<div class="spaces__image -ibg"><picture><source srcset="img/spaces/slide01.webp" type="image/webp"><img src="img/spaces/slide01.jpg" alt=""></picture>
+									<a href="#" class="spaces__link button-link slide__link"><span class="image-arrow link-arrow"></span></a>
+								</div>
+								<figcaption>
+									Working with team
+								</figcaption>
+								<div class="spaces__hover-block hover-block">
+									<div class="hover-block__body">
+										<div class="hover-block__decor"></div>
+										<h3 class="hover-block__title">Private Space</h3>
+										<p class="hover-block__descr">Comfortable space, Full speed wifi, Free coffe & Snack and many more</p>
+									</div>
+									<a href="#" class="hover-block__link button-link slide__link">
+										<span class="hover-block__label">Check avaibility</span>
+										<span class="hover-block__arrow link-arrow image-arrow"></span>
+									</a>
+								</div>
+							</figure>
+							<figure class="spaces__slide swiper-slide">
+								<div class="spaces__image -ibg"><picture><source srcset="img/spaces/slide02.webp" type="image/webp"><img src="img/spaces/slide02.jpg" alt=""></picture>
+									<a href="#" class="spaces__link button-link slide__link"><span class="image-arrow link-arrow"></span></a>
+								</div>
+								<figcaption>
+									Custom Office
+								</figcaption>
+								<div class="spaces__hover-block hover-block">
+									<div class="hover-block__body">
+										<div class="hover-block__decor"></div>
+										<h3 class="hover-block__title">Private Space</h3>
+										<p class="hover-block__descr">Comfortable space, Full speed wifi, Free coffe & Snack and many more</p>
+									</div>
+									<a href="#" class="hover-block__link button-link slide__link">
+										<span class="hover-block__label">Check avaibility</span>
+										<span class="hover-block__arrow link-arrow image-arrow"></span>
+									</a>
+								</div>
+							</figure>
+							<figure class="spaces__slide swiper-slide">
+								<div class="spaces__image -ibg"><picture><source srcset="img/spaces/slide01.webp" type="image/webp"><img src="img/spaces/slide01.jpg" alt=""></picture>
+									<a href="#" class="spaces__link button-link slide__link"><span class="image-arrow link-arrow"></span></a>
+								</div>
+								<figcaption>
+									Working with team
+								</figcaption>
+								<div class="spaces__hover-block hover-block">
+									<div class="hover-block__body">
+										<div class="hover-block__decor"></div>
+										<h3 class="hover-block__title">Private Space</h3>
+										<p class="hover-block__descr">Comfortable space, Full speed wifi, Free coffe & Snack and many more</p>
+									</div>
+									<a href="#" class="hover-block__link button-link slide__link">
+										<span class="hover-block__label">Check avaibility</span>
+										<span class="hover-block__arrow link-arrow image-arrow"></span>
+									</a>
+								</div>
+							</figure>
+							<figure class="spaces__slide swiper-slide">
+								<div class="spaces__image -ibg"><picture><source srcset="img/spaces/slide02.webp" type="image/webp"><img src="img/spaces/slide02.jpg" alt=""></picture>
+									<a href="#" class="spaces__link button-link slide__link"><span class="image-arrow link-arrow"></span></a>
+								</div>
+								<figcaption>
+									Custom Office
+								</figcaption>
+								<div class="spaces__hover-block hover-block">
+									<div class="hover-block__body">
+										<div class="hover-block__decor"></div>
+										<h3 class="hover-block__title">Private Space</h3>
+										<p class="hover-block__descr">Comfortable space, Full speed wifi, Free coffe & Snack and many more</p>
+									</div>
+									<a href="#" class="hover-block__link button-link slide__link">
+										<span class="hover-block__label">Check avaibility</span>
+										<span class="hover-block__arrow link-arrow image-arrow"></span>
+									</a>
+								</div>
+							</figure>
+						</div>
+					</div>
+					<div class="spaces__scrollbar swiper-scrollbar scrollbar"></div>
+					<div class="spaces__pagination"></div>
+				</div>
+			</section>
+			<section class="aboutus">
+				<div class="aboutus__container">
+					<div class="aboutus__achievemens">
+						<div class="achievemens__info">
+							<div class="achievemens__icon">
+								<img src="img/icons/aboutus/icon01.svg" alt="">
+							</div>
+							<div class="achievemens__block">
+								<div class="achievemens__value">500+</div>
+								<div class="achievemens__label">Meeting rooms</div>
+							</div>
+						</div>
+						<div class="achievemens__info">
+							<div class="achievemens__icon">
+								<img src="img/icons/aboutus/icon02.svg" alt="">
+							</div>
+							<div class="achievemens__block">
+								<div class="achievemens__value">100+</div>
+								<div class="achievemens__label">Event spaces</div>
+							</div>
+						</div>
+						<div class="achievemens__info">
+							<div class="achievemens__icon">
+								<img src="img/icons/aboutus/icon03.svg" alt="">
+							</div>
+							<div class="achievemens__block">
+								<div class="achievemens__value">60+</div>
+								<div class="achievemens__label">Countries</div>
+							</div>
+						</div>
+						<div class="achievemens__info">
+							<div class="achievemens__icon">
+								<img src="img/icons/aboutus/icon04.svg" alt="">
+							</div>
+							<div class="achievemens__block">
+								<div class="achievemens__value">500 Mbps</div>
+								<div class="achievemens__label">Internet speed</div>
+							</div>
+						</div>
+						<div class="achievemens__info">
+							<div class="achievemens__icon">
+								<img src="img/icons/aboutus/icon05.svg" alt="">
+							</div>
+							<div class="achievemens__block">
+								<div class="achievemens__value">5K+</div>
+								<div class="achievemens__label">Startup mentors</div>
+							</div>
+						</div>
+						<div class="achievemens__info">
+							<div class="achievemens__icon">
+								<img src="img/icons/aboutus/icon06.svg" alt="">
+							</div>
+							<div class="achievemens__block">
+								<div class="achievemens__value">200+</div>
+								<div class="achievemens__label">Communities inside</div>
+							</div>
+						</div>
+					</div>
+					<div class="aboutus__content">
+						<div class="content__label label">Why Frispes</div>
+						<h2 class="content__title title">We revolutionize your workspace</h2>
+						<p class="content__text">With a decade of insights and expertise, we're decided to reimagine co-working space, designed to help a new startup grow up and realize their ideas so they can give a positive impacts on many people</p>
+					</div>
+				</div>
+			</section>
+			<section class="facilities">
+				<div class="facilities__container">
+					<div class="facilities__label label">Our Facilities</div>
+					<h2 class="facilities__title title">All facilities are designed to meet all your needs</h2>
+					<div class="facilities__wrapper">
+						<div class="facilities__slider-body">
+							<div class="facilities__thumbs-slider swiper">
+								<div class="swiper-wrapper">
+									<div class="thumbs__slide swiper-slide">
+										<span class="thumbs__content">Spacious parking area</span>
+									</div>
+									<div class="thumbs__slide swiper-slide">
+										<span class="thumbs__content">Comfortable spaces</span>
+									</div>
+									<div class="thumbs__slide swiper-slide">
+										<span class="thumbs__content">Cozy cafe</span>
+									</div>
+									<div class="thumbs__slide swiper-slide">
+										<span class="thumbs__content">Child playground</span>
+									</div>
+								</div>
+							</div>
+							<div class="facilities__slider swiper">
+								<div class="swiper-wrapper">
+									<div class="facilities__slide swiper-slide">
+										<div class="facilities__image -ibg"><picture><source srcset="img/facilities.webp" type="image/webp"><img src="img/facilities.jpg" alt=""></picture></div>
+									</div>
+									<div class="facilities__slide swiper-slide">
+										<div class="facilities__image -ibg"><picture><source srcset="img/hero.webp" type="image/webp"><img src="img/hero.jpg" alt=""></picture></div>
+									</div>
+									<div class="facilities__slide swiper-slide">
+										<div class="facilities__image -ibg"><picture><source srcset="img/facilities.webp" type="image/webp"><img src="img/facilities.jpg" alt=""></picture></div>
+									</div>
+									<div class="facilities__slide swiper-slide">
+										<div class="facilities__image -ibg"><picture><source srcset="img/hero.webp" type="image/webp"><img src="img/hero.jpg" alt=""></picture></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="facilities__control">
+							<div class="facilities__scrollbar swiper-scrollbar scrollbar"></div>
+							<div class="facilities__pagination"></div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="gallery">
+				<div class="gallery__container">
+					<div class="gallery__header">
+						<div class="gallery__label label">Frispes gallery</div>
+						<h2 class="gallery__titile title">Immersive beautiful co-working space gallery</h2>
+						<div class="gallery__navigation arrows">
+							<div class="gallery__arrow arrow arrow-next">
+								<svg width="53" height="27" viewBox="0 0 53 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M0.448429 14.7981L9.6525 25.9884C9.94822 26.3465 10.3179 26.5255 10.6875 26.5255C11.0572 26.5255 11.4268 26.3465 11.7225 25.9884C12.3139 25.2722 12.3139 24.1532 11.7225 23.437L5.03198 15.2905H26.6191C27.4323 15.2905 28.0977 14.4848 28.0977 13.5001C28.0977 12.5153 27.4323 11.7096 26.6191 11.7096H5.03198L11.7225 3.56312C12.3139 2.84695 12.3139 1.72792 11.7225 1.01174C11.1311 0.295565 10.207 0.295565 9.61555 1.01174L0.411451 12.202C-0.143013 12.9629 -0.142998 14.1267 0.448429 14.7981Z" fill="#9A9A9A" />
+									<rect width="50" height="4.00159" rx="2.00079" transform="matrix(-1 0 0 1 52.6855 11.5194)" fill="#9A9A9A" />
+								</svg>
+							</div>
+							<div class="gallery__arrow arrow arrow-prev">
+								<svg width="53" height="27" viewBox="0 0 53 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M0.448429 14.7981L9.6525 25.9884C9.94822 26.3465 10.3179 26.5255 10.6875 26.5255C11.0572 26.5255 11.4268 26.3465 11.7225 25.9884C12.3139 25.2722 12.3139 24.1532 11.7225 23.437L5.03198 15.2905H26.6191C27.4323 15.2905 28.0977 14.4848 28.0977 13.5001C28.0977 12.5153 27.4323 11.7096 26.6191 11.7096H5.03198L11.7225 3.56312C12.3139 2.84695 12.3139 1.72792 11.7225 1.01174C11.1311 0.295565 10.207 0.295565 9.61555 1.01174L0.411451 12.202C-0.143013 12.9629 -0.142998 14.1267 0.448429 14.7981Z" fill="#9A9A9A" />
+									<rect width="50" height="4.00159" rx="2.00079" transform="matrix(-1 0 0 1 52.6855 11.5194)" fill="#9A9A9A" />
+								</svg>
+							</div>
+						</div>
+					</div>
+					<div class="gallery__slider swiper">
+						<div class="swiper-wrapper">
+							<div class="gallery__slide swiper-slide">
+								<div class="gallery__image -ibg">
+									<picture><source srcset="img/gallery/image01.webp" type="image/webp"><img src="img/gallery/image01.jpg" alt=""></picture>
+								</div>
+							</div>
+							<div class="gallery__slide swiper-slide">
+								<div class="gallery__image -ibg">
+									<picture><source srcset="img/gallery/image02.webp" type="image/webp"><img src="img/gallery/image02.jpg" alt=""></picture>
+								</div>
+							</div>
+							<div class="gallery__slide swiper-slide">
+								<div class="gallery__image -ibg">
+									<picture><source srcset="img/gallery/image03.webp" type="image/webp"><img src="img/gallery/image03.jpg" alt=""></picture>
+								</div>
+							</div>
+							<div class="gallery__slide swiper-slide">
+								<div class="gallery__image -ibg">
+									<picture><source srcset="img/gallery/image04.webp" type="image/webp"><img src="img/gallery/image04.jpg" alt=""></picture>
+								</div>
+							</div>
+							<div class="gallery__slide swiper-slide">
+								<div class="gallery__image -ibg">
+									<picture><source srcset="img/gallery/image01.webp" type="image/webp"><img src="img/gallery/image01.jpg" alt=""></picture>
+								</div>
+							</div>
+							<div class="gallery__slide swiper-slide">
+								<div class="gallery__image -ibg">
+									<picture><source srcset="img/gallery/image02.webp" type="image/webp"><img src="img/gallery/image02.jpg" alt=""></picture>
+								</div>
+							</div>
+							<div class="gallery__slide swiper-slide">
+								<div class="gallery__image -ibg">
+									<picture><source srcset="img/gallery/image03.webp" type="image/webp"><img src="img/gallery/image03.jpg" alt=""></picture>
+								</div>
+							</div>
+							<div class="gallery__slide swiper-slide">
+								<div class="gallery__image -ibg">
+									<picture><source srcset="img/gallery/image04.webp" type="image/webp"><img src="img/gallery/image04.jpg" alt=""></picture>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="brands">
+				<div class="brands__container">
+					<h2 class="brands__title title">Who uses Frispes?</h2>
+					<p class="brands__descr">Big brands, small bussiness, new startuo and inividuals</p>
+					<ul class="brands__list">
+						<li class="brands__item">
+							<a href="" class="brands__link">
+								<picture><source srcset="img/brands/Logo01.webp" type="image/webp"><img src="img/brands/Logo01.png" alt=""></picture>
+							</a>
+						</li>
+						<li class="brands__item">
+							<a href="" class="brands__link">
+								<picture><source srcset="img/brands/Logo02.webp" type="image/webp"><img src="img/brands/Logo02.png" alt=""></picture>
+							</a>
+						</li>
+						<li class="brands__item">
+							<a href="" class="brands__link">
+								<picture><source srcset="img/brands/Logo03.webp" type="image/webp"><img src="img/brands/Logo03.png" alt=""></picture>
+							</a>
+						</li>
+						<li class="brands__item">
+							<a href="" class="brands__link">
+								<picture><source srcset="img/brands/Logo04.webp" type="image/webp"><img src="img/brands/Logo04.png" alt=""></picture>
+							</a>
+						</li>
+						<li class="brands__item">
+							<a href="" class="brands__link">
+								<picture><source srcset="img/brands/Logo05.webp" type="image/webp"><img src="img/brands/Logo05.png" alt=""></picture>
+							</a>
+						</li>
+						<li class="brands__item">
+							<a href="" class="brands__link">
+								<picture><source srcset="img/brands/Logo06.webp" type="image/webp"><img src="img/brands/Logo06.png" alt=""></picture>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="reviews">
+				<div class="reviews__container">
+					<div class="reviews__header">
+						<div class="reviews__title-box">
+							<div class="reviews__label label">Reviews</div>
+							<h2 class="reviews__titile title">What our customers are saying</h2>
+						</div>
+						<div class="reviews__navigation arrows">
+							<div class="reviews__arrow arrow arrow-next">
+								<svg width="53" height="27" viewBox="0 0 53 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M0.448429 14.7981L9.6525 25.9884C9.94822 26.3465 10.3179 26.5255 10.6875 26.5255C11.0572 26.5255 11.4268 26.3465 11.7225 25.9884C12.3139 25.2722 12.3139 24.1532 11.7225 23.437L5.03198 15.2905H26.6191C27.4323 15.2905 28.0977 14.4848 28.0977 13.5001C28.0977 12.5153 27.4323 11.7096 26.6191 11.7096H5.03198L11.7225 3.56312C12.3139 2.84695 12.3139 1.72792 11.7225 1.01174C11.1311 0.295565 10.207 0.295565 9.61555 1.01174L0.411451 12.202C-0.143013 12.9629 -0.142998 14.1267 0.448429 14.7981Z" fill="#9A9A9A" />
+									<rect width="50" height="4.00159" rx="2.00079" transform="matrix(-1 0 0 1 52.6855 11.5194)" fill="#9A9A9A" />
+								</svg>
+							</div>
+							<div class="reviews__arrow arrow arrow-prev">
+								<svg width="53" height="27" viewBox="0 0 53 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M0.448429 14.7981L9.6525 25.9884C9.94822 26.3465 10.3179 26.5255 10.6875 26.5255C11.0572 26.5255 11.4268 26.3465 11.7225 25.9884C12.3139 25.2722 12.3139 24.1532 11.7225 23.437L5.03198 15.2905H26.6191C27.4323 15.2905 28.0977 14.4848 28.0977 13.5001C28.0977 12.5153 27.4323 11.7096 26.6191 11.7096H5.03198L11.7225 3.56312C12.3139 2.84695 12.3139 1.72792 11.7225 1.01174C11.1311 0.295565 10.207 0.295565 9.61555 1.01174L0.411451 12.202C-0.143013 12.9629 -0.142998 14.1267 0.448429 14.7981Z" fill="#9A9A9A" />
+									<rect width="50" height="4.00159" rx="2.00079" transform="matrix(-1 0 0 1 52.6855 11.5194)" fill="#9A9A9A" />
+								</svg>
+							</div>
+						</div>
+					</div>
+					<div class="reviews__slider swiper">
+						<div class="swiper-wrapper">
+							<div class="reviews__slide swiper-slide">
+								<article class="reviews__card card">
+									<p class="card__text">Our team has been working at frispes for almost 2 months because our office still closed. During working at frispes, we feel a new experience, we can feel working with a beautiful, modern, and comfortable space. And cozy cafe with high-speed internet in there. Thank you for frispes and team.</p>
+									<div class="card__person person">
+										<div class="person__avatar">
+											<picture><source srcset="img/avatar/avatar01.webp" type="image/webp"><img src="img/avatar/avatar01.png" alt=""></picture>
+										</div>
+										<div class="person__info">
+											<div class="person__name">Pedro Ibanez</div>
+											<div class="person__position">UI Designer at Google</div>
+										</div>
+									</div>
+								</article>
+							</div>
+							<div class="reviews__slide swiper-slide">
+								<article class="reviews__card card">
+									<p class="card__text">The high-speed internet at frispes was so amazing. I can get best experience when running video call with my clients. Frispes has spacious and safe parking area, that’s what i need because i used to work as freelancer for a long time.</p>
+									<div class="card__person person">
+										<div class="person__avatar">
+											<picture><source srcset="img/avatar/avatar02.webp" type="image/webp"><img src="img/avatar/avatar02.png" alt=""></picture>
+										</div>
+										<div class="person__info">
+											<div class="person__name">Raymond Thual</div>
+											<div class="person__position">Professional Freelancer</div>
+										</div>
+									</div>
+								</article>
+							</div>
+							<div class="reviews__slide swiper-slide">
+								<article class="reviews__card card">
+									<p class="card__text">Just three words : Frispes is Awesome!</p>
+									<div class="card__person person">
+										<div class="person__avatar">
+											<picture><source srcset="img/avatar/avatar03.webp" type="image/webp"><img src="img/avatar/avatar03.png" alt=""></picture>
+										</div>
+										<div class="person__info">
+											<div class="person__name">Yuli Berlian</div>
+											<div class="person__position">IOS Dev at Tokopedia</div>
+										</div>
+									</div>
+								</article>
+							</div>
+							<div class="reviews__slide swiper-slide">
+								<article class="reviews__card card">
+									<p class="card__text">Our team has been working at frispes for almost 2 months because our office still closed. During working at frispes, we feel a new experience, we can feel working with a beautiful, modern, and comfortable space. And cozy cafe with high-speed internet in there. Thank you for frispes and team.</p>
+									<div class="card__person person">
+										<div class="person__avatar">
+											<picture><source srcset="img/avatar/avatar01.webp" type="image/webp"><img src="img/avatar/avatar01.png" alt=""></picture>
+										</div>
+										<div class="person__info">
+											<div class="person__name">Pedro Ibanez</div>
+											<div class="person__position">UI Designer at Google</div>
+										</div>
+									</div>
+								</article>
+							</div>
+							<div class="reviews__slide swiper-slide">
+								<article class="reviews__card card">
+									<p class="card__text">The high-speed internet at frispes was so amazing. I can get best experience when running video call with my clients. Frispes has spacious and safe parking area, that’s what i need because i used to work as freelancer for a long time.</p>
+									<div class="card__person person">
+										<div class="person__avatar">
+											<picture><source srcset="img/avatar/avatar02.webp" type="image/webp"><img src="img/avatar/avatar02.png" alt=""></picture>
+										</div>
+										<div class="person__info">
+											<div class="person__name">Raymond Thual</div>
+											<div class="person__position">Professional Freelancer</div>
+										</div>
+									</div>
+								</article>
+							</div>
+							<div class="reviews__slide swiper-slide">
+								<article class="reviews__card card">
+									<p class="card__text">Just three words : Frispes is Awesome!</p>
+									<div class="card__person person">
+										<div class="person__avatar">
+											<picture><source srcset="img/avatar/avatar03.webp" type="image/webp"><img src="img/avatar/avatar03.png" alt=""></picture>
+										</div>
+										<div class="person__info">
+											<div class="person__name">Yuli Berlian</div>
+											<div class="person__position">IOS Dev at Tokopedia</div>
+										</div>
+									</div>
+								</article>
+							</div>
+						</div>
+					</div>
+					<div class="reviews__scrollbar swiper-scrollbar scrollbar"></div>
+				</div>
+			</section>
+			<section class="answers">
+				<div class="answers__container" data-showmore="3">
+					<h2 class="answers__title title">Find the answers to anything you need in our Help Center</h2>
+					<ul class="answers__body" data-showmore-content>
+						<li class="answers__item" data-item>
+							<a href="" class="answers__card">How do I know if a space is available?</a>
+							<a href="#" class="answers__btn button-link"><span class="answers__arrow link-arrow"></span></a>
+						</li>
+						<li class="answers__item">
+							<a href="" class="answers__card">How do i book a space?</a>
+							<a href="#" class="answers__btn button-link"><span class="answers__arrow link-arrow"></span></a>
+						</li>
+						<li class="answers__item">
+							<a href="" class="answers__card">How do reviews work?</a>
+							<a href="#" class="answers__btn button-link"><span class="answers__arrow link-arrow"></span></a>
+						</li>
+						<li class="answers__item">
+							<a href="" class="answers__card">How do I know if a space is available?</a>
+							<a href="#" class="answers__btn button-link"><span class="answers__arrow link-arrow"></span></a>
+						</li>
+						<li class="answers__item">
+							<a href="" class="answers__card">How do i book a space?</a>
+							<a href="#" class="answers__btn button-link"><span class="answers__arrow link-arrow"></span></a>
+						</li>
+						<li class="answers__item">
+							<a href="" class="answers__card">How do reviews work?</a>
+							<a href="#" class="answers__btn button-link"><span class="answers__arrow link-arrow"></span></a>
+						</li>
+					</ul>
+					<button class="answers__button-more button-more" hidden data-showmore-button><span>More questions<div class="link-arrow"></div></span><span>Hide</span></button>
+				</div>
+			</section>
+			<section class="news">
+				<div class="news__container">
+					<div class="news__header">
+						<h2 class="news__title title">News, events and insights for you</h2>
+						<button class="news__button-more button-more"><span>See more<div class="link-arrow"></div></span></button>
+					</div>
+					<div class="news__body">
+						<article class="news__block block-news">
+							<div class="block-news__image -ibg">
+								<picture><source srcset="img/news/news01.webp" type="image/webp"><img src="img/news/news01.jpg" alt=""></picture>
+							</div>
+							<div class="block-news__info">
+								<h3 class="block-news__title">Google I / O 2020 news update</h3>
+								<p class="block-news__text">Out of concern for the health and safety of our developers, employees, and local communities — and in line with recent ...
+								</p>
+								<div class="block-news__person person">
+									<div class="person__avatar">
+										<picture><source srcset="img/avatar/avatar04.webp" type="image/webp"><img src="img/avatar/avatar04.png" alt=""></picture>
+									</div>
+									<div class="person__info">
+										<div class="person__name">Sundar pichai</div>
+										<div class="person__position">CEO at Google</div>
+									</div>
+								</div>
+							</div>
+						</article>
+						<article class="news__block block-news">
+							<div class="block-news__image -ibg">
+								<picture><source srcset="img/news/news02.webp" type="image/webp"><img src="img/news/news02.jpg" alt=""></picture>
+							</div>
+							<div class="block-news__info">
+								<h3 class="block-news__title">Minimal workspace for inspirations</h3>
+								<p class="block-news__text">Out of concern for the health and safety of our developers, employees, and local communities — and in line with recent ...</p>
+								<div class="block-news__person person">
+									<div class="person__avatar">
+										<picture><source srcset="img/avatar/avatar02.webp" type="image/webp"><img src="img/avatar/avatar02.png" alt=""></picture>
+									</div>
+									<div class="person__info">
+										<div class="person__name">Anthony Masional</div>
+										<div class="person__position">CEO at Google</div>
+									</div>
+								</div>
+							</div>
+						</article>
+						<article class="news__block block-news">
+							<div class="block-news__image -ibg">
+								<picture><source srcset="img/news/news03.webp" type="image/webp"><img src="img/news/news03.jpg" alt=""></picture>
+							</div>
+							<div class="block-news__info">
+								<h3 class="block-news__title">Does productivity increase when working remotely ?</h3>
+								<p class="block-news__text">Out of concern for the health and safety of our developers, employees, and local communities — and in line with recent ...</p>
+								<div class="block-news__person person">
+									<div class="person__avatar">
+										<picture><source srcset="img/avatar/avatar03.webp" type="image/webp"><img src="img/avatar/avatar03.png" alt=""></picture>
+									</div>
+									<div class="person__info">
+										<div class="person__name">Franck Martin</div>
+										<div class="person__position">CEO at Google</div>
+									</div>
+								</div>
+							</div>
+						</article>
+						<article class="news__block block-news">
+							<div class="block-news__image -ibg">
+								<picture><source srcset="img/news/news04.webp" type="image/webp"><img src="img/news/news04.jpg" alt=""></picture>
+							</div>
+							<div class="block-news__info">
+								<h3 class="block-news__title">Morning routine to boost your mood</h3>
+								<p class="block-news__text">Out of concern for the health and safety of our developers, employees, and local communities — and in line with recent ...</p>
+								<div class="block-news__person person">
+									<div class="person__avatar">
+										<picture><source srcset="img/avatar/avatar01.webp" type="image/webp"><img src="img/avatar/avatar01.png" alt=""></picture>
+									</div>
+									<div class="person__info">
+										<div class="person__name">Anthony Masional</div>
+										<div class="person__position">CEO at Google</div>
+									</div>
+								</div>
+							</div>
+						</article>
+						<article class="news__block block-news">
+							<div class="block-news__image -ibg">
+								<picture><source srcset="img/news/news05.webp" type="image/webp"><img src="img/news/news05.jpg" alt=""></picture>
+							</div>
+							<div class="block-news__info">
+								<h3 class="block-news__title">5+ tips to find comfortable co-working space</h3>
+								<p class="block-news__text">Out of concern for the health and safety of our developers, employees, and local communities — and in line with recent ...</p>
+								<div class="block-news__person person">
+									<div class="person__avatar">
+										<picture><source srcset="img/avatar/avatar04.webp" type="image/webp"><img src="img/avatar/avatar04.png" alt=""></picture>
+									</div>
+									<div class="person__info">
+										<div class="person__name">Mykola Ilschenko</div>
+										<div class="person__position">CEO at Google</div>
+									</div>
+								</div>
+							</div>
+						</article>
+						<article class="news__block block-news">
+							<div class="block-news__image -ibg">
+								<picture><source srcset="img/news/news01.webp" type="image/webp"><img src="img/news/news01.jpg" alt=""></picture>
+							</div>
+							<div class="block-news__info">
+								<h3 class="block-news__title">Google I / O 2020 news update</h3>
+								<p class="block-news__text">Out of concern for the health and safety of our developers, employees, and local communities — and in line with recent ...</p>
+								<div class="block-news__person person">
+									<div class="person__avatar">
+										<picture><source srcset="img/avatar/avatar04.webp" type="image/webp"><img src="img/avatar/avatar04.png" alt=""></picture>
+									</div>
+									<div class="person__info">
+										<div class="person__name">Sundar pichai</div>
+										<div class="person__position">CEO at Google</div>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+				</div>
+			</section>
+		</main>
+		<div id="login" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<form action="#" class="popup__form">
+						<input type="text" class="popup__input form__input input" placeholder="Your Name" required>
+						<input type="email" class="popup__input form__input input" placeholder="Your Email" required>
+						<input type="password" class="popup__input form__input input" placeholder="Your Password" required>
+					</form>
+					<button data-close type="submit" class="popup__close button button-modal">Log In</button>
+				</div>
+			</div>
+		</div>
+		<div id="signup" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<form action="#" class="popup__form">
+						<input type="email" class="popup__input form__input input" placeholder="Your Email" required>
+						<input type="password" class="popup__input form__input input" placeholder="Your Password" required>
+					</form>
+					<button data-close type="submit" class="popup__close button button-modal">Sign Up</button>
+				</div>
+			</div>
+		</div>
+		<!-- <div class="hero__modal modal-hero " id="modal" aria-hidden="true">
+	<h2 class="modal-hero__title">Find your space now</h2>
+	<form class="modal-hero__body popup__form" data-one-select>
+		<fieldset class="modal-hero__select-box">
+			<label for="location" class="modal-hero__label">Location</label>
+			<select name="location" id="location" class="modal-hero__select" data-scroll>
+				<option value="1" selected>Malang, Indonesia</option>
+				<option value="2">Kosgoda, Sri Lanka</option>
+				<option value="3">Phuket, Thailand</option>
+			</select>
+		</fieldset>
+		<fieldset class="modal-hero__select-box">
+			<label for="type" class="modal-hero__label">Type</label>
+			<select name="type" id="type" class="modal-hero__select">
+				<option value="1" selected>Private Office</option>
+				<option value="2">Private Office</option>
+				<option value="3">Сonference Hall</option>
+			</select>
+		</fieldset>
+		<fieldset class="modal-hero__select-box">
+			<label for="date" class="modal-hero__label">Date</label>
+			<input type="date" class="modal-hero__select" value="2022-08-09">
+		</fieldset>
+		<button data-close class="modal-hero__button popup__close button button-modal" type="submit">FIND MY SPACE</button>
+	</form>
+</div> -->
+
+
+
+		<footer class="footer">
+			<div class="footer__top footer-top">
+				<div class="footer-top__container">
+					<div class="footer-top__content">
+						<div class="footer-top__content-body">
+							<div class="footer-top__label label">Became a member</div>
+							<h2 class="footer-top__title title">Ready to try different work experience now?</h2>
+							<p class="footer-top__descr">Get the best working experience that you never feel before</p>
+							<button type="button" class="footer-top__button button">SIGN UP NOW</button>
+						</div>
+					</div>
+					<div class="footer-top__image">
+						<picture><source srcset="img/footer.webp" type="image/webp"><img src="img/footer.png" alt=""></picture>
+					</div>
+				</div>
+			</div>
+			<div class="footer__bottom footer-bottom">
+				<div class="footer-bottom__container">
+					<div class="footer-bottom__social">
+						<a href="" class="footer-bottom__logo">Frispes</a>
+						<p class="footer-bottom__text">We offer comfortable spaces, cozy cafe, high-speed internet, spacious parking area and many more for your best workspaces and meetings</p>
+						<ul class="footer-bottom__social-box">
+							<li class="footer-bottom__social-icon"><a href="#"><img src="img/icons/footer/footer01.svg" alt=""></a></li>
+							<li class="footer-bottom__social-icon"><a href="#"><img src="img/icons/footer/footer02.svg" alt=""></a></li>
+							<li class="footer-bottom__social-icon"><a href="#"><img src="img/icons/footer/footer03.svg" alt=""></a></li>
+						</ul>
+					</div>
+					<div class="footer-bottom__links" data-spollers="768,max" data-one-spoller>
+						<div class="footer-bottom__block-link">
+							<h4 class="footer-bottom__title" data-spoller>Spaces
+								<span>
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#fff">
+										<path d="M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414z" />
+									</svg>
+								</span>
+							</h4>
+							<ul class="footer-bottom__list">
+								<li><a href="" class="footer__link">Co-working spaces</a></li>
+								<li><a href="" class="footer__link">Meeting rooms</a></li>
+								<li><a href="" class="footer__link">Event spaces</a></li>
+								<li><a href="" class="footer__link">Child playground</a></li>
+								<li><a href="" class="footer__link">Cafe & resto</a></li>
+							</ul>
+						</div>
+						<div class="footer-bottom__block-link">
+							<h4 class="footer-bottom__title" data-spoller>Company
+								<span>
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#fff">
+										<path d="M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414z" />
+									</svg>
+								</span>
+							</h4>
+							<ul class="footer-bottom__list">
+								<li><a href="" class="footer__link">About Us</a></li>
+								<li><a href="" class="footer__link">Pricing</a></li>
+								<li><a href="" class="footer__link">Careers</a></li>
+								<li><a href="" class="footer__link">Press</a></li>
+							</ul>
+						</div>
+						<div class="footer-bottom__block-link ">
+							<h4 class="footer-bottom__title" data-spoller>Support
+								<span>
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#fff">
+										<path d="M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414z" />
+									</svg>
+								</span>
+							</h4>
+							<ul class="footer-bottom__list">
+								<li><a href="" class="footer__link">FAQs</a></li>
+								<li><a href="" class="footer__link">Privacy Policy</a></li>
+								<li><a href="" class="footer__link">Help</a></li>
+							</ul>
+						</div>
+						<div class="footer-bottom__block-link contactus">
+							<h4 class="footer-bottom__title" data-spoller>Contact Us
+								<span>
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#fff">
+										<path d="M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414z" />
+									</svg>
+								</span>
+							</h4>
+							<ul class="footer-bottom__list ">
+								<li><a href="" class="footer__link contact-link">E. <span>Hello@frispes.com</span></a></li>
+								<li><a href="" class="footer__link contact-link">A. <span>Jalan Jayakatwang No.301 Ngasem, Kediri</span></a></li>
+								<li><a href="" class="footer__link contact-link">P. <span>(+62) 82334670000</span></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script src="js/app.min.js?_v=20220528234026"></script>
+</body>
+
+</html>
