@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220706205514">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220708195006">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,12 +20,12 @@
 				<div class="header__menu menu">
 					<nav class="menu__body">
 						<ul class="menu__list">
-							<li class="menu__item"><a href="#" class="menu__link">Home</a></li>
-							<li class="menu__item"><a href="#" class="menu__link">Workspace</a></li>
-							<li class="menu__item"><a href="#" class="menu__link">Service</a></li>
-							<li class="menu__item"><a href="#" class="menu__link">Events</a></li>
-							<li class="menu__item"><a href="#" class="menu__link">Reviews</a></li>
-							<li class="menu__item"><a href="#" class="menu__link">Contact Us</a></li>
+							<li class="menu__item"><a href="#" class="menu__link" data-goto=".page__hero">Home</a></li>
+							<li class="menu__item"><a href="#" class="menu__link" data-goto=".spaces">Workspace</a></li>
+							<li class="menu__item"><a href="#" class="menu__link" data-goto=".facilities">Service</a></li>
+							<li class="menu__item"><a href="#" class="menu__link" data-goto=".news">Events</a></li>
+							<li class="menu__item"><a href="#" class="menu__link" data-goto=".reviews">Reviews</a></li>
+							<li class="menu__item"><a href="#" class="menu__link" data-goto=".footer__bottom">Contact Us</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -41,7 +41,7 @@
 			</div>
 		</header>
 		<main class="page">
-			<section class="page__hero hero">
+			<section class="page__hero hero" data-watch="navigator">
 				<div class="hero__container">
 					<div class="hero__label label">Introducing</div>
 					<div class="hero__content">
@@ -92,7 +92,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="spaces">
+			<section class="spaces" data-watch="navigator">
 				<div class="spaces__container">
 					<div class="spaces__header">
 						<div class="spaces__title-box">
@@ -274,7 +274,7 @@
 					<div class="spaces__pagination"></div>
 				</div>
 			</section>
-			<section class="aboutus">
+			<section class="aboutus" data-watch="navigator">
 				<div class="aboutus__container">
 					<div class="aboutus__achievemens">
 						<div class="achievemens__info">
@@ -339,7 +339,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="facilities">
+			<section class="facilities" data-watch="navigator">
 				<div class="facilities__container">
 					<div class="facilities__label label">Our Facilities</div>
 					<h2 class="facilities__title title">All facilities are designed to meet all your needs</h2>
@@ -389,7 +389,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="gallery">
+			<section class="gallery" data-watch="navigator">
 				<div class="gallery__container">
 					<div class="gallery__header">
 						<div class="gallery__label label">Frispes gallery</div>
@@ -455,7 +455,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="brands">
+			<section class="brands" data-watch="navigator">
 				<div class="brands__container">
 					<h2 class="brands__title title">Who uses Frispes?</h2>
 					<p class="brands__descr">Big brands, small bussiness, new startuo and inividuals</p>
@@ -493,7 +493,7 @@
 					</ul>
 				</div>
 			</section>
-			<section class="reviews">
+			<section class="reviews" data-watch="navigator">
 				<div class="reviews__container">
 					<div class="reviews__header">
 						<div class="reviews__title-box">
@@ -606,7 +606,7 @@
 					<div class="reviews__scrollbar swiper-scrollbar scrollbar"></div>
 				</div>
 			</section>
-			<section class="answers">
+			<section class="answers" data-watch="navigator">
 				<div class="answers__container" data-showmore="3">
 					<h2 class="answers__title title">Find the answers to anything you need in our Help Center</h2>
 					<ul class="answers__body" data-showmore-content>
@@ -638,7 +638,7 @@
 					<button class="answers__button-more button-more" hidden data-showmore-button><span>More questions<div class="link-arrow"></div></span><span>Hide</span></button>
 				</div>
 			</section>
-			<section class="news">
+			<section class="news" data-watch="navigator">
 				<div class="news__container">
 					<div class="news__header">
 						<h2 class="news__title title">News, events and insights for you</h2>
@@ -652,18 +652,6 @@
 							<div class="block-news__info">
 								<h3 class="block-news__title">Google I / O 2020 news update</h3>
 								<span class="block-news__author">Sundar Pichai</span>
-
-								<!-- <p class="block-news__text">Out of concern for the health and safety of our developers, employees, and local communities — and in line with recent ...
-									</p>
-									<div class="block-news__person person">
-										<div class="person__avatar">
-											<picture><source srcset="img/avatar/avatar04.webp" type="image/webp"><img src="img/avatar/avatar04.png" alt=""></picture>
-										</div>
-										<div class="person__info">
-											<div class="person__name">Sundar pichai</div>
-											<div class="person__position">CEO at Google</div>
-										</div>
-									</div> -->
 							</div>
 						</a>
 						<a href="#" class="news__block block-news">
@@ -859,7 +847,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20220706205514"></script>
+	<script src="js/app.min.js?_v=20220708195006"></script>
 </body>
 
 </html>
