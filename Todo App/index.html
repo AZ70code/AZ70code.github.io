@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <title>task1</title>
+<script defer src="analytic.0fc7a69ee55e47695338.js"></script><script defer src="main.e6b626f96da1bfe0165b.js"></script></head>
+<body>
+  <div id="container" class="container-xl p-3">
+    <h2>MY NOTES</h2>
+    <table id="table-note" class="table table-sm my-3">
+      <thead class="table-info">
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Created</th>
+          <th scope="col">Category</th>
+          <th scope="col">Content</th>
+          <th scope="col">Dates</th>
+          <th scope="col">
+            <span><i class="bi bi-pencil-fill"></i></span>
+            <span><i class="bi bi-file-zip-fill"></i></span>
+            <span><i class="bi bi-trash-fill"></i></span>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end my-4">
+      <button id="create-btn" class="btn me-md-2 btn btn-success" type="button">Create Note</button>
+      <button id="archive-btn" class="btn btn-outline-secondary" type="button">Archive</button>
+    </div>
+    <h3>Summary</h3>
+    <table id="summary" class="table  table-sm mb-5">
+      <thead class="table-info">
+      <tr>
+          <th scope="col">Note category</th>
+          <th scope="col">Active</th>
+          <th scope="col">Archived</th>
+      </tr>
+      </thead>
+      <tbody>
+        <tr id="row-task">
+          <td>Task</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr id="row-thought">
+          <td>Random Thought</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr id="row-idea">
+          <td>Idea</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <script type="text/javascript" src="./main.js"></script>
+</body>
+</html>
