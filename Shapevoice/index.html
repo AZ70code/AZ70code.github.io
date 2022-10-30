@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20221028123923">
+	<link rel="stylesheet" href="css/style.min.css?_v=20221030090521">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -88,9 +88,9 @@
 							<div class="main__buttons">
 								<a href="" class="buttons-process btn">Our Process</a>
 								<div class="buttons-video-block">
-									<a href="" class="buttons-video" id="video">
+									<button class="buttons-video" id="video">
 										<img src="img/play.svg" alt="play video">
-									</a>
+									</button>
 									<label for="video">See How It Works</label>
 								</div>
 							</div>
@@ -510,7 +510,7 @@
 			</div>
 		</footer>
 	</div>
-	<div id="popup" aria-hidden="true" class="popup">
+	<div id="popup-signUP" aria-hidden="true" class="popup">
 		<div class="popup__wrapper">
 			<div class="popup__content">
 				<button id="btnClose" data-close type="button" class="popup__close"></button>
@@ -528,7 +528,15 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20221028123923"></script>
+	<div id="popup-video" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button id="btnCloseVideo" data-close type="button" class="popup__close"></button>
+				<iframe class="popup-video" width="560" height="315" src="https://www.youtube.com/embed/WO-O2K_Fqw0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+		</div>
+	</div>
+	<script src="js/app.min.js?_v=20221030090521"></script>
 </body>
 
 </html>
