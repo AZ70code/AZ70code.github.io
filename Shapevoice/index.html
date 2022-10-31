@@ -6,8 +6,11 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20221030090521">
+
+	<link rel="stylesheet" href="css/style.min.css?_v=20221031133205">
 	<link rel="shortcut icon" href="favicon.ico">
+	<script src="//www.youtube.com/iframe_api?_v=20221031133205"></script>
+
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -23,7 +26,7 @@
 					<div class="menu__body">
 						<ul class="menu__list">
 							<li class="menu__item">
-								<div class="menu__item-block">
+								<div class="menu__item-block" id="drop-down">
 									<a href="" type="button">Product</a>
 									<span>
 										<svg width="9" height="7" viewBox="0 0 9 7" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -38,7 +41,7 @@
 								</ul>
 							</li>
 							<li class="menu__item">
-								<div class="menu__item-block">
+								<div class="menu__item-block" id="drop-down">
 									<a href="" type="button">Template</a>
 									<span>
 										<svg width="9" height="7" viewBox="0 0 9 7" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -88,10 +91,10 @@
 							<div class="main__buttons">
 								<a href="" class="buttons-process btn">Our Process</a>
 								<div class="buttons-video-block">
-									<button class="buttons-video" id="video">
+									<button class="buttons-video" id="openVideo">
 										<img src="img/play.svg" alt="play video">
 									</button>
-									<label for="video">See How It Works</label>
+									<label for="openVideo">See How It Works</label>
 								</div>
 							</div>
 						</div>
@@ -510,7 +513,7 @@
 			</div>
 		</footer>
 	</div>
-	<div id="popup-signUP" aria-hidden="true" class="popup">
+	<div id="popup-signUp" aria-hidden="true" class="popup">
 		<div class="popup__wrapper">
 			<div class="popup__content">
 				<button id="btnClose" data-close type="button" class="popup__close"></button>
@@ -519,7 +522,7 @@
 					<input type="text" data-required="text" placeholder="Your Position" name="form[]" data-error="Enter only letters" class="input" />
 					<input type="email" data-required="email" placeholder="Email Address" name="form[]" data-error="Enter correct email" class="input" />
 					<div class="form__upload">
-						<label class="upload-label" for="upload-file">Upload file</label>
+						<label class="upload-label" for="upload-file">Upload your avatar</label>
 						<input id="upload-file" class="upload-file" type="file" required data-required name="form[]" />
 					</div>
 					<input type="password" required placeholder="Password" />
@@ -532,11 +535,11 @@
 		<div class="popup__wrapper">
 			<div class="popup__content">
 				<button id="btnCloseVideo" data-close type="button" class="popup__close"></button>
-				<iframe class="popup-video" width="560" height="315" src="https://www.youtube.com/embed/WO-O2K_Fqw0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<iframe class="popup__video" width="800" height="450" src="https://www.youtube.com/embed/Qa_4c9zrxf0" title="YouTube video player" frameborder="0" enablejsapi allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20221030090521"></script>
+	<script src="js/app.min.js?_v=20221031133205"></script>
 </body>
 
 </html>
