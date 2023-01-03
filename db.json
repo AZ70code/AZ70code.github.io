@@ -1,0 +1,49 @@
+{
+  "TABLE_CONTENT": [
+    {
+      "name": "Shopping list",
+      "category": "Task",
+      "content": "bread, beer and meat",
+      "created": "12.10.2022, 16:22",
+      "dates": "",
+      "archived": false,
+      "id": 1
+    },
+    {
+      "name": "Plans for the weekend",
+      "category": "Idea",
+      "content": "to have a picnic next weekend",
+      "created": "12.10.2022, 16:22",
+      "dates": "",
+      "archived": false,
+      "id": 2
+    },
+    {
+      "name": "Taxes",
+      "category": "Task",
+      "content": "pay taxes up to 20/03/22",
+      "created": "12.10.2022, 16:42",
+      "dates": " 20/03/22",
+      "archived": false,
+      "id": 3
+    },
+    {
+      "name": "My health",
+      "category": "Task",
+      "content": "make an apointment with a doctor for 25.07.22 or 26.07.22",
+      "created": "13.10.2022, 14:35",
+      "dates": null,
+      "archived": false,
+      "id": 4
+    },
+    {
+      "name": "My thoughts",
+      "category": "Random Thought",
+      "content": "it would be cool to live in the mountains",
+      "created": "13.10.2022, 16:47",
+      "dates": null,
+      "archived": false,
+      "id": 5
+    }
+  ]
+}
