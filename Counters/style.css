@@ -1,0 +1,153 @@
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:regular,500,700&display=swap);
+* {
+    margin: 0;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'Ubuntu';
+    font-size: 20px;
+    color: #262F56;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style-type: none;
+}
+.wrapper {
+    padding: 0 calc(50% - 720px);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+	overflow: hidden;
+    background:  linear-gradient(to top, rgba(203, 251, 255, 0.2), rgba(163, 175, 175, 0.2)), url(./img/bg.jpg);
+    background-position: center 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.container {
+    flex: 1;
+    margin: 0 auto;
+}
+.content {
+    display: flex;
+    padding: 1em;
+    border-radius: 5px;
+    border: 2px solid #a4f9ff;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow:  41px 41px 82px #445c5e,
+                -41px -41px 82px #ecfdff;
+}
+.counts {
+    flex: 1 1 50%;
+    border-right: 1px solid #5b617e;
+    padding: 0.5em;
+}
+.title {
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 1.5em;
+    margin-left: 1em;
+}
+.counts__info {
+    display: flex;
+    gap: 1em;
+    margin-bottom: 1em;
+    align-items: center;
+    padding: 5px;
+}
+.counts__icon {
+    align-self: flex-start;
+}
+.counts__block {
+    flex: 1 1 auto;
+}
+.counts__number {
+    margin-right: 0.25em;
+}
+.counts__value {
+    font-size: 3rem;
+    text-align: left;
+    flex: 0 0 250px;
+}
+.counts__label {
+    margin-bottom: 0.3em;
+}
+.graph {
+    padding: 0.5em;
+    border-left: 1px solid #5b617e;
+    flex: 1 1 50%;
+}
+figure {
+    height: 480px;
+    position: relative;
+    margin-bottom: 20px;
+}
+figcaption {
+    margin-left: 3em;
+    font-style: italic;
+}
+.scale-x, .scale-y {
+    position: absolute;
+    display: flex;
+    font-size: 0.8rem;
+}
+.scale-x span, .scale-y span {
+    display: block;
+}
+.scale-y {
+    width: 40px;
+    height: 100%;
+    top: 0;
+    left: 10px;
+    flex-direction: column-reverse;
+}
+.scale-y span{
+    margin-bottom: 28px;
+}
+.scale-x {
+    width: 100%;
+    height: 40px;
+    left: 50px;
+    bottom: -20px;
+}
+.scale-x span{
+    margin-left: 40px;
+}
+.graphcol {
+    position: absolute;
+    width: 50px;
+    bottom: 35px;
+    border: 1px solid #fff;
+    text-align: center;
+    padding-top: 5px;
+    color: #000;
+    font-style: italic;
+}
+#c1 {
+    background-color: red;
+    left: 68px;
+}
+#c2 {
+    background-color: cyan;
+    left: 123px;
+}
+#c3 {
+    background-color: green;
+    left: 178px;
+}
+#c4 {
+    background-color: yellow;
+    left: 233px;
+}
+#c5 {
+    background-color: coral;
+    left: 288px;
+}
+#c6 {
+    background-color: plum;
+    left: 343px;
+}
