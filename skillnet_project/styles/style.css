@@ -293,6 +293,9 @@ button {
 		top: calc(50% - 1px);
 		transform: rotate(-45deg);
 	}
+	body.lock {
+		overflow: hidden;
+	}
 }
 @media (max-width: 767.98px){
 	.header__contact {
@@ -328,7 +331,6 @@ button {
 		height: 100%;
 		object-fit: cover;
 		opacity: 0.7;
-
 	}
 }
 @media (min-width: 767.98px){
