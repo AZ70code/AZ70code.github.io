@@ -19,7 +19,7 @@ window.onload = () => {
 	// init swiper
 	const swiperThumb = new Swiper('.classes__slider-thumbs', {
 		// Optional parameters
-
+		direction: "vertical",
 		spaeed: 800,
 		spaceBetween: 20,
 		slidesPerView: 7,
@@ -28,26 +28,49 @@ window.onload = () => {
 		grid: {
 			rows: 1,
 		},
+		breakpoints: {
+
+		}
 
 	});
 	const swiperMain = new Swiper('.classes__slider', {
 		// Optional parameters
-		spaeed: 800,
-		loop: true,
-		// effect: 'fade',
-		spaceBetween: 10,
-		effect: "coverflow",
-		grabCursor: true,
 		centeredSlides: true,
-		slidesPerView: 3,
-		coverflowEffect: {
-			rotate: 70,
-			stretch: 0,
-			depth: 100,
+		effect: 'coverflow',
+		loop: true,
+		centeredSlides: true,
+		slidesPerView: 1,
+		lazyLoading: true,
+		lazyLoadingInPrevNext: true,
+		speed: 800,
+		additionalSlide: 1,
+		spaceBetween: 10,
+		coverflow: {
+			rotate: 0,
+			stretch: 100,
+			depth: 50,
 			modifier: 1,
-			slideShadows: true,
+			slideShadows: false,
 		},
-		// If we need pagination
+		breakpoints: {
+			// when window width is >= 480px
+			480: {
+				slidesPerView: 1.5,
+			},
+			// when window width is >= 768px
+			768: {
+				slidesPerView: 2.2,
+				spaceBetween: 0,
+				coverflow: {
+					rotate: 40,
+					stretch: 100,
+					depth: 100,
+					modifier: 1,
+					slideShadows: false,
+				},
+		
+			}
+		},
 		pagination: {
 			el: '.swiper-pagination',
 		},
