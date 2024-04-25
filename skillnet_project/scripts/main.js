@@ -60,7 +60,7 @@ window.onload = () => {
 			// when window width is >= 768px
 			768: {
 				slidesPerView: 2.2,
-				spaceBetween: 0,
+				spaceBetween: 30,
 				coverflow: {
 					rotate: 40,
 					stretch: 100,
@@ -71,7 +71,7 @@ window.onload = () => {
 			}
 		},
 		pagination: {
-			el: '.swiper-pagination',
+			el: '.classes__pagination',
 		},
 
 		// Navigation arrows
@@ -84,10 +84,4 @@ window.onload = () => {
 		},
 	});
 	// ==================================================
-	const appHeight = () => {
-		const doc = document.documentElement
-		doc.style.setProperty('--app-height', '${window.innerHeight}px')
-	}
-	window.addEventListener('resize', appHeight)
-	appHeight()
 };
