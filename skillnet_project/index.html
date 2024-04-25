@@ -21,11 +21,11 @@
 				</a>
 				<nav class="header__navbar navbar menu-body">
 					<ul class="navbar__list">
-						<li><a class="navbar__link" href="#about">Our Mission</a></li>
+						<li><a class="navbar__link" href="#mission">Our Mission</a></li>
 						<li><a class="navbar__link" href="#">Our Stuff</a></li>
-						<li><a class="navbar__link" href="#">Classes</a></li>
+						<li><a class="navbar__link" href="#classes">Classes</a></li>
 						<li><a class="navbar__link" href="#">Programs</a></li>
-						<li><a class="navbar__link" href="#">Contact</a></li>
+						<li><a class="navbar__link" href="#contact">Contact</a></li>
 					</ul>
 					<div class="header__contact-mobile header-contact">
 						<a href="tel:0877303030">087 730 30 30</a>
@@ -84,7 +84,7 @@
 			<div class="container">
 				<h2 class="classes__title title">/// Classes</h2>
 				<p class="classes__text">Each week, we offer a variety of fitness, swimming, and wellbeing classes.</p>
-				<div class="classes__body">
+				<div class="classes__inner">
 					<div class="classes__slider-thumbs swiper">
 						<div class="classes__wrapper swiper-wrapper">
 							<div class="classes__slide-thumbs swiper-slide thumbs ">
@@ -189,6 +189,30 @@
 					</div>
 				</div>
 			</div>
+		</section>
+		<section class="contacts" id="contact">
+			<div class="container">
+				<h2 class="contacts__title title">/// Contact Us</h2>
+				<p class="contacts__text">One of the staff at the gym will  contact you by telephone or email to discuss their application.
+				</p>
+				<div class="contacts__inner">
+					<form action="#" class="contacts__form">
+						<label class="contacts__label" for="name">Your Name</label>
+						<input class="contacts__input" id="name" type="text" name="name" required><br>
+						<label class="contacts__label" for="phone">Phone Number</label>
+						<input class="contacts__input" id="phone" type="text" name="phone" required><br>
+						<label class="contacts__label" for="email">Email</label>
+						<input class="contacts__input" id="email" type="email" name="email" required><br>
+						<label class="contacts__label" for="massege">Your Massege</label>
+						<textarea class="contacts__input" id="massege" rows="4" name="massege" maxlength="250"></textarea>
+						<button class="contacts__btn btn" type="submit">Send</button>
+					</form>
+					<div class="contacts__image">
+						<img src="images/contacts.jpg" alt="">
+					</div>
+				</div>
+			</div>
+			
 		</section>
 	</main>
 	<script src="scripts/main.js"></script>
