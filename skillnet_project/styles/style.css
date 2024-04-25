@@ -16,21 +16,10 @@
 	padding: 0;
 }
 
-/* html,
-body {
-	padding: 0;
-	margin: 0;
-	overflow: hidden;
-} */
 
 html,
 body {
 	min-width: 360px;
-
-	@media not all and (hover:hover) {
-		height: var(--app-height);
-	}
-
 }
 
 body {
@@ -68,14 +57,19 @@ textarea {
 	font-family: inherit;
 	font-size: inherit;
 	line-height: inherit;
-}
 
+}
+input:focus-visible, textarea:focus-visible {
+	outline: 1px solid #fff;
+	border: none;
+	box-shadow: 2px 2px 5px #cacaca;
+}
 button {
 	cursor: pointer;
-	outline: none;
 	background-color: transparent;
 	box-shadow: none;
 	border: none;
+	outline: none;
 }
 
 textarea {
@@ -294,7 +288,6 @@ section {
 
 .navbar__link {
 	position: relative;
-
 	@media (max-width: 991.98px) {
 		font-size: 1.5rem;
 		font-weight: 700;
@@ -324,7 +317,6 @@ section {
 /* ============icon menu ================= */
 .icon-menu {
 	display: none;
-
 	@media (max-width: 991.98px) {
 		display: block;
 		position: relative;
@@ -477,7 +469,6 @@ section {
 .hero__image img {
 	width: 100%;
 	filter: grayscale(0.5);
-
 	@media only screen and (max-width: 767.98px) {
 		position: absolute;
 		top: 0;
@@ -499,13 +490,20 @@ section {
 }
 
 .classes__inner {
-	height: 90vh;
+	height: 80vh;
 	min-height: 500px;
 	position: relative;
+	margin: 0 auto;
+	@media (max-width: 991.98px){
+		height: 70vh;
+	}
+	@media (max-width: 767.98px){
+		height: 60vh;
+	}
 }
 
 .classes__text {
-	margin-bottom: 30px;
+	margin-bottom: 70px;
 }
 
 /* =============thumbs slider============ */
@@ -562,9 +560,9 @@ section {
 
 /* ===============main slider============================== */
 .classes__slider {
+	position: relative;
 	height: 100%;
 	position: relative;
-
 	@media only screen and (max-width: 767.98px) {
 		width: 100%;
 	}
@@ -616,6 +614,15 @@ section {
 }
 
 /* ==============slider pagination============================ */
+.classes__pagination {
+	position: absolute;
+	top: -50px !important;
+	height: 30px;
+	z-index: 10;
+	@media (max-width: 767.98px){
+		text-align: center;
+	}
+}
 .swiper-pagination-bullet.swiper-pagination-bullet-active {
 	background-color: var(--main-color);
 	opacity: 1;
