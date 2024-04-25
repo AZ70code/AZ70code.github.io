@@ -1,7 +1,7 @@
 'use strict'
 
 window.onload = () => {
-	// init menu burger
+	// ===================init menu burger================
 	(function menuInit() {
 		if (document.querySelector(".icon-menu")) {
 			document.addEventListener("click", function (e) {
@@ -16,22 +16,22 @@ window.onload = () => {
 		};
 	})()
 
-	// init swiper
+	//============= validation form ========================
+	const btnSubmit = document.querySelector('.contacts__btn');
+
+	btnSubmit.addEventListener('click', (e) => {
+		e.preventDefault();
+		console.log(btnSubmit)
+	})
+
+	// ======================init swiper=================
 	const swiperThumb = new Swiper('.classes__slider-thumbs', {
 		// Optional parameters
 		direction: "vertical",
-		spaeed: 800,
-		spaceBetween: 20,
 		slidesPerView: 7,
-		freeMode: true,
+		spaceBetween: 10,
+
 		watchSlidesProgress: true,
-		grid: {
-			rows: 1,
-		},
-		breakpoints: {
-
-		}
-
 	});
 	const swiperMain = new Swiper('.classes__slider', {
 		// Optional parameters
@@ -68,7 +68,6 @@ window.onload = () => {
 					modifier: 1,
 					slideShadows: false,
 				},
-		
 			}
 		},
 		pagination: {
@@ -80,9 +79,15 @@ window.onload = () => {
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',
 		},
-
 		thumbs: {
 			swiper: swiperThumb,
 		},
 	});
+	// ==================================================
+	const appHeight = () => {
+		const doc = document.documentElement
+		doc.style.setProperty('--app-height', '${window.innerHeight}px')
+	}
+	window.addEventListener('resize', appHeight)
+	appHeight()
 };
