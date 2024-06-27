@@ -2,37 +2,44 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
 	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" async></script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="styles/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="styles/style.css" />
 	<title>Cork City Gym</title>
 </head>
 
 <body>
-
 	<header class="header">
 		<div class="container">
 			<div class="header__wrapper">
 				<a class="header__logo logo" href="#">
-					<img src="images/logo.png" alt="logo">
+					<img src="images/logo.png" alt="logo" />
 				</a>
 				<nav class="header__navbar navbar menu-body">
 					<ul class="navbar__list">
 						<li class="navbar-submenu">
 							<span>About Us</span>
 							<ul class="navbar-submenu__list">
-								<li><a class="navbar-submenu__link navbar__link" href="#mission">Our Mission</a></li>
-								<li><a class="navbar-submenu__link navbar__link" href="#team">Our Team</a></li>
-								<li><a class="navbar-submenu__link navbar__link" href="#facilities">Facilities</a></li>
+								<li>
+									<a class="navbar-submenu__link navbar__link" href="#mission">Our Mission</a>
+								</li>
+								<li>
+									<a class="navbar-submenu__link navbar__link" href="#team">Our Staff</a>
+								</li>
+								<li>
+									<a class="navbar-submenu__link navbar__link" href="#facilities">Facilities</a>
+								</li>
 							</ul>
 						</li>
 						<li><a class="navbar__link" href="#classes">Classes</a></li>
-						<li><a class="navbar__link" href="#memberships">Memberships</a></li>
+						<li>
+							<a class="navbar__link" href="#memberships">Memberships</a>
+						</li>
 						<li><a class="navbar__link" href="#contact">Contact</a></li>
 					</ul>
 					<div class="header__contact-mobile header-contact">
@@ -41,8 +48,12 @@
 						<div class="header__schedule">
 							<p>Opening Hours:</p>
 							<div class="header__schedule-time">
-								<p>Mon-Fri:&nbsp;<span>6 am</span><span>-</span><span>10 pm</span></p>
-								<p>Sat, Sun & BH:&nbsp;<span>8 am</span><span>-</span><span>9 pm</span></p>
+								<p>
+									Mon-Fri:&nbsp;<span>6 am</span><span>-</span><span>10 pm</span>
+								</p>
+								<p>
+									Sat, Sun & BH:&nbsp;<span>8 am</span><span>-</span><span>9 pm</span>
+								</p>
 							</div>
 						</div>
 					</div>
@@ -53,12 +64,18 @@
 					<div class="header__schedule">
 						<p>Opening Hours</p>
 						<div class="header__schedule-time">
-							<p>Mon-Fri:&nbsp;<span>6 am</span><span>-</span><span>10 pm</span></p>
-							<p>Sat, Sun & BH:&nbsp;<span>8 am</span><span>-</span><span>9 pm</span></p>
+							<p>
+								Mon-Fri:&nbsp;<span>6 am</span><span>-</span><span>10 pm</span>
+							</p>
+							<p>
+								Sat, Sun & BH:&nbsp;<span>8 am</span><span>-</span><span>9 pm</span>
+							</p>
 						</div>
 					</div>
 				</div>
-				<button type="button" class="icon-menu"><span></span></button>
+				<button type="button" class="icon-menu" aria-label="open/close mobile menu">
+					<span></span>
+				</button>
 			</div>
 		</div>
 	</header>
@@ -68,23 +85,23 @@
 			<div class="container">
 				<div class="hero__inner">
 					<div class="hero__image">
-						<img src="images/bg3.jpg" alt="">
+						<img src="images/bg3.jpg" alt="athlete with barbell" />
 					</div>
 					<div class="hero__content">
 						<h1 class="hero__title">
-							Fitness Centre<br><span>Cork Docklands Gym</span>
+							Fitness Centre<br /><span>Cork Docklands Gym</span>
 						</h1>
-						<h2 class="hero__subtitle title">
-							make your body shape
-						</h2>
+						<h2 class="hero__subtitle title">make your body shape</h2>
 						<p class="hero__text">
-							Transform yourself, one rep at a time. Unleash your inner hero at our gym. Feel the burn,
-							embrace
-							the sweat, and conquer your limits. From beginner to beast mode, we're here to fuel your
-							journey.
-							Join us and rewrite your story, sculpting the hero within.
+							Transform yourself, one rep at a time. Unleash your inner hero
+							at our gym. Feel the burn, embrace the sweat, and conquer your
+							limits. From beginner to beast mode, we're here to fuel your
+							journey. Join us and rewrite your story, sculpting the hero
+							within.
 						</p>
-						<button type="button" class="hero__btn btn" onclick="openPopup()">Get Started</button>
+						<button type="button" class="hero__btn btn" onclick="openPopup()">
+							Get Started
+						</button>
 					</div>
 				</div>
 			</div>
@@ -93,7 +110,10 @@
 		<section class="mission" id="mission">
 			<div class="container">
 				<h2 class="mission__title title">/// Our Mission</h2>
-				<p class="mission__description">At our gym, we are dedicated to transforming lives through the power
+				<p class="mission__description">Cork Docklands Gym offer to create a peaceful and relaxing environment
+					in which its members can work out and realise
+					and achieve their fitness and wellness goals. At our gym, we are dedicated to transforming lives
+					through the power
 					of fitness. We believe in
 					fostering a community
 					that empowers individuals to reach their full potential, both physically and mentally. Our
@@ -114,7 +134,11 @@
 
 		<section class="team" id="team">
 			<div class="container">
-				<h2 class="team__title title">/// Team</h2>
+				<h2 class="team__title title">/// Staff</h2>
+				<p class="team__overview">Our staff is highly qualified, and with their motivation and expertise, will
+					help you to achieve your
+					fitness and
+					wellness goals</p>
 				<ul class="team__list">
 					<li class="team__item item">
 						<div class="team__scene">
@@ -308,7 +332,6 @@
 				</ul>
 			</div>
 		</section>
-
 		<div class="tech">
 			<div class="container tech__wrapper">
 				<div class="tech__inner">
@@ -322,7 +345,9 @@
 						<li class="tech__item">journey</li>
 						<li class="tech__item">&nbsp;</li>
 						<li class="tech__item">today</li>
-						<li class="tech__item"><img src="images/icon.png" alt="icon"></li>
+						<li class="tech__item">
+							<img src="images/icon.png" alt="icon" />
+						</li>
 					</ul>
 					<ul class="tech__items" aria-hidden="true">
 						<li class="tech__item">start</li>
@@ -334,7 +359,9 @@
 						<li class="tech__item">journey</li>
 						<li class="tech__item">&nbsp;</li>
 						<li class="tech__item">today</li>
-						<li class="tech__item"><img src="images/icon.png" alt="icon"></li>
+						<li class="tech__item">
+							<img src="images/icon.png" alt="icon" />
+						</li>
 					</ul>
 				</div>
 			</div>
@@ -343,89 +370,106 @@
 		<section class="classes" id="classes">
 			<div class="container">
 				<h2 class="classes__title title">/// Classes</h2>
-				<p class="classes__text">Each week, we offer a variety of fitness, swimming, and wellbeing classes.</p>
+				<p class="classes__text">
+					Each week, we offer a variety of fitness, swimming, and wellbeing
+					classes.
+				</p>
 				<div class="classes__inner">
 					<div class="classes__slider-thumbs swiper">
 						<div class="classes__wrapper swiper-wrapper">
-							<div class="classes__slide-thumbs swiper-slide thumbs ">
+							<div class="classes__slide-thumbs swiper-slide thumbs">
 								<h2 class="thumbs__title">Yoga</h2>
-								<img src="images/classes/img01.jpg" alt="Yoga class photo">
+								<img src="images/classes/img01.jpg" alt="Yoga class photo" />
 							</div>
 							<div class="classes__slide-thumbs swiper-slide thumbs">
 								<h2 class="thumbs__title">Tai Chi</h2>
-								<img src="images/classes/img02.jpg" alt="Tai Chi class photo">
+								<img src="images/classes/img02.jpg" alt="Tai Chi class photo" />
 							</div>
 							<div class="classes__slide-thumbs swiper-slide thumbs">
 								<h2 class="thumbs__title">Pilates</h2>
-								<img src="images/classes/img03.jpg" alt="Pilates class photo">
+								<img src="images/classes/img03.jpg" alt="Pilates class photo" />
 							</div>
 							<div class="classes__slide-thumbs swiper-slide thumbs">
 								<h2 class="thumbs__title">Spinning</h2>
-								<img src="images/classes/img04.jpg" alt="Spinning class photo">
+								<img src="images/classes/img04.jpg" alt="Spinning class photo" />
 							</div>
 							<div class="classes__slide-thumbs swiper-slide thumbs">
 								<h2 class="thumbs__title">Aqua Aerobics</h2>
-								<img src="images/classes/img05.jpg" alt="Aqua Aerobics class photo">
+								<img src="images/classes/img05.jpg" alt="Aqua Aerobics class photo" />
 							</div>
 							<div class="classes__slide-thumbs swiper-slide thumbs">
 								<h2 class="thumbs__title">Swimming</h2>
-								<img src="images/classes/img06.jpg" alt="Swimming class photo">
+								<img src="images/classes/img06.jpg" alt="Swimming class photo" />
 							</div>
 							<div class="classes__slide-thumbs swiper-slide thumbs">
 								<h2 class="thumbs__title">Circuit Training</h2>
-								<img src="images/classes/img07.jpg" alt="Circuit Training class photo">
+								<img src="images/classes/img07.jpg" alt="Circuit Training class photo" />
 							</div>
 						</div>
 					</div>
 					<div class="classes__slider swiper">
 						<div class="classes__wrapper swiper-wrapper">
 							<div class="classes__slide swiper-slide">
-								<img src="images/classes/img01.jpg" loading="lazy" alt="Yoga class photo">
+								<img src="images/classes/img01.jpg" loading="lazy" alt="Yoga class photo" />
 								<div class="swiper-slide__content">
 									<h2 class="swiper-slide__title">Yoga</h2>
-									<p>Connect your physical body to your mind through movements and breathing</p>
+									<p>
+										Connect your physical body to your mind through movements
+										and breathing
+									</p>
 								</div>
 							</div>
 							<div class="classes__slide swiper-slide">
-								<img src="images/classes/img02.jpg" loading="lazy" alt="Tai Chi class photo">
+								<img src="images/classes/img02.jpg" loading="lazy" alt="Tai Chi class photo" />
 								<div class="swiper-slide__content">
 									<h2 class="swiper-slide__title">Tai Chi</h2>
-									<p>Flowing Chinese exercise brings harmony to your mind, body and spirit</p>
+									<p>
+										Flowing Chinese exercise brings harmony to your mind, body
+										and spirit
+									</p>
 								</div>
 							</div>
 							<div class="classes__slide swiper-slide">
-								<img src="images/classes/img03.jpg" loading="lazy" alt="Pilates class photo">
+								<img src="images/classes/img03.jpg" loading="lazy" alt="Pilates class photo" />
 								<div class="swiper-slide__content">
 									<h2 class="swiper-slide__title">Pilates</h2>
-									<p>Helps build flexibility, muscle strength, and endurance</p>
+									<p>
+										Helps build flexibility, muscle strength, and endurance
+									</p>
 								</div>
 							</div>
 							<div class="classes__slide swiper-slide">
-								<img src="images/classes/img04.jpg" loading="lazy" alt="Spinning class photo">
+								<img src="images/classes/img04.jpg" loading="lazy" alt="Spinning class photo" />
 								<div class="swiper-slide__content">
 									<h2 class="swiper-slide__title">Spinning</h2>
-									<p>Aerobic class designed to burn calories on stationary bikes</p>
+									<p>
+										Aerobic class designed to burn calories on stationary
+										bikes
+									</p>
 								</div>
 							</div>
 							<div class="classes__slide swiper-slide">
-								<img src="images/classes/img05.jpg" loading="lazy" alt="Aqua Aerobics class photo">
+								<img src="images/classes/img05.jpg" loading="lazy" alt="Aqua Aerobics class photo" />
 								<div class="swiper-slide__content">
 									<h2 class="swiper-slide__title">Aqua Aerobics</h2>
 									<p>Low impact exercises for joints and mobility</p>
 								</div>
 							</div>
 							<div class="classes__slide swiper-slide">
-								<img src="images/classes/img06.jpg" loading="lazy" alt="Swimming class photo">
+								<img src="images/classes/img06.jpg" loading="lazy" alt="Swimming class photo" />
 								<div class="swiper-slide__content">
 									<h2 class="swiper-slide__title">Swimming</h2>
 									<p>Beginners and Improvers</p>
 								</div>
 							</div>
 							<div class="classes__slide swiper-slide">
-								<img src="images/classes/img07.jpg" loading="lazy" alt="Circuit Training class photo">
+								<img src="images/classes/img07.jpg" loading="lazy" alt="Circuit Training class photo" />
 								<div class="swiper-slide__content">
 									<h2 class="swiper-slide__title">Circuit Training</h2>
-									<p>Various exercise stations for burning calories and increasing muscle tone</p>
+									<p>
+										Various exercise stations for burning calories and
+										increasing muscle tone
+									</p>
 								</div>
 							</div>
 						</div>
@@ -438,61 +482,60 @@
 		<section class="memberships" id="memberships">
 			<div class="container">
 				<h2 class="title">/// Memberships</h2>
-				<p class="memberships__text">Select from a choice of two memberships.
+				<p class="memberships__text">
+					Select from a choice of two memberships.
 				</p>
 				<div class="memberships__wrap">
 					<div class="membership__card">
-
-						<h3 class="membership__option">Classic Membership: </h3>
+						<h3 class="membership__option">Classic Membership:</h3>
 						<ul>
 							<li class="membership__item">Initial Fitness Assessment</li>
-							<li class="membership__item">Fitness Re-Assessments (4 per year)</li>
-							<li class="membership__item">Discounted price for fitness classes (pre-pay in advance €50
-								for a class with
-								ten sessions)</li>
+							<li class="membership__item">Re-Assessments (4 per year)</li>
+							<li class="membership__item">
+								Discount on the price of Fitness Classes (20% off standard
+								rate)
+							</li>
 						</ul>
 						<div class="memberships__price">
-							<p>Single Annual Rate: <span class="memberships__price--color">€650 </span>
-
+							<p>
+								Single Annual Rate:
+								<span class="memberships__price--color">€890 </span>
 							</p>
-							<p>Monthly DD: <span class="memberships__price--color">€55</span>
-
-
+							<p>
+								Monthly DD: <span class="memberships__price--color">€80</span>
 							</p>
 						</div>
-
 					</div>
 					<div class="membership__card">
-
 						<h3 class="membership__option">Gold Membership:</h3>
 						<ul>
 							<li class="membership__item">Initial Fitness Assessment</li>
-							<li class="membership__item">Fitness Re-Assessments (4 per year)</li>
-							<li class="membership__item">Fitness classes (inclusive of annual membership fee – no extra
+							<li class="membership__item">Re-Assessments (4 per year)</li>
+							<li class="membership__item">
+								Fitness Classes (inclusive of membership fee – no extra
 								charge)
 							</li>
-							<li class="membership__item">Personal Training (one session with a gym instructor per month
-								for 30
-								Minutes)
+							<li class="membership__item">
+								Personal Training (1 free session per month with a personal
+								trainer for 45 minutes)
 							</li>
-							<li class="membership__item">Gym towel
+							<li class="membership__item">
+								Gym towel on arrival (on request)
 							</li>
 						</ul>
 						<div class="memberships__price">
-							<p>Single Annual Rate: <span class="memberships__price--color">€1050 </span>
-
+							<p>
+								Single Annual Rate:
+								<span class="memberships__price--color">€1200 </span>
 							</p>
-							<p>Monthly DD: <span class="memberships__price--color">€92</span>
-
-
+							<p>
+								Monthly DD:
+								<span class="memberships__price--color">€100</span>
 							</p>
 						</div>
-
 					</div>
 				</div>
 			</div>
-
-
 		</section>
 
 		<section class="calculator">
@@ -501,25 +544,28 @@
 					<h3>Calculate your Body Mass Index</h3>
 					<div class="calculator__wrap">
 						<div class="calculator__weight">
-							<input type="number" class="weight__value value" id="weight" name="weight" max="500"
-								placeholder="0">
+							<label class="calculator__label" for="weight">Enter your weight</label>
+							<input type="number" class="weight__value value" id="weight" name="weight" min="0"
+								oninput="this.value = Math.max(this.value, 0)" max="500" placeholder="0">
 							<select class="calculator__sel weight" name="weightOption">
 								<option value="kg" id="kg">kg</option>
 								<option value="lbs" id="lbs">lbs</option>
 							</select>
 						</div>
 						<div class="calculator__height">
-							<input type="number" class="height__value value" id="height" name="height" max="300"
-								placeholder="0">
+							<label class="calculator__label" for="height">Enter your height</label>
+							<input type="number" class="height__value value" id="height" name="height" min="0"
+								oninput="this.value = Math.max(this.value, 0)" max="300" placeholder="0">
 							<select class="calculator__sel height" name="heightOption">
 								<option value="cm" id="cm">cm</option>
 								<option value="in" id="in">in</option>
 							</select>
 						</div>
 					</div>
-					<button type="submit" class="calculator__button btn" id="submitButton">Calculate
+					<button type="submit" onclick="onSubmitButton()" class="calculator__button btn"
+						id="submitButton">Calculate
 						BMI</button>
-					<button type="reset" onclick="switchToSubmit()" class="calculator__button btn reset"
+					<button onclick="onResetButton()" class="calculator__button btn reset"
 						id="resetButton">Reset</button>
 					<p class="calculator__result" id="result"></p>
 				</form>
@@ -545,14 +591,17 @@
 						</div>
 					</li>
 					<li class="content__item">
-						<img class="item__preview" src="images/facilities/weights.jpg" alt="Weights photo">
-						<h3 class="item__header">Weights</h3>
+						<img class="item__preview" src="images/facilities/coffee-shop.jpg" alt="Weights cafe">
+						<h3 class="item__header">Café Revive</h3>
 						<div class="item__overlay">
 							<svg class="item__svg" width="55" height="55">
-								<use href="./images/facilities/symbol-defs-f.svg#icon-weight">
+								<use href="./images/facilities/symbol-defs-f.svg#icon-cafe">
 								</use>
 							</svg>
-							<p class="item__description">Selection of free weights and fixed weights.</p>
+							<p class="item__description">An onsite coffee shop. Grab a coffee and a snack before or
+								after your workout. A selection of healthy food and drinks
+								are available. Be social!
+							</p>
 						</div>
 					</li>
 					<li class="content__item">
@@ -571,22 +620,49 @@
 						</div>
 					</li>
 					<li class="content__item">
-						<img class="item__preview" src="images/facilities/coffee-shop.jpg" alt="Weights cafe">
-						<h3 class="item__header">Lee Coffee Shop</h3>
+						<img class="item__preview" src="images/facilities/weights.jpg" alt="Weights photo">
+						<h3 class="item__header">Weights</h3>
 						<div class="item__overlay">
 							<svg class="item__svg" width="55" height="55">
-								<use href="./images/facilities/symbol-defs-f.svg#icon-cafe">
+								<use href="./images/facilities/symbol-defs-f.svg#icon-weight">
 								</use>
 							</svg>
-							<p class="item__description">An onsite coffee shop. Grab a coffee and a snack. Make new
-								friends!
+							<p class="item__description">Selection of free weights and fixed weights.</p>
+						</div>
+					</li>
+					<li class="content__item">
+						<img class="item__preview" src="images/facilities/sporting-room.jpg" alt="Weights cafe">
+						<h3 class="item__header">Multimedia Room</h3>
+						<div class="item__overlay">
+							<svg class="item__svg" width="55" height="55">
+								<use href="./images/facilities/symbol-defs-f.svg#icon-room">
+								</use>
+							</svg>
+							<p class="item__description">A multimedia room open to gym members only. Contains video,
+								audio and memorabilia of some of Cork’s most famous sports
+								stars including Roy Keane, Denis Irwin, Sonia O’Sullivan, Christy Ring and Ronan O’Gara.
+							</p>
+						</div>
+					</li>
+					<li class="content__item">
+						<img class="item__preview" src="images/facilities/sauna.jpg" alt="Weights cafe">
+						<h3 class="item__header">Sauna</h3>
+						<div class="item__overlay">
+							<svg class="item__svg" width="55" height="55">
+								<use href="./images/facilities/symbol-defs-f.svg#icon-sauna">
+								</use>
+							</svg>
+							<p class="item__description">Our gym sauna provides a tranquil space to relax and unwind
+								after an intense workout. It's a heated room, typically
+								lined with wood, offering dry heat that promotes muscle recovery and detoxification.
+								Regular use can improve
+								circulation, reduce stress, and enhance overall well-being.
 							</p>
 						</div>
 					</li>
 				</ul>
 			</div>
 		</section>
-
 
 		<section class="contacts" id="contact">
 			<div class="container">
@@ -595,7 +671,7 @@
 					One of our gym staff will contact you by telephone or email to discuss your application.
 				</p>
 				<div class="contacts__inner">
-					<form class="contacts__form" id="form" method="post">
+					<form class="contacts__form" id="form" method="post" name="form">
 						<fieldset>
 							<label class="contacts__label" for="name">Your Name*</label>
 							<input class="contacts__input required" id="name" type="text" name="name"
@@ -626,33 +702,48 @@
 		<div class="modal">
 			<h2 class="modal__title">Track Your Progress & More!</h2>
 			<button class="modal__close" onclick="closePopup()">X</button>
-			<p>All fields are required</p>
 			<div class="modal__content">
-				<form class="modal__form" id="modal-form" method="post">
+				<form class="modal__form" id="modal-form" method="post" name="form">
 					<fieldset class="modal__block">
-						<label class="modal__label" for="firstname">First Name</label><br>
+						<label class="modal__label" for="firstname">First Name <span>&nbsp;*</span></label><br>
 						<input class="modal__input required" id="firstname" type="text" name="name">
 					</fieldset>
 					<fieldset class="modal__block">
-						<label class="modal__label" for="lastname">Last Name</label><br>
+						<label class="modal__label" for="lastname">Last Name<span>&nbsp;*</span></label><br>
 						<input class="modal__input required" id="lastname" type="text" name="name">
 					</fieldset>
 					<fieldset class="modal__block">
-						<label class="modal__label" for="account-phone">Phone Number</label><br>
+						<label class="modal__label" for="account-phone">Phone Number<span>&nbsp;*</span></label><br>
 						<input class="modal__input required" id="account-phone" type="text" name="phone">
 					</fieldset>
 					<fieldset class="modal__block">
-						<label class="modal__label" for="account-email">Email</label><br>
+						<label class="modal__label" for="account-email">Email<span>&nbsp;*</span></label><br>
 						<input class="modal__input required" id="account-email" type="text" name="email">
 					</fieldset>
+					<fieldset id="age" class="modal__block" style="display: inline-block;">
+						<label class="modal__label" for="account-age">Age (from 16 years old)</label><br>
+						<input class="modal__input" id="account-age" type="number" min="16" name="age"
+							onblur=checkAge(this)>
+					</fieldset>
+					<fieldset class="modal__block" id="gender" style="display: inline-block;">
+						<legend>Your gender</legend>
+						<input class="gender" id="account-male" type="radio" name="gender">
+						<label class="modal__label" for="account-male">Male</label>
+						<input class="gender" id="account-female" type="radio" name="gender">
+						<label class="modal__label" for="account-female">Female</label>
+						<input class="gender" id="account-other" type="radio" name="gender">
+						<label class="modal__label" for="account-other">Other</label>
+					</fieldset>
 					<fieldset class="modal__block">
-						<label class="modal__label" for="password">Password</label><br>
-						<input class="modal__input required" id="password" type="password" name="password">
-						<a href="#" id="pass-up-show" class="password-control"></a>
+						<label class="modal__label" for="password">Password<span>&nbsp;*</span></label><br>
+						<input class="modal__input required" id="password" type="password" name="password" minlength="5"
+							maxlength="20">
+						<a href="#" id="pass-up-show" class="password-control" aria-label="show/hide password"></a>
 					</fieldset>
 					<input id="agree" type="checkbox" name="agree">
 					<label class="modal__label" for="agree">Send me email notifications for new program launches,
 						website or store updates (optional)</label><br>
+					<span>* required fields</span>
 					<button id="submitModalBtn" class="modal__btn btn" type="submit" disabled>Create Account</button>
 				</form>
 				<div class="modal__image">
@@ -660,7 +751,6 @@
 				</div>
 			</div>
 		</div>
-
 	</main>
 	<footer class="footer">
 		<div class="container">
@@ -672,17 +762,17 @@
 						<a href="mailto:docklands-gym@gmail.com">docklands-gym@gmail.com</a>
 					</div>
 					<ul class="footer__social">
-						<li><a href="https://www.facebook.com/" target="_blank"><svg class="item__img" width="20"
-									height="20">
+						<li><a href="https://www.facebook.com/" target="_blank" aria-label="link to facebook"><svg
+									class="item__img" width="20" height="20">
 									<use href="images/social/symbol-defs.svg#icon-facebook"></use>
 								</svg>
 							</a></li>
-						<li><a href="https://www.instagram.com/" target="_blank">
+						<li><a href="https://www.instagram.com/" target="_blank" aria-label="link to instagram">
 								<svg class="item__img" width="20" height="20">
 									<use href="images/social/symbol-defs.svg#icon-instagram"></use>
 								</svg>
 							</a></li>
-						<li><a href="https://x.com/" target="_blank">
+						<li><a href="https://x.com/" target="_blank" aria-label="link to twitter">
 								<svg class="item__img" width="20" height="20">
 									<use href="images/social/symbol-defs.svg#icon-twitter"></use>
 								</svg>
@@ -706,7 +796,7 @@
 			</div>
 		</div>
 	</footer>
-
+	</main>
 	<script src="scripts/main.js" async></script>
 </body>
 
