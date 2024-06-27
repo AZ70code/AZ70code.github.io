@@ -15,7 +15,7 @@
   }
 })();
 //============= form ========================
-const forms = document.getElementsByTagName("form");
+const forms = document.querySelectorAll("[name='form']");
 
 // add and remove placeholders
 for (let form of forms) {
@@ -32,24 +32,39 @@ for (let form of forms) {
     }
   });
   //===========tracking changes in the form fields=========
+  const buttonSubmit = form.querySelector("[type='submit']");
 
-  form.addEventListener("change", (e) => {
+  form.addEventListener("input", (e) => {
     const form = e.target.closest("form");
-    const buttonSubmit = form.querySelector("[type='submit']");
-
     formObserver(form, e.target, buttonSubmit);
-    form.addEventListener("submit", (e) => {
-      const body = Object.fromEntries(new FormData(e.target).entries());
-      e.preventDefault();
-      buttonSubmit.setAttribute("disabled", "true");
-      console.log(form.id);
-      if (form.id == "form") {
-        formSubmit(body, form);
-      }
-      if (form.id == "modal-form") {
-        closePopup();
-      }
-    });
+  });
+
+  form.addEventListener("submit", (e) => {
+    const body = Object.fromEntries(new FormData(e.target).entries());
+    e.preventDefault();
+    fetch("https://api.exemple.com", {
+      method: "POST",
+      body: body,
+    })
+      .then((response) => {
+        // successful request
+        console.log(response);
+      })
+      .catch((error) => {
+        // failed request
+        console.log(error);
+      });
+    form.reset();
+
+    buttonSubmit.setAttribute("disabled", "true");
+
+    if (form.id == "form") {
+      alert(`Hi ${body.name}. Thank you for the message`);
+    }
+    if (form.id == "modal-form") {
+      closePopup();
+      alert("Your data has been sent successfully");
+    }
   });
 }
 //============= validation form ========================
@@ -88,6 +103,8 @@ function formObserver(form, target, button) {
   }
   if (!error) {
     button.removeAttribute("disabled");
+  } else {
+    button.setAttribute("disabled", "true");
   }
 }
 // check input field values and show error messages
@@ -119,32 +136,15 @@ function emailValidation(input) {
   return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
 }
 function phoneValidation(input) {
-  return /^((0|\+)[\- ]?)?(\(?\d{3,5}\)?[\- ]?)?[\d\- ]{5,10}$/.test(
-    input.value
-  );
+  return /(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){12,14}(\s*)?/.test(input.value);
 }
-// ======Imitation of sending the form================
-
-async function formSubmit(body, form) {
-  const value = document.getElementById("name").value.trim();
-  let response = await fetch("/index.html", {
-    method: "POST",
-    body: body,
-  });
-  form.reset();
-  form.insertAdjacentHTML(
-    "beforeend",
-    `<div class="form-submit">
-			<p>Hi ${value} </p>
-			<p>Your message is submited</p>
-		</div>`
-  );
-  setTimeout(() => {
-    form.removeChild(form.querySelector(".form-submit"));
-  }, 3000);
-}
-
-// ======================init swiper=================
+function checkAge(e) {
+  if (e.value != "") {
+    if (parseInt(e.value) < parseInt(e.min)) {
+      e.value = e.min;
+    }
+  }
+} // ======================init swiper=================
 const swiperThumb = new Swiper(".classes__slider-thumbs", {
   // Optional parameters
   direction: "vertical",
@@ -207,63 +207,105 @@ const swiperMain = new Swiper(".classes__slider", {
 // ======================calculator=====================
 
 const calculatorForm = document.getElementById("calculator");
+const inputWeight = document.querySelector(".weight__value");
+const inputHeight = document.querySelector(".height__value");
+const weightParamElement = document.querySelector(".weight");
+const heightParamElement = document.querySelector(".height");
 const submitButton = document.getElementById("submitButton");
 const resetButton = document.getElementById("resetButton");
 const result = document.getElementById("result");
 
-const switchToSubmit = () => {
-  submitButton.style.display = "block";
-  resetButton.style.display = "none";
-  result.innerText = " ";
-};
-
-const switchToReset = () => {
+const onSubmitButton = () => {
+  result.innerText = `Your Body Mass Index is ${bmi}. This is considered as ${weightResult}`;
   submitButton.style.display = "none";
   resetButton.style.display = "block";
+  weightParamElement.value = weightParam;
+  heightParamElement.value = heightParam;
 };
 
-calculatorForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-  const data = Object.fromEntries(new FormData(e.target).entries());
-  let bmi = 0;
-  let weight = 0;
-  let height = 0;
+const onResetButton = () => {
+  submitButton.style.display = "block";
+  resetButton.style.display = "none";
+  weight = 0;
+  height = 0;
+  inputWeight.value = null;
+  inputHeight.value = null;
+  weightParamElement.value = weightParam;
+  heightParamElement.value = heightParam;
+  result.innerText = "";
+};
 
-  data.weightOption === "lbs"
-    ? (weight = data.weight * 0.453592)
-    : (weight = data.weight);
-  data.heightOption === "in"
-    ? (height = (data.height * 2.54) / 100)
-    : (height = data.height / 100);
+let bmi = 0;
+let weight = 0;
+let height = 0;
+let weightParam = "kg";
+let heightParam = "cm";
+let weightResult = "";
+
+inputWeight.addEventListener("input", onInputWeightChange);
+
+inputHeight.addEventListener("input", onInputHeightChange);
+
+weightParamElement.addEventListener("change", weightParamChange);
+
+heightParamElement.addEventListener("change", heightParamChange);
+
+function onInputWeightChange(event) {
+  weight = event.currentTarget.value;
+}
+
+function onInputHeightChange(event) {
+  height = event.currentTarget.value;
+}
+
+function weightParamChange(event) {
+  weightParam = event.currentTarget.value;
+}
+
+function heightParamChange(event) {
+  heightParam = event.currentTarget.value;
+}
+
+calculatorForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  weightParam === "lbs" ? (weight = weight * 0.453592) : (weight = weight);
+  heightParam === "in"
+    ? (height = (height * 2.54) / 100)
+    : (height = height / 100);
 
   if (height <= 0) {
-    result.innerText = "Please, enter valid numbers!";
+    result.innerText = "";
     return;
   } else if (weight <= 0) {
-    result.innerText = "Please, enter valid numbers!";
+    result.innerText = "";
     return;
   }
+
   bmi = Math.round((weight / Math.pow(height, 2)) * 10) / 10;
 
   if (bmi <= 18.4) {
-    switchToReset();
-    result.innerText = `Your Body Mass Index is ${bmi}. This is considered as underweight`;
+    weightResult = "underweight";
   } else if (bmi >= 18.5 && bmi <= 24.9) {
-    switchToReset();
-    result.innerText = `Your Body Mass Index is ${bmi}. This is considered as normal`;
+    weightResult = "normal";
   } else if (bmi >= 25 && bmi <= 30) {
-    switchToReset();
-    result.innerText = `Your Body Mass Index is ${bmi}. This is considered as overweight`;
+    weightResult = "overweight";
   } else if (bmi >= 30.1) {
-    switchToReset();
-    result.innerText = `Your Body Mass Index is ${bmi}. This is considered as obese`;
+    weightResult = "obese";
   }
+
+  onSubmitButton();
 });
 // =======popup======================================
 const modal = document.querySelector(".modal");
 function openPopup() {
   modal.classList.add("open");
   document.body.classList.add("modal-lock");
+  if (modal.classList.contains("open")) {
+    document.addEventListener("keyup", keyHandler);
+  } else {
+    document.removeEventListener("keyup", keyHandler);
+  }
 }
 function closePopup() {
   const form = document.getElementById("modal-form");
@@ -295,5 +337,12 @@ function showPassword(e) {
   } else {
     target.classList.remove("view-pass");
     input.setAttribute("type", "password");
+  }
+}
+
+function keyHandler(e) {
+  if (e.key == "Escape") {
+    closePopup();
+    document.removeEventListener("keyup", keyHandler);
   }
 }
